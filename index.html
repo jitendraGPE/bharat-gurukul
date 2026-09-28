@@ -507,7 +507,9 @@ textarea.f{min-height:110px}
 
   function downloadsPage() {
     var f = [['Handbook for everyone (A5, 40 pages)', 'docs/Bharat-Handbook-A5.pdf'], ['Trifold brochure (A4)', 'docs/Bharat-Brochure-Trifold.pdf'], ['Year schedule poster (A3)', 'docs/Bharat-Year-Schedule-A3.pdf'], ['January poster (A4)', 'docs/Bharat-Launch-Poster-A4.pdf']];
+    var g = 'https://github.com/jitendraGPE/bharat-gurukul/blob/main/docs/', t = [['The plan', 'plan.md'], ['Topic guides for presenters (all 12 months)', 'topic-guides.md'], ['Letters and templates (delegate invitation and more)', 'letters-and-templates.md']];
     return '<div class="eb">Print and share</div><h1>Downloads</h1>' + f.map(function (x) { return '<div class="card"><a href="' + x[1] + '" download>' + esc(x[0]) + '</a></div>'; }).join('') +
+      '<h2>For organisers and presenters</h2>' + t.map(function (x) { return '<div class="card"><a href="' + g + x[1] + '" target="_blank" rel="noopener">' + esc(x[0]) + '</a></div>'; }).join('') +
       '<h2>Contact</h2><p>' + esc(D.contact.name) + ' · ' + esc(D.contact.phone) + '<br>' + esc(D.venue.name) + ', ' + esc(D.venue.address) + '</p>';
   }
 

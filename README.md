@@ -26,7 +26,11 @@ It works like the Durga Puja site: a single page on GitHub Pages, with a Google 
 | `index.html` | The website (mobile-first book you swipe through) | Rarely |
 | `backend/Code.gs` | Apps Script that receives registrations, RSVPs, seva sign-ups and questions | Once, at set-up |
 | `backend/Workbook.gs` | Apps Script that builds the organisers' dashboards in the sheet | Once, at set-up |
-| `docs/` | Print materials (handbook, brochure, year poster, launch poster) and the research report | When reprinted |
+| `docs/plan.md` | The plan: purpose, the year, a gathering morning, volunteers, resources, checklist, impact | Organisers |
+| `docs/topic-guides.md` | All 12 topic guides for volunteer presenters and circle leaders, with games and quiz answers (generated from `programme.json`) | Regenerate when content changes |
+| `docs/letters-and-templates.md` | Delegate invitation, presenter invitation, volunteer appeal, venue and school letters, WhatsApp text, press note, day checklist | Organisers |
+| `docs/*.pdf` | Print materials: handbook, brochure, year poster, launch poster | When reprinted |
+| `docs/research-making-it-attractive.md` | Research on attracting every age group, with verified epic references | Reference |
 | `assets/` | App icons | Rarely |
 
 ## Updating the programme (no coding needed)
