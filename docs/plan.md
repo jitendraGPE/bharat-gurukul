@@ -2,7 +2,7 @@
 
 *Ancient Wisdom for Modern Excellence*
 
-Twelve Sunday-morning gatherings in 2027, from the Vedas to the Buddha, with the Ramayana and Mahabharata at the heart of the year. Free for everyone, and run entirely by volunteers: no fees, no sponsors, only seva. Each gathering is opened by invited delegates, presented by a volunteer, and ends with a certificate for everyone who took part.
+Twelve Sunday-morning gatherings in 2027, from the Vedas to the Buddha, with the Ramayana and Mahabharata at the heart of the year. Free for everyone, and run entirely by volunteers: no fees, no sponsors, only seva. Each gathering is opened by invited delegates, presented together by two or three volunteers, and ends with a certificate for everyone who took part.
 
 ## Why we gather
 
@@ -41,7 +41,7 @@ Full content for each month is in [topic-guides.md](topic-guides.md) and on the 
 | Time | Segment | What happens |
 | --- | --- | --- |
 | 9:30 | Deep prajwalan | Invited delegates (for example an ambassador or guest of honour) open the gathering, lighting the lamp with a child and an elder; children chant the invocation |
-| 9:45 | Pravachan | A volunteer presents the day's topic, with one practice everyone does together |
+| 9:45 | Pravachan | Two or three volunteers present the topic together: one tells the story, one explains the verses, one connects it to today and leads the shared practice |
 | 10:30 | Vishram | A short break |
 | 10:45 | Shishya sabha | Four circles with activities and games: Bal Gurukul (children), Yuva Sabha (youth and families), Karma Sabha (professionals and civic leaders), Vriddha Sabha (elders) |
 | 11:30 | Quiz | A quick quiz on the day's topic for everyone |
@@ -51,11 +51,11 @@ Full content for each month is in [topic-guides.md](topic-guides.md) and on the 
 
 ## Volunteers
 
-Every topic is presented by a volunteer, and any volunteer can sign up for any topic on the website.
+Every topic is presented by two or three volunteers, which makes each gathering participatory and shares the load. Any volunteer can sign up for any topic on the website.
 
 | Role | Needed each month |
 | --- | --- |
-| Present the month's topic | 1 |
+| Present the topic (the story · the verses · today) | 2–3 |
 | Lead a learning circle | 4 |
 | Welcome desk and registration | 3 |
 | Seating and elders' care | 3 |
@@ -85,11 +85,11 @@ The venue, sound, durries and chairs are donated or lent. The only cash needs ar
 | --- | --- |
 | 15 Oct 2026 | Form the committee; agree the plan |
 | 31 Oct 2026 | Book the venue for all 12 dates |
-| 15 Nov 2026 | Find volunteer presenters for Jan–Mar; send each the topic guide |
+| 15 Nov 2026 | Find 2–3 volunteer presenters for each of Jan–Mar; send each the topic guide |
 | 15 Nov 2026 | Invite delegates for the opening of each gathering (see [letters](letters-and-templates.md)) |
 | 30 Nov 2026 | Print posters, handbooks and certificates; share the website |
 | 10 Dec 2026 | Recruit and brief volunteers; code of conduct signed |
-| 15 Dec 2026 | Go/no-go: venue booked, 3 presenters, 150 registrations |
+| 15 Dec 2026 | Go/no-go: venue booked, presenters for Jan–Mar, 150 registrations |
 | 10 Jan 2027 | Dry run at the venue |
 | 17 Jan 2027 | First gathering |
 
@@ -103,6 +103,6 @@ Every volunteer signs a code of conduct. No volunteer is ever alone with a child
 | --- | --- |
 | People per gathering | 150 average |
 | Families returning for 6+ gatherings | 40% |
-| Topics presented by local volunteers | 12 of 12 |
+| Different local volunteers who present | 30 or more across the year |
 | Quiz taken and certificates given | Every gathering |
 | Active volunteers | 40 by December |

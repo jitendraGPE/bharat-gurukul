@@ -35,9 +35,9 @@ With respect and gratitude,
 
 Dear [Name],
 
-Namaste. You know [TOPIC] well, and we would be grateful if you would present it at our gathering on **[DATE], 9:45–10:30 am**, at [VENUE]. Every topic in *Bharat: Rooted in Heritage, Inspired for the Future* is presented by a volunteer from our community, for an audience of all ages.
+Namaste. You know [TOPIC] well, and we would be grateful if you would be one of the two or three presenters at our gathering on **[DATE], 9:45–10:30 am**, at [VENUE]. Each topic in *Bharat: Rooted in Heritage, Inspired for the Future* is presented together by volunteers from our community: one tells **the story**, one explains **the verses**, and one connects it to **today** and leads a short practice. We suggest you take [PART]; your fellow presenters are [NAMES].
 
-We will send you the topic guide for your month: the core message, verses with sources, what to cover, circle activities, games and a short quiz. Please keep the talk to about 40 minutes, include one five-minute practice everyone can do together, cite each verse by its source, and say when something is tradition rather than history.
+We will send you the topic guide for your month: the core message, verses with sources, what to cover, circle activities, games and a short quiz. Please agree your parts with the other presenters (about 12–15 minutes each), cite each verse by its source, and say when something is tradition rather than history.
 
 Please confirm by [DATE] and send a short introduction of yourself for the poster.
 
@@ -50,7 +50,7 @@ With thanks,
 
 From January 2027, *Bharat: Rooted in Heritage, Inspired for the Future* brings twelve Sunday mornings of learning to our own locality: the Vedas, Upanishads, Yoga, the Ramayana, the Mahabharata, the Gita and the Buddha, for every age. There are no fees and no sponsors. Everything runs on seva.
 
-- **Present a topic** you know well; any volunteer can sign up for any month.
+- **Present a topic** with one or two others; any volunteer can sign up for any month.
 - **Lead a circle** for children, youth, working people or elders.
 - **Help on the day:** welcome desk, seating, stage and sound, photos, setting up.
 - **Lend what you have:** durries, chairs, a sound system or a projector.
@@ -93,19 +93,19 @@ With regards,
 > Gathering 1: The Vedas — the roots of Bharat
 > Sunday 17 January 2027 · 9:30 am to 12:30 pm · [VENUE]
 >
-> Opening by our chief guest, a talk by a volunteer, circles and games for every age, a quiz, and a certificate for everyone.
+> Opening by our chief guest, talks by 2–3 volunteer presenters, circles and games for every age, a quiz, and a certificate for everyone.
 > Free, and run entirely by volunteers. Tell us you're coming: [WEBSITE LINK]
 
 ## 7. Press note
 
 **[LOCALITY] to host twelve monthly gatherings on India's wisdom traditions**
 
-[CITY], [DATE]: *Bharat: Rooted in Heritage, Inspired for the Future*, a free, volunteer-run series, begins on Sunday 17 January 2027 at [VENUE]. Over twelve months it follows India's wisdom in historical order, from the Vedas through the Upanishads, Yoga, the Ramayana, the Mahabharata and the Gita to the age of the Buddha. Each gathering is opened by an invited guest, presented by a local volunteer, and includes circles for every age, games, a quiz and a certificate for all participants. The opening will be attended by [CHIEF GUEST]. Details: [WEBSITE LINK] or [PHONE].
+[CITY], [DATE]: *Bharat: Rooted in Heritage, Inspired for the Future*, a free, volunteer-run series, begins on Sunday 17 January 2027 at [VENUE]. Over twelve months it follows India's wisdom in historical order, from the Vedas through the Upanishads, Yoga, the Ramayana, the Mahabharata and the Gita to the age of the Buddha. Each gathering is opened by an invited guest, presented together by two or three local volunteers, and includes circles for every age, games, a quiz and a certificate for all participants. The opening will be attended by [CHIEF GUEST]. Details: [WEBSITE LINK] or [PHONE].
 
 ## 8. Gathering-day checklist
 
 **One week before**
-- [ ] Presenter confirmed and topic guide sent
+- [ ] 2–3 presenters confirmed, parts agreed and topic guide sent
 - [ ] Chief guest / delegates confirmed; online link tested if joining remotely
 - [ ] Posters up; WhatsApp invitation sent; lane volunteers inviting families
 - [ ] Certificates and quiz sheets printed
@@ -117,6 +117,6 @@ With regards,
 - [ ] Registration desk, certificate desk, circle materials and game kits
 
 **After**
-- [ ] Attendance entered; thank-you messages to presenter, delegates, venue and volunteers
+- [ ] Attendance entered; thank-you messages to presenters, delegates, venue and volunteers
 - [ ] Photos (with consent) and highlights shared
-- [ ] Next month's presenter and delegate confirmed
+- [ ] Next month's presenters and delegate confirmed

@@ -219,7 +219,17 @@ textarea.f{min-height:110px}
       .then(function (r) { return r.json(); }).catch(function () { return { ok: false, error: 'network' }; });
   }
   function liveMonth(n) { return (LIVE && LIVE.months && LIVE.months[String(n)]) || { families: 0, people: 0, names: [], seva: {} }; }
-  function presenterOf(m) { var l = liveMonth(m.n), p = (l.seva && l.seva.present) || []; return m.presenter || p[0] || ''; }
+  function presentersOf(m) {
+    var l = liveMonth(m.n), out = (m.presenters || []).slice();
+    ((l.seva && l.seva.present) || []).forEach(function (p) { if (out.indexOf(p) < 0) out.push(p); });
+    return out;
+  }
+  function presentersText(m) {
+    var p = presentersOf(m), left = Math.max(0, 2 - p.length);
+    if (!p.length) return '2–3 volunteers needed';
+    return p.join(', ') + (p.length < 2 ? ' · ' + left + ' more needed' : p.length < 3 ? ' · room for one more' : '');
+  }
+  function presentersOpen(m) { return presentersOf(m).length < 3; }
 
   var ROUTES = {
     home: ['Bharat', homePage, 'home'], year: ['The year', yearPage, 'year'], join: ['Join', joinPage, 'join'], seva: ['Volunteer', sevaPage, 'seva'],
@@ -253,13 +263,13 @@ textarea.f{min-height:110px}
       '<div class="verbs"><span>Learn.</span><span>Practise.</span><span>Serve.</span><span>Grow.</span></div>' +
       '<p style="margin:6px 0 0">Twelve Sunday mornings from the Vedas to the Buddha, for everyone. Free, and run entirely by volunteers.</p></section>';
     if (nm) {
-      var n = daysTo(nm), pr = presenterOf(nm), inn = MINE.rsvp[nm.n] && MINE.rsvp[nm.n].sent;
+      var n = daysTo(nm), inn = MINE.rsvp[nm.n] && MINE.rsvp[nm.n].sent;
       s += '<div class="band b-saffron" style="margin-top:18px"><div class="eb">Next gathering · ' + esc(nm.month) + ' · ' + esc(nm.festival) + '</div>' +
         '<div class="count"><div><div class="n">' + n + '</div><div class="l">' + (n === 0 ? 'Today!' : n === 1 ? 'day to go' : 'days to go') + '</div></div>' +
         '<div><div class="disp" style="font-size:24px;line-height:1.15">' + esc(nm.topic) + '</div><div class="small">' + esc(nm.theme) + '</div><div class="small">' + esc(niceDate(nm)) + ' · ' + esc(D.time) + '</div>' +
-        '<div class="small"><b>Presenter:</b> ' + (pr ? esc(pr) : 'a volunteer is needed') + '</div></div></div>' +
+        '<div class="small"><b>Presenters:</b> ' + esc(presentersText(nm)) + '</div></div></div>' +
         '<div class="row" style="margin-top:12px"><a class="btn primary" href="#month-' + nm.n + '/join">' + (inn ? 'You’re in ✓' : 'Count us in') + '</a>' +
-        '<a class="btn ghost" href="#month-' + nm.n + '/day">Topics of the day</a>' + (pr ? '' : '<button class="btn ghost" data-act="offer" data-m="' + nm.n + '">Offer to present</button>') + '</div></div>';
+        '<a class="btn ghost" href="#month-' + nm.n + '/day">Topics of the day</a>' + (presentersOpen(nm) && !MINE.seva[nm.n + ':present'] ? '<button class="btn ghost" data-act="offer" data-m="' + nm.n + '">Join as a presenter</button>' : '') + '</div></div>';
     }
     s += '<h2>The year at a glance</h2><div class="small muted">' + held + ' of 12 gatherings held · tap an arch</div>' + arcHtml();
     if (LIVE) s += '<h2>Together so far</h2><div class="stats"><div class="stat"><b>' + (LIVE.families || 0) + '</b><span>families</span></div><div class="stat"><b>' + (LIVE.people || 0) + '</b><span>people</span></div><div class="stat"><b>' + sevaCount() + '</b><span>volunteer sign-ups</span></div></div>';
@@ -276,10 +286,10 @@ textarea.f{min-height:110px}
     var ni = nextIdx();
     return '<div class="eb">The journey, oldest first</div><h1>From the Vedas to the Buddha</h1>' + arcHtml() + '<ul class="tl">' +
       D.months.map(function (m, i) {
-        var n = daysTo(m), pr = presenterOf(m);
+        var n = daysTo(m), np = presentersOf(m).length;
         var st = n < 0 ? '<span class="pill ok">Held</span>' : i === ni ? '<span class="pill">Next · ' + whenText(m) + '</span>' : '';
         return '<li><span class="mk" style="background:' + COLS[m.colour] + '"></span><div style="flex:1"><a href="#month-' + m.n + '"><b class="disp" style="font-size:18px">' + esc(m.topic) + '</b></a> ' + st +
-          '<div class="small">' + esc(m.theme) + '</div><div class="when">' + esc(shortDate(m)) + ' · ' + esc(m.festival) + (pr ? ' · Presenter: ' + esc(pr) : n >= 0 ? ' · <b style="color:var(--kumkum)">Presenter needed</b>' : '') + '</div></div></li>';
+          '<div class="small">' + esc(m.theme) + '</div><div class="when">' + esc(shortDate(m)) + ' · ' + esc(m.festival) + (n >= 0 ? ' · ' + (np >= 2 ? 'Presenters: ' + esc(presentersOf(m).join(', ')) : '<b style="color:var(--kumkum)">Presenters: ' + np + ' of 2–3</b>') : '') + '</div></div></li>';
       }).join('') + '</ul><p class="small muted">Every third Sunday, ' + esc(D.time) + ', at ' + esc(D.venue.name) + '. Festival links are seasonal; check the local panchang.</p>';
   }
 
@@ -289,7 +299,9 @@ textarea.f{min-height:110px}
     var item = function (tm, nm, c, body) { return '<li><div class="tm">' + tm + '</div><div class="bx" style="--c:' + c + '"><div class="nm">' + nm + '</div>' + body + '</div></li>'; };
     return '<ol class="agenda">' +
       item('9:30', 'Deep prajwalan · opening', 'var(--saffron)', '<div class="tp">Opening by our chief guest</div><div class="sub"><b>' + esc(delegatesOf(m)) + '</b>, with a child and an elder. Invocation: <i>Oṁ saha nāvavatu</i>.</div>') +
-      item('9:45', 'Pravachan', COLS[m.colour], '<div class="tp">' + esc(m.topic) + ': ' + esc(m.theme) + '</div><div class="sub">Presented by ' + (presenterOf(m) ? esc(presenterOf(m)) : 'a volunteer') + '. Key verse: <i>' + esc(v.text) + '</i> (' + esc(v.source) + ')</div>') +
+      item('9:45', 'Pravachan · 2–3 presenters', COLS[m.colour], '<div class="tp">' + esc(m.topic) + ': ' + esc(m.theme) + '</div><div class="cir">' +
+        D.presenterParts.map(function (p, k) { var nm = presentersOf(m)[k]; return '<div class="' + ['b-saffron', 'b-haldi', 'b-peacock'][k] + '"><b>' + (k + 1) + '. ' + esc(p.part) + ':</b> ' + esc(p.what) + (nm ? ' <i>(' + esc(nm) + ')</i>' : '') + '</div>'; }).join('') +
+        '</div><div class="sub" style="margin-top:6px">Key verse: <i>' + esc(v.text) + '</i> (' + esc(v.source) + ')</div>') +
       item('10:45', 'Shishya sabha · circles and games', 'var(--peacock)', '<div class="cir">' + Object.keys(m.circles).map(function (k) { return '<div class="' + CIRCLE_COL[k] + '"><b>' + esc(k) + ':</b> ' + esc(m.circles[k]) + '</div>'; }).join('') + '</div><div class="sub" style="margin-top:6px">Games: ' + m.games.map(function (g) { return esc(g.name); }).join(' · ') + '</div>') +
       item('11:30', 'Quiz', 'var(--haldi)', '<div class="tp">Quick quiz: ' + m.quiz.length + ' questions on ' + esc(m.topic) + '</div><div class="sub">Try it below before or after the gathering.</div>') +
       item('11:45', 'Prashnottari · life’s question', 'var(--kumkum)', '<div class="tp">' + esc(m.lifeQuestion.question) + '</div><div class="sub">' + esc(m.lifeQuestion.episode) + ' <b>(' + esc(m.lifeQuestion.source) + ')</b></div>') +
@@ -354,20 +366,21 @@ textarea.f{min-height:110px}
     var st = QUIZ[m.n] || {}, right = 0, done = 0; m.quiz.forEach(function (q, qi) { if (st[qi] != null) { done++; if (st[qi] === q.answer) right++; } });
     if (done === m.quiz.length) { x.fillStyle = '#1f5f6b'; x.font = '600 30px Mukta, sans-serif'; x.fillText('Quiz score: ' + right + ' of ' + m.quiz.length, W / 2, 860); }
     x.fillStyle = '#e9b949'; x.font = '600 40px Fraunces, Georgia, serif'; x.fillText('Learn. Practise. Serve. Grow.', W / 2, 940);
-    x.fillStyle = '#2a1a12'; x.font = '26px Mukta, sans-serif'; x.textAlign = 'left'; x.fillText('Organising volunteer', 170, 1015); x.textAlign = 'right'; x.fillText('Presenter', W - 170, 1015);
+    x.fillStyle = '#2a1a12'; x.font = '26px Mukta, sans-serif'; x.textAlign = 'left'; x.fillText('Organising volunteer', 170, 1015); x.textAlign = 'right'; x.fillText('Presenters', W - 170, 1015);
     x.beginPath(); x.moveTo(150, 980); x.lineTo(470, 980); x.moveTo(W - 470, 980); x.lineTo(W - 150, 980); x.stroke();
     var a = document.createElement('a'); a.download = 'Bharat-certificate-' + m.month + '-' + name.replace(/[^A-Za-z0-9]+/g, '-') + '.png'; a.href = c.toDataURL('image/png'); document.body.appendChild(a); a.click(); a.remove();
   }
 
   function monthPage(i) {
-    var m = D.months[i], c = m.colour, n = daysTo(m), live = liveMonth(m.n), pr = presenterOf(m);
+    var m = D.months[i], c = m.colour, n = daysTo(m), live = liveMonth(m.n), prs = presentersOf(m), mineP = !!MINE.seva[m.n + ':present'];
     var s = '<div class="mhead b-' + c + '"><div class="eb">' + esc(m.month) + ' · ' + esc(m.festival) + '</div>' +
       '<div class="row" style="gap:12px;align-items:flex-end"><div class="num">' + String(m.n).padStart(2, '0') + '</div><div><div class="ttl">' + esc(m.topic) + '</div><div>' + esc(m.theme) + '</div></div></div></div>' +
       '<nav class="chips" aria-label="Sections"><a href="#month-' + m.n + '/day">Topics of the day</a><a href="#month-' + m.n + '/topic">The topic</a><a href="#month-' + m.n + '/games">Games</a><a href="#month-' + m.n + '/quiz">Quiz</a><a href="#month-' + m.n + '/join">Coming?</a><a href="#month-' + m.n + '/sankalp">Sankalp</a><a href="#month-' + m.n + '/certificate">Certificate</a></nav>' +
       '<p style="margin-top:14px"><b>' + esc(niceDate(m)) + '</b> · ' + esc(D.time) + ' <span class="pill' + (n >= 0 ? '' : ' ok') + '">' + whenText(m) + '</span></p>' +
-      '<div class="card" style="display:flex;gap:12px;align-items:center"><div style="flex:1"><div class="eb">Presented by a volunteer</div><div class="disp" style="font-size:18px">' + (pr ? esc(pr) : 'Presenter needed') + '</div>' +
-      (pr ? '' : '<div class="small muted">Know this topic well? Offer to present it; you will get the topic guide.</div>') + '</div>' +
-      (!pr && n >= 0 ? '<button class="btn primary small" data-act="offer" data-m="' + m.n + '">Offer to present</button>' : '') + '</div>' +
+      '<div class="card"><div class="row" style="justify-content:space-between"><div class="eb">Presented together by 2–3 volunteers</div><span class="meter' + (prs.length >= 2 ? ' full' : '') + '">' + prs.length + ' of 3</span></div>' +
+      D.presenterParts.map(function (p, k) { return '<div class="role"><div class="info"><b>' + (k + 1) + '. ' + esc(p.part) + '</b> · ' + (prs[k] ? esc(prs[k]) : '<span style="color:var(--kumkum);font-weight:700">open</span>') + '<div class="names">' + esc(p.what) + '</div></div></div>'; }).join('') +
+      (n >= 0 ? (mineP ? '<div class="row" style="margin-top:8px"><span class="pill ok">You are presenting</span><button class="btn small" data-act="unseva" data-m="' + m.n + '" data-r="present">Withdraw</button></div>'
+        : prs.length < 3 ? '<div class="row" style="margin-top:8px"><button class="btn primary small" data-act="offer" data-m="' + m.n + '">Join as a presenter</button><span class="small muted">You get the topic guide; parts are agreed among the presenters.</span></div>' : '') : '') + '</div>' +
       '<h2 id="day">Topics of the day</h2>' + agenda(m) +
       '<h2 id="topic">The topic</h2><p style="font-size:18px">' + esc(m.core) + '</p>' + (m.note ? '<div class="notice">' + esc(m.note) + '</div>' : '') +
       '<h3>Key verses</h3>' + m.verses.map(function (v) { return '<div class="verse"><div class="v">' + esc(v.text) + '</div><div class="s">' + esc(v.source) + '</div><div>' + esc(v.meaning) + '</div></div>'; }).join('') +
@@ -437,11 +450,11 @@ textarea.f{min-height:110px}
     var up = D.months.filter(function (m) { return daysTo(m) >= 0; });
     var sel = +((location.hash.split('/')[1]) || (up[0] && up[0].n) || 1), m = D.months[sel - 1] || D.months[0];
     var s = '<div class="eb">Everyone has a role</div><h1>Volunteer</h1><p>Every gathering is organised, presented and run by volunteers. Pick a role, even for one Sunday.</p>' +
-      '<div class="band b-kumkum"><div class="eb">Present a topic</div><div class="disp" style="font-size:20px">Share what you know</div><p style="margin:4px 0 0">Any volunteer can sign up for any topic. You get a topic guide with the verses, stories, games and quiz.</p></div>' +
+      '<div class="band b-kumkum"><div class="eb">Present a topic</div><div class="disp" style="font-size:20px">Share what you know</div><p style="margin:4px 0 0">Each topic is presented by two or three volunteers together: one tells the story, one explains the verses, one connects it to today. Any volunteer can sign up for any topic.</p></div>' +
       '<div class="card">' + D.months.map(function (x) {
         var names = (liveMonth(x.n).seva || {}).present || [], on = !!MINE.seva[x.n + ':present'], past = daysTo(x) < 0;
         return '<div class="role"><span class="mk" style="width:14px;height:20px;border-radius:99px 99px 0 0;background:' + COLS[x.colour] + ';flex-shrink:0"></span><div class="info"><b>' + esc(x.topic) + '</b><div class="names">' + esc(shortDate(x)) +
-          (x.presenter ? ' · Presenter: ' + esc(x.presenter) : names.length ? ' · Signed up: ' + names.map(esc).join(', ') : ' · Presenter needed') + '</div></div>' +
+          ' · Presenters ' + presentersOf(x).length + ' of 3' + (presentersOf(x).length ? ': ' + presentersOf(x).map(esc).join(', ') : '') + '</div></div>' +
           (past ? '<span class="pill ok">Held</span>' : ME ? '<button class="btn small' + (on ? '' : ' primary') + '" data-act="' + (on ? 'unseva' : 'offer') + '" data-m="' + x.n + '" data-r="present">' + (on ? 'Withdraw' : 'Sign up') + '</button>' : '') + '</div>';
       }).join('') + (ME ? '' : '<p class="small" style="margin-top:10px"><a href="#join">Register</a> to sign up.</p>') + '</div><h2>Help on the day</h2>';
     if (up.length) {

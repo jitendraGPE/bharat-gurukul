@@ -1,10 +1,10 @@
 # Topic guides for volunteer presenters and circle leaders
 
-Every topic is presented by a volunteer. This guide gives the presenter and the four circle leaders what they need for each month: the message, verses with sources, what to cover, circle activities, games, a quiz with answers, the life question from the epics, and the month's sankalp.
+Every topic is presented together by two or three volunteers: one tells **the story**, one explains **the verses**, and one connects it to **today** and leads the shared practice. This guide gives the presenters and the four circle leaders what they need for each month: the message, verses with sources, what to cover, circle activities, games, a quiz with answers, the life question from the epics, and the month's sankalp.
 
 **Every gathering opens** with invited delegates lighting the lamp with a child and an elder, and the invocation *Oṁ saha nāvavatu, saha nau bhunaktu, saha vīryaṁ karavāvahai, tejasvi nāv adhītam astu, mā vidviṣāvahai* (may we learn together, grow together, and never be hostile to one another).
 
-**Rules for every presenter:** recite each verse, give its source and explain it simply; keep the talk to 40 minutes; lead one practice everyone does together; speak to all ages; never overstate a historical claim, and say when something is tradition rather than history.
+**Rules for every presenter:** agree your parts beforehand (about 12–15 minutes each, 40 minutes in all); recite each verse, give its source and explain it simply; lead one practice everyone does together; speak to all ages; never overstate a historical claim, and say when something is tradition rather than history.
 
 Ramayana references follow Valmiki (Gita Press sarga numbers). Mahabharata references follow the BORI critical edition (CE chapter.verse).
 
@@ -13,7 +13,7 @@ Ramayana references follow Valmiki (Gita Press sarga numbers). Mahabharata refer
 **The roots of Bharat** · 2027-01-17 · Makar Sankranti
 
 - **Opening by:** an ambassador or invited delegate (to be announced)
-- **Presented by:** volunteer needed
+- **Presented by:** 2–3 volunteers (1. the story · 2. the verses · 3. today)
 
 **Core message:** The Vedas are India’s oldest texts. They teach that truth is one, that we must live in harmony with nature, and that people must walk and decide together.
 
@@ -69,7 +69,7 @@ Answers: 1 C, 2 B, 3 A, 4 A, 5 A
 **Knowledge born from the Vedas** · 2027-02-21 · Vasant Panchami
 
 - **Opening by:** an ambassador or invited delegate (to be announced)
-- **Presented by:** volunteer needed
+- **Presented by:** 2–3 volunteers (1. the story · 2. the verses · 3. today)
 
 **Core message:** To understand the Vedas, our ancestors built sciences of sound, grammar, mathematics, astronomy, health and building. Learning and devotion were never separate.
 
@@ -124,7 +124,7 @@ Answers: 1 A, 2 B, 3 A, 4 A, 5 A
 **Knowing yourself** · 2027-03-21 · Holi
 
 - **Opening by:** an ambassador or invited delegate (to be announced)
-- **Presented by:** volunteer needed
+- **Presented by:** 2–3 volunteers (1. the story · 2. the verses · 3. today)
 
 **Core message:** The Upanishads turn the search inward. They ask “Who am I?” and answer that the same divine self lives in every being.
 
@@ -178,7 +178,7 @@ Answers: 1 A, 2 A, 3 A, 4 A, 5 A
 **Nachiketa and mastering the mind** · 2027-04-18 · Ram Navami
 
 - **Opening by:** an ambassador or invited delegate (to be announced)
-- **Presented by:** volunteer needed
+- **Presented by:** 2–3 volunteers (1. the story · 2. the verses · 3. today)
 
 **Core message:** A boy, Nachiketa, has the courage to ask Death itself about the meaning of life. His teacher shows that a trained mind, guided by a clear intellect, carries us to our goal.
 
@@ -231,7 +231,7 @@ Answers: 1 A, 2 A, 3 A, 4 A, 5 A
 **Calm in every storm** · 2027-05-16 · Buddha Purnima
 
 - **Opening by:** an ambassador or invited delegate (to be announced)
-- **Presented by:** volunteer needed
+- **Presented by:** 2–3 volunteers (1. the story · 2. the verses · 3. today)
 
 **Core message:** The sages found that when the breath is steady, the mind becomes steady. Breath and meditation are tools anyone can use, at any age.
 
@@ -287,7 +287,7 @@ Answers: 1 A, 2 A, 3 A, 4 A, 5 A
 **Strong body, steady mind, good conduct** · 2027-06-20 · International Day of Yoga (21 June)
 
 - **Opening by:** an ambassador or invited delegate (to be announced)
-- **Presented by:** volunteer needed
+- **Presented by:** 2–3 volunteers (1. the story · 2. the verses · 3. today)
 
 **Core message:** Yoga is an eight-step path that begins with how we treat others and ourselves, and ends in a still, clear mind.
 
@@ -342,7 +342,7 @@ Answers: 1 A, 2 C, 3 A, 4 A, 5 A
 **Character, family and keeping your word** · 2027-07-18 · Guru Purnima
 
 - **Opening by:** an ambassador or invited delegate (to be announced)
-- **Presented by:** volunteer needed
+- **Presented by:** 2–3 volunteers (1. the story · 2. the verses · 3. today)
 
 **Core message:** Character is built through small choices: keeping your word, respecting elders and serving without expecting reward.
 
@@ -397,7 +397,7 @@ Answers: 1 A, 2 A, 3 A, 4 A, 5 A
 **Right action in conflict** · 2027-08-15 · Independence Day · Raksha Bandhan
 
 - **Opening by:** an ambassador or invited delegate (to be announced)
-- **Presented by:** volunteer needed
+- **Presented by:** 2–3 volunteers (1. the story · 2. the verses · 3. today)
 
 **Core message:** Life is full of grey situations. The Mahabharata shows how to choose rightly when every option has a cost, and what happens when greed and pride go unchecked.
 
@@ -453,7 +453,7 @@ Answers: 1 A, 2 A, 3 A, 4 A, 5 A
 **Courage, duty and clear decisions** · 2027-09-19 · Ganesh Chaturthi
 
 - **Opening by:** an ambassador or invited delegate (to be announced)
-- **Presented by:** volunteer needed
+- **Presented by:** 2–3 volunteers (1. the story · 2. the verses · 3. today)
 
 **Core message:** Do your duty fully and let go of anxiety about the result. A steady mind makes good decisions.
 
@@ -509,7 +509,7 @@ Answers: 1 A, 2 A, 3 A, 4 A, 5 B
 **Devotion, courage and joy in service** · 2027-10-17 · Navaratri · Sharad Purnima
 
 - **Opening by:** an ambassador or invited delegate (to be announced)
-- **Presented by:** volunteer needed
+- **Presented by:** 2–3 volunteers (1. the story · 2. the verses · 3. today)
 
 **Core message:** Devotion is open to everyone: a five-year-old, a poor friend or a whole village. Love and service, not status, bring us close to the divine.
 
@@ -564,7 +564,7 @@ Answers: 1 A, 2 A, 3 A, 4 C, 5 A
 **An age of questions and assemblies** · 2027-11-21 · Kartik Purnima
 
 - **Opening by:** an ambassador or invited delegate (to be announced)
-- **Presented by:** volunteer needed
+- **Presented by:** 2–3 volunteers (1. the story · 2. the verses · 3. today)
 
 **Core message:** Around the 6th–5th century BCE, India was full of new cities, trade and bold thinkers. Kingdoms and republics debated and governed through assemblies.
 
@@ -616,7 +616,7 @@ Answers: 1 C, 2 A, 3 A, 4 A, 5 A
 **The middle way and a compassionate mind** · 2027-12-19 · Annual finale
 
 - **Opening by:** an ambassador or invited delegate (to be announced)
-- **Presented by:** volunteer needed
+- **Presented by:** 2–3 volunteers (1. the story · 2. the verses · 3. today)
 
 **Core message:** Siddhartha left comfort to understand suffering and found the middle way. His message of a trained mind, right action and compassion is part of India’s shared heritage.
 

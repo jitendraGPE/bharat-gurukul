@@ -18,8 +18,8 @@
  "roles": [
   {
    "id": "present",
-   "name": "Present the month’s topic",
-   "need": 1
+   "name": "Present the topic (2–3 presenters)",
+   "need": 3
   },
   {
    "id": "circle",
@@ -76,7 +76,7 @@
   [
    "9:45",
    "Pravachan",
-   "A volunteer presents the day’s topic, with one practice we all do together"
+   "Two or three volunteers present the topic together: the story, the verses, and what it means today"
   ],
   [
    "10:30",
@@ -286,7 +286,6 @@
     "source": "Ramayana, Ayodhya Kanda 18"
    },
    "sankalp": "Greet the rising sun each morning and sit in silence for three minutes.",
-   "presenter": "",
    "games": [
     {
      "name": "Mantra relay",
@@ -354,7 +353,8 @@
      "why": ""
     }
    ],
-   "delegates": ""
+   "delegates": "",
+   "presenters": []
   },
   {
    "n": 2,
@@ -400,7 +400,6 @@
     "source": "Mahabharata, Udyoga Parva (Vidura Niti), CE 5.33.66"
    },
    "sankalp": "Ten minutes of new learning every day, and one fixed time to sleep and wake.",
-   "presenter": "",
    "games": [
     {
      "name": "Rope geometry challenge",
@@ -468,7 +467,8 @@
      "why": ""
     }
    ],
-   "delegates": ""
+   "delegates": "",
+   "presenters": []
   },
   {
    "n": 3,
@@ -519,7 +519,6 @@
     "source": "Mahabharata, Vana Parva (Yaksha Prashna), CE 3.297.62–64"
    },
    "sankalp": "Five minutes of journalling each night: who am I beyond my roles today?",
-   "presenter": "",
    "games": [
     {
      "name": "The salt mystery",
@@ -587,7 +586,8 @@
      "why": ""
     }
    ],
-   "delegates": ""
+   "delegates": "",
+   "presenters": []
   },
   {
    "n": 4,
@@ -633,7 +633,6 @@
     "source": "Mahabharata, Vana Parva (Yaksha Prashna), CE 3.297.57"
    },
    "sankalp": "Ten screen-free minutes a day, and one family hour a week with all phones in a basket.",
-   "presenter": "",
    "games": [
     {
      "name": "Chariot tug",
@@ -701,7 +700,8 @@
      "why": ""
     }
    ],
-   "delegates": ""
+   "delegates": "",
+   "presenters": []
   },
   {
    "n": 5,
@@ -748,7 +748,6 @@
     "source": "Mahabharata, Udyoga Parva (Vidura Niti), CE 5.33.48"
    },
    "sankalp": "Five minutes of slow breathing or silent sitting every morning.",
-   "presenter": "",
    "games": [
     {
      "name": "Stillness statue",
@@ -816,7 +815,8 @@
      "why": ""
     }
    ],
-   "delegates": ""
+   "delegates": "",
+   "presenters": []
   },
   {
    "n": 6,
@@ -862,7 +862,6 @@
     "source": "Mahabharata, Udyoga Parva (Vidura Niti), CE 5.33.17, 26"
    },
    "sankalp": "Fifteen minutes of yoga daily, with three rounds of Surya Namaskar.",
-   "presenter": "",
    "games": [
     {
      "name": "Animal asana freeze",
@@ -930,7 +929,8 @@
      "why": "Bhagavad Gita 2.50"
     }
    ],
-   "delegates": ""
+   "delegates": "",
+   "presenters": []
   },
   {
    "n": 7,
@@ -972,7 +972,6 @@
     "source": "Ramayana, Ayodhya Kanda 112"
    },
    "sankalp": "One act of service at home every day, done without being asked.",
-   "presenter": "",
    "games": [
     {
      "name": "Paduka relay",
@@ -1040,7 +1039,8 @@
      "why": "Aranya Kanda 51"
     }
    ],
-   "delegates": ""
+   "delegates": "",
+   "presenters": []
   },
   {
    "n": 8,
@@ -1087,7 +1087,6 @@
     "source": "Mahabharata, Sabha Parva, CE 2.60.7–8"
    },
    "sankalp": "Before any big decision, pause and consult one elder or trusted friend.",
-   "presenter": "",
    "games": [
     {
      "name": "Yaksha’s riddles",
@@ -1155,7 +1154,8 @@
      "why": ""
     }
    ],
-   "delegates": ""
+   "delegates": "",
+   "presenters": []
   },
   {
    "n": 9,
@@ -1206,7 +1206,6 @@
     "source": "Mahabharata, Udyoga Parva, CE 5.141.33"
    },
    "sankalp": "Do one duty fully every day, without complaint and without worrying about the result.",
-   "presenter": "",
    "games": [
     {
      "name": "Chariot wheel craft",
@@ -1274,7 +1273,8 @@
      "why": ""
     }
    ],
-   "delegates": ""
+   "delegates": "",
+   "presenters": []
   },
   {
    "n": 10,
@@ -1316,7 +1316,6 @@
     "source": "Ramayana, Aranya Kanda 51"
    },
    "sankalp": "One act of selfless service each week, and one small personal goal kept daily, like Dhruva.",
-   "presenter": "",
    "games": [
     {
      "name": "Find the Pole Star",
@@ -1384,7 +1383,8 @@
      "why": ""
     }
    ],
-   "delegates": ""
+   "delegates": "",
+   "presenters": []
   },
   {
    "n": 11,
@@ -1425,7 +1425,6 @@
     "source": "Mahabharata, Udyoga Parva, CE 5.39.7"
    },
    "sankalp": "Learn one story of our region’s history and tell it at home; join one residents’ or family meeting.",
-   "presenter": "",
    "games": [
     {
      "name": "Mahajanapada map puzzle",
@@ -1493,7 +1492,8 @@
      "why": ""
     }
    ],
-   "delegates": ""
+   "delegates": "",
+   "presenters": []
   },
   {
    "n": 12,
@@ -1540,7 +1540,6 @@
     "source": "Ramayana, Yuddha Kanda 18.33"
    },
    "sankalp": "Two minutes of loving-kindness each night, and our family’s pledge for 2028 on the wall at home.",
-   "presenter": "",
    "games": [
     {
      "name": "The gift not accepted",
@@ -1608,7 +1607,22 @@
      "why": ""
     }
    ],
-   "delegates": ""
+   "delegates": "",
+   "presenters": []
+  }
+ ],
+ "presenterParts": [
+  {
+   "part": "The story",
+   "what": "The background and narrative of the text: who, when and what happens"
+  },
+  {
+   "part": "The verses",
+   "what": "The key verses: recite, give the source and explain the meaning simply"
+  },
+  {
+   "part": "Today",
+   "what": "What it means for our lives now, and leading the practice everyone does together"
   }
  ]
 }

@@ -21,7 +21,7 @@ var MONTHS = [
 ];
 
 var ROLES = [
-  ['present', 'Present the month\u2019s topic', 1], ['circle', 'Lead a learning circle', 4],
+  ['present', 'Present the topic (2\u20133 presenters)', 3], ['circle', 'Lead a learning circle', 4],
   ['welcome', 'Welcome desk and registration', 3], ['seating', 'Seating and elders\u2019 care', 3],
   ['bal', 'Bal Gurukul helper', 3], ['stage', 'Stage, sound and timekeeping', 2],
   ['media', 'Photos and WhatsApp updates', 2], ['clean', 'Setting up and clean-up', 3],
@@ -32,13 +32,13 @@ var TASKS = [
   ['15 Oct 2026', 'Form the committee; agree the plan', 'Convenor'],
   ['31 Oct 2026', 'Book the venue for all 12 dates; sound and seating', 'Civic liaison'],
   ['31 Oct 2026', 'Set up the Seva Kosh box and open accounts register', 'Accounts coordinator'],
-  ['15 Nov 2026', 'Find volunteer presenters for Jan–Mar; send each the topic guide', 'Programme head'],
+  ['15 Nov 2026', 'Find 2\u20133 volunteer presenters for each of Jan–Mar; send each the topic guide', 'Programme head'],
   ['15 Nov 2026', 'Arrange printing, durries and sound in kind', 'Management track lead'],
   ['30 Nov 2026', 'Print posters, Sadhana Cards, booklets; share the website link', 'Media and registrations'],
   ['30 Nov 2026', 'Tie up with 3–5 schools and 2 senior citizens’ associations', 'Children’s and elders’ leads'],
   ['10 Dec 2026', 'Recruit and brief 20 volunteers; code of conduct signed', 'Volunteer coordinator'],
   ['10 Dec 2026', 'Recruit one lane volunteer per building to invite 5–10 families', 'Volunteer coordinator'],
-  ['15 Dec 2026', 'Go/no-go: venue booked, 3 presenters, 150 registrations', 'Committee'],
+  ['15 Dec 2026', 'Go/no-go: venue booked, presenters for Jan\u2013Mar, 150 registrations', 'Committee'],
   ['20 Dec 2026', 'Curtain-raiser at Gita Jayanti', 'Programme head'],
   ['10 Jan 2027', 'Dry run at the venue', 'All']
 ];
@@ -62,8 +62,8 @@ function buildWorkbook() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   ['Families', 'RSVPs', 'Seva', 'Questions'].forEach(function (n) { if (!ss.getSheetByName(n)) ss.insertSheet(n); });
   seed_(ss, 'Tasks', ['Due', 'Task', 'Owner', 'Status', 'Notes'], TASKS.map(function (t) { return [t[0], t[1], t[2], 'Not started', '']; }));
-  seed_(ss, 'Presenters', ['Month', 'Date', 'Topic', 'Volunteer presenter', 'Phone', 'Topic guide sent', 'Confirmed', 'Chief guest / delegates (opening)', 'Invitation sent', 'Circle leaders'],
-        MONTHS.map(function (m) { return [m[0], m[1], m[2], '', '', 'No', 'No', 'An ambassador or invited delegate (to be announced)', 'No', '']; }));
+  seed_(ss, 'Presenters', ['Month', 'Date', 'Topic', 'Presenter 1: the story', 'Presenter 2: the verses', 'Presenter 3: today', 'Topic guide sent', 'Confirmed', 'Chief guest / delegates (opening)', 'Invitation sent', 'Circle leaders'],
+        MONTHS.map(function (m) { return [m[0], m[1], m[2], '', '', '', 'No', 'No', 'An ambassador or invited delegate (to be announced)', 'No', '']; }));
   seed_(ss, 'Seva Kosh', ['Date', 'Month', 'In (₹)', 'Out (₹)', 'What for', 'Recorded by'], []);
   seed_(ss, 'Materials', ['Month', 'Topic', 'Materials (plus printed certificates and quiz sheets)', 'Arranged by', 'Ready?'],
         MATERIALS.map(function (m) { return [m[0], MONTHS[Number(m[0]) - 1][2], m[1], '', 'No']; }));
