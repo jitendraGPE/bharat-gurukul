@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bharat: Rooted in Heritage, Inspired for the Future</title>
+<meta name="description" content="A free, volunteer-run community gurukul: twelve monthly gatherings from the Vedas to the Buddha.">
+<meta name="theme-color" content="#9e2a2b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Bharat Gurukul">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Mukta:wght@400;600;700&family=Tiro+Devanagari+Sanskrit&display=swap">
+<style>
+:root{
+  --paper:#faf5ea; --raised:#fffdf8; --ink:#2a1a12; --muted:#6b5646; --line:#d9c9ae;
+  --kumkum:#9e2a2b; --saffron:#e8871e; --haldi:#e9b949; --peacock:#1f5f6b;
+  --on-kumkum:#fffdf8; --on-peacock:#fffdf8; --on-saffron:#2a1a12; --on-haldi:#2a1a12;
+  --ok:#2c6e49; --ok-bg:#e3f0e6; --warn-bg:#f7eac9; --need-bg:#f6d5cc; --wa:#15803d;
+  --shadow:0 1px 2px rgba(42,26,18,.08);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#1d1713; --raised:#27201a; --ink:#f3ece3; --muted:#c3ab93; --line:#4a3b2d;
+    --kumkum:#e0736a; --saffron:#f0a04a; --haldi:#e9c46a; --peacock:#6fb7c2;
+    --on-kumkum:#1d1713; --on-peacock:#1d1713; --on-saffron:#1d1713; --on-haldi:#1d1713;
+    --ok:#8fd1a8; --ok-bg:#1c3326; --warn-bg:#3a2f16; --need-bg:#40221d; --wa:#4ec27e;
+  }
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Mukta','Segoe UI',system-ui,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column}
+a{color:var(--kumkum)}
+button,input,select,textarea{font:inherit;color:inherit}
+.disp{font-family:'Fraunces',Georgia,serif;font-weight:600}
+.dev{font-family:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
+.eb{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--kumkum)}
+.muted{color:var(--muted)} .small{font-size:14px}
+header.top{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:8px;padding:calc(8px + env(safe-area-inset-top)) 12px 8px;background:var(--kumkum);color:var(--on-kumkum)}
+header.top .t{flex:1;font-family:'Fraunces',serif;font-weight:600;font-size:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.iconbtn{min-width:44px;min-height:44px;border:0;background:transparent;color:inherit;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.iconbtn:focus-visible,.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--kumkum);outline-offset:2px}
+header.top .iconbtn:focus-visible{outline-color:var(--on-kumkum)}
+main{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.page{max-width:720px;margin:0 auto;padding:20px 16px 32px}
+nav.pager{position:sticky;bottom:0;display:flex;align-items:center;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:var(--raised);border-top:1px solid var(--line)}
+nav.pager .mid{flex:1;text-align:center;font-size:13px;color:var(--muted)}
+.btn{text-decoration:none;display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 16px;border-radius:8px;border:1px solid var(--line);background:var(--raised);cursor:pointer;font-weight:600}
+.btn.primary{background:var(--kumkum);border-color:var(--kumkum);color:var(--on-kumkum)}
+.btn.wa{background:var(--wa);border-color:var(--wa);color:#fff}
+.btn:disabled{opacity:.5;cursor:default}
+.btn.small{min-height:36px;padding:4px 12px;font-size:14px}
+h1{font-family:'Fraunces',serif;font-weight:600;font-size:30px;line-height:1.15;margin:6px 0 12px}
+h2{font-family:'Fraunces',serif;font-weight:600;font-size:22px;line-height:1.2;margin:24px 0 8px}
+h3{font-family:'Fraunces',serif;font-weight:600;font-size:18px;margin:18px 0 6px}
+p{margin:0 0 12px}
+ul{padding-left:20px;margin:0 0 12px} li{margin-bottom:4px}
+.card{background:var(--raised);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:12px 0;box-shadow:var(--shadow)}
+.band{border-radius:10px;padding:14px 16px;margin:12px 0}
+.b-saffron{background:var(--saffron);color:var(--on-saffron)} .b-haldi{background:var(--haldi);color:var(--on-haldi)}
+.b-kumkum{background:var(--kumkum);color:var(--on-kumkum)} .b-peacock{background:var(--peacock);color:var(--on-peacock)}
+.band .eb{color:inherit;opacity:.9}
+.arches{display:flex;gap:5px;align-items:flex-end}
+.arches i{display:block;width:18px;height:28px;border-radius:999px 999px 0 0}
+.cover{margin:-20px -16px 0;min-height:calc(100vh - 130px);display:flex;flex-direction:column}
+.cover .top{background:var(--saffron);color:var(--on-saffron);padding:28px 20px 0}
+.cover .big{font-family:'Fraunces',serif;font-weight:600;font-size:76px;line-height:1;margin:18px 0}
+.cover .top .arches i{width:26px;height:40px;background:var(--kumkum)}
+.cover .bot{flex:1;background:var(--kumkum);color:var(--on-kumkum);padding:22px 20px 28px;display:flex;flex-direction:column;gap:10px}
+.cover .bot .h{font-family:'Fraunces',serif;font-weight:600;font-size:26px;line-height:1.15}
+.cover .verbs{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px;font-family:'Fraunces',serif;font-weight:600;font-size:28px;line-height:1.15;color:var(--haldi)}
+.btn.cta{background:transparent;color:inherit;border:1.5px solid currentColor}
+.cover .tag{font-style:italic;color:var(--haldi)}
+@media (prefers-color-scheme: dark){.cover .verbs{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px;font-family:'Fraunces',serif;font-weight:600;font-size:28px;line-height:1.15;color:var(--haldi)}
+.btn.cta{background:transparent;color:inherit;border:1.5px solid currentColor}
+.cover .tag{color:var(--on-kumkum);opacity:.85}}
+.stats{display:flex;gap:10px;flex-wrap:wrap}
+.stat{flex:1;min-width:120px;border-radius:10px;padding:10px 12px;background:rgba(255,253,248,.12);border:1px solid rgba(255,253,248,.3)}
+.stat b{display:block;font-size:24px;font-family:'Fraunces',serif}
+.toc a{display:flex;gap:12px;align-items:center;padding:10px 4px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);min-height:44px}
+.toc .n{font-family:'Fraunces',serif;font-weight:600;width:32px;color:var(--kumkum)}
+.toc .next{margin-left:auto;font-size:12px;font-weight:700;color:var(--on-saffron);background:var(--saffron);padding:2px 8px;border-radius:99px}
+.dot{display:inline-block;width:10px;height:14px;border-radius:99px 99px 0 0;flex-shrink:0}
+.mhead{margin:-20px -16px 0;padding:24px 16px 20px;border-radius:0 0 28px 28px}
+.mhead .num{font-family:'Fraunces',serif;font-weight:600;font-size:48px;line-height:1;opacity:.9}
+.mhead .ttl{font-family:'Fraunces',serif;font-weight:600;font-size:32px;line-height:1.1}
+.pill{display:inline-block;font-size:13px;font-weight:700;padding:2px 10px;border-radius:99px;background:var(--warn-bg);color:var(--ink)}
+.pill.ok{background:var(--ok-bg);color:var(--ok)}
+.verse{margin:0 0 12px}.verse .v{font-style:italic;font-size:17px}.verse .s{font-size:13px;font-weight:700;color:var(--kumkum)}
+table.t{width:100%;border-collapse:collapse;font-size:15px}
+table.t td,table.t th{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+table.t th{font-size:13px;color:var(--muted);border-bottom:2px solid var(--kumkum)}
+.lq{background:var(--peacock);color:var(--on-peacock);border-radius:10px;padding:14px 16px;margin:14px 0}
+.lq .eb{color:inherit;opacity:.9}.lq .q{font-family:'Fraunces',serif;font-weight:600;font-size:20px}.lq .s{font-size:13px;font-weight:700;opacity:.9}
+.ticks{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;margin-top:10px}
+.ticks button{aspect-ratio:1;min-height:30px;border:1px solid var(--line);border-radius:6px;background:var(--raised);font-size:12px;color:var(--muted);cursor:pointer;padding:0}
+.ticks button[aria-pressed="true"]{background:var(--saffron);color:var(--on-saffron);border-color:var(--saffron);font-weight:700}
+.stepper{display:flex;align-items:center;gap:8px}
+.stepper button{width:44px;height:44px;border-radius:8px;border:1px solid var(--line);background:var(--raised);font-size:20px;cursor:pointer}
+.stepper output{min-width:28px;text-align:center;font-weight:700;font-size:18px}
+.row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.role{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.role .info{flex:1}.role .names{font-size:13px;color:var(--muted)}
+.meter{font-size:12px;font-weight:700;padding:1px 8px;border-radius:99px;background:var(--need-bg)}
+.meter.full{background:var(--ok-bg);color:var(--ok)}
+label.f{display:block;font-weight:600;font-size:14px;margin:12px 0 4px}
+input.f,select.f,textarea.f{width:100%;min-height:44px;padding:8px 10px;border:1px solid var(--muted);border-radius:8px;background:var(--raised)}
+textarea.f{min-height:110px}
+.check{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
+.check input{width:22px;height:22px;margin-top:2px;flex-shrink:0}
+.notice{background:var(--warn-bg);border-radius:8px;padding:10px 12px;font-size:14px;margin:12px 0}
+.toast{position:fixed;left:50%;bottom:84px;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:8px;font-size:15px;z-index:20;max-width:90vw;opacity:0;transition:opacity .2s}
+.toast.show{opacity:1}
+.drawer{position:fixed;inset:0;z-index:15;display:none;background:rgba(0,0,0,.4)}
+.drawer.open{display:block}
+.drawer .panel{position:absolute;top:0;left:0;bottom:0;width:min(360px,88vw);background:var(--paper);overflow-y:auto;padding:calc(16px + env(safe-area-inset-top)) 16px 24px}
+@media (prefers-reduced-motion: reduce){.toast{transition:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <button class="iconbtn" id="menuBtn" aria-label="Contents" aria-expanded="false" aria-controls="drawer">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+  </button>
+  <div class="t" id="topTitle">Bharat</div>
+  <button class="iconbtn" id="shareBtn" aria-label="Share this page on WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M16 6l-4-4-4 4M12 2v14"/></svg>
+  </button>
+</header>
+<main id="main" tabindex="-1"><div class="page" id="page"><p class="muted">Loading…</p></div></main>
+<nav class="pager" aria-label="Page navigation">
+  <button class="btn small" id="prevBtn">‹ Back</button>
+  <div class="mid" id="pageNo"></div>
+  <button class="btn small primary" id="nextBtn">Next ›</button>
+</nav>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Contents"><div class="panel" id="drawerPanel"></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  'use strict';
+  var D = null, LIVE = null;
+  var $ = function (id) { return document.getElementById(id); };
+  var COLS = { saffron: 'var(--saffron)', haldi: 'var(--haldi)', kumkum: 'var(--kumkum)', peacock: 'var(--peacock)' };
+
+  /* ---------- storage (per phone, never shared) ---------- */
+  function load(k, d) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
+  function save(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  var ME = load('bg_me', null);
+  var MINE = load('bg_mine', { rsvp: {}, seva: {} });
+  var TICKS = load('bg_ticks', {});
+
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function toast(msg) { var t = $('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toast.h); toast.h = setTimeout(function () { t.classList.remove('show'); }, 2800); }
+  function digits(s) { return String(s || '').replace(/\D/g, ''); }
+  function online() { return !!(D && D.scriptUrl); }
+
+  /* ---------- dates ---------- */
+  function today() { var d = new Date(); d.setHours(0, 0, 0, 0); return d; }
+  function dateOf(m) { var p = m.date.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
+  function daysTo(m) { return Math.round((dateOf(m) - today()) / 864e5); }
+  function nextIdx() { for (var i = 0; i < D.months.length; i++) if (daysTo(D.months[i]) >= 0) return i; return -1; }
+  function whenText(m) {
+    var n = daysTo(m);
+    if (n === 0) return 'Today';
+    if (n === 1) return 'Tomorrow';
+    if (n > 1) return 'In ' + n + ' days';
+    return 'Held';
+  }
+  function niceDate(m) { return dateOf(m).toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }); }
+
+  /* ---------- backend ---------- */
+  function fetchLive() {
+    LIVE = load('bg_live', null);
+    if (!online()) return;
+    fetch(D.scriptUrl, { method: 'GET' }).then(function (r) { return r.json(); }).then(function (j) {
+      if (j && j.ok) { LIVE = j; save('bg_live', j); render(); }
+    }).catch(function () {});
+  }
+  function post(body) {
+    if (!online()) return Promise.resolve({ ok: true, offline: true });
+    return fetch(D.scriptUrl, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(body) })
+      .then(function (r) { return r.json(); })
+      .catch(function () { return { ok: false, error: 'network' }; });
+  }
+  function liveMonth(n) { return (LIVE && LIVE.months && LIVE.months[String(n)]) || { families: 0, people: 0, names: [], seva: {} }; }
+
+  /* ---------- pages ---------- */
+  var PAGES = [];
+  function buildPages() {
+    PAGES = [
+      { id: 'cover', title: 'Welcome', r: coverPage },
+      { id: 'contents', title: 'Contents', r: contentsPage },
+      { id: 'about', title: 'Why we gather', r: aboutPage },
+      { id: 'morning', title: 'A gurukul morning', r: morningPage },
+      { id: 'year', title: 'The year', r: yearPage }
+    ];
+    D.months.forEach(function (m, i) { PAGES.push({ id: 'month-' + m.n, title: m.month + ': ' + m.topic, r: function () { return monthPage(i); }, month: m }); });
+    PAGES.push(
+      { id: 'questions', title: 'Life’s questions', r: questionsPage },
+      { id: 'seva', title: 'Become a sevak', r: sevaPage },
+      { id: 'register', title: 'Register', r: registerPage },
+      { id: 'ask', title: 'Ask or suggest', r: askPage },
+      { id: 'prayers', title: 'Prayers', r: prayersPage },
+      { id: 'promise', title: 'Our promise', r: promisePage },
+      { id: 'downloads', title: 'Downloads', r: downloadsPage }
+    );
+  }
+  function current() {
+    var h = location.hash.replace('#', '') || 'cover';
+    if (h === 'organiser') return -1;
+    for (var i = 0; i < PAGES.length; i++) if (PAGES[i].id === h) return i;
+    return 0;
+  }
+  function go(id) { location.hash = id; }
+
+  function arches(n, cols) { var s = '<div class="arches" aria-hidden="true">'; for (var i = 0; i < n; i++) s += '<i style="background:' + COLS[cols[i % cols.length]] + '"></i>'; return s + '</div>'; }
+
+  function coverPage() {
+    var ni = nextIdx(), nm = ni >= 0 ? D.months[ni] : null;
+    var live = LIVE ? '<div class="stats"><div class="stat"><b>' + (LIVE.families || 0) + '</b>families registered</div><div class="stat"><b>' + (LIVE.people || 0) + '</b>people</div></div>' : '';
+    return '<div class="cover"><div class="top"><div class="big">Bharat</div>' +
+      '<div class="arches" aria-hidden="true">' + new Array(9).join('<i></i>') + '</div></div>' +
+      '<div class="bot"><div class="h">Rooted in Heritage,<br>Inspired for the Future</div><div class="tag">' + esc(D.tagline) + '</div>' +
+      '<div class="verbs"><span>Learn.</span><span>Practise.</span><span>Serve.</span><span>Grow.</span></div>' +
+      '<p>Twelve Sunday mornings from the Vedas to the Buddha, for everyone. Free, and run entirely by volunteers.</p>' +
+      (nm ? '<div class="band b-saffron"><div class="eb">Next gathering · ' + whenText(nm) + '</div><div class="disp" style="font-size:22px">' + esc(nm.topic) + '</div><div>' + esc(niceDate(nm)) + ' · ' + esc(D.time) + '</div>' +
+        '<div class="row" style="margin-top:10px"><a class="btn primary" href="#month-' + nm.n + '">See the gathering</a></div></div>' : '') +
+      live +
+      '<div class="row"><a class="btn cta" href="#register">' + (ME ? 'My entries' : 'Register your family') + '</a><a class="btn cta" href="#seva">Volunteer</a><a class="btn cta" href="#contents">Explore the year</a></div>' +
+      '<p class="small" style="margin-top:auto;opacity:.9">No fees. No sponsors. Only seva.</p></div></div>';
+  }
+
+  function contentsPage() {
+    var ni = nextIdx();
+    var s = '<div class="eb">Contents</div><h1>Inside the book</h1><div class="toc">';
+    PAGES.forEach(function (p, i) {
+      if (i < 2) return;
+      var m = p.month;
+      s += '<a href="#' + p.id + '">' + (m ? '<span class="dot" style="background:' + COLS[m.colour] + '"></span><span class="n">' + m.n + '</span>' : '<span class="n">·</span>') +
+        '<span>' + esc(p.title) + (m ? '<br><span class="small muted">' + esc(niceDate(m)) + '</span>' : '') + '</span>' +
+        (m && ni === m.n - 1 ? '<span class="next">Next</span>' : '') + '</a>';
+    });
+    return s + '</div>';
+  }
+
+  function aboutPage() {
+    var lv = [['Vyakti', 'The individual', 'Focus, discipline, calm, character', 'saffron'], ['Parivar', 'The family', 'Respect, time together, shared values', 'haldi'], ['Samaj', 'The community', 'Seva, harmony, neighbours who care', 'peacock'], ['Rashtra', 'The nation', 'Pride, responsibility, Viksit Bharat 2047', 'kumkum']];
+    return '<div class="eb">Why we gather</div><h1>Grow yourself. Grow together.</h1>' +
+      '<p>Our ancestors saw development as a chain: a better person makes a better family, a stronger community and a greater nation.</p>' +
+      lv.map(function (l) { return '<div class="band b-' + l[3] + '"><span class="disp" style="font-size:20px">' + l[0] + '</span> <b>' + l[1] + '</b><div>' + l[2] + '</div></div>'; }).join('') +
+      '<h2>A gurukul in our own neighbourhood</h2><p>On the third Sunday of each month, children, youth, parents, working people, elders and civic leaders gather for one morning of learning, practice and seva. We follow India’s wisdom in the order it unfolded, from the Vedas to the Buddha, with the Ramayana and Mahabharata at the heart of the year.</p>' +
+      '<div class="band b-saffron"><div class="disp" style="font-size:19px">No fees. No sponsors. Only seva.</div>Everything is run by volunteers. Families take turns bringing prasad, and a small Seva Kosh box meets the cost of printing and children’s materials.</div>' +
+      '<h2>Four pillars</h2><table class="t"><tr><th>Pillar</th><th>What it asks</th></tr>' +
+      '<tr><td><b>Wisdom</b> <i>(jñāna)</i></td><td>Who am I, and what is worth pursuing?</td></tr><tr><td><b>Life management</b> <i>(swadharma)</i></td><td>Discipline, balance, focus and calm</td></tr>' +
+      '<tr><td><b>Human management</b> <i>(sambandha)</i></td><td>Family, respect, empathy and service</td></tr><tr><td><b>Complete management</b> <i>(rājadharma)</i></td><td>Ethical leadership of teams and communities</td></tr></table>';
+  }
+
+  function morningPage() {
+    return '<div class="eb">A gurukul with a modern touch</div><h1>One Sunday morning</h1><p>' + esc(D.time) + ' at ' + esc(D.venue.name) + '.</p><table class="t">' +
+      D.morning.map(function (r) { return '<tr><td style="width:60px;color:var(--kumkum);font-weight:700">' + r[0] + '</td><td><b>' + esc(r[1]) + '</b><br>' + esc(r[2]) + '</td></tr>'; }).join('') + '</table>' +
+      '<h2>Four learning circles</h2><div class="band b-saffron"><b>Bal Gurukul</b> · children 8–14</div><div class="band b-haldi"><b>Yuva Sabha</b> · youth and families</div>' +
+      '<div class="band b-peacock"><b>Karma Sabha</b> · professionals and civic leaders</div><div class="band b-kumkum"><b>Vriddha Sabha</b> · elders</div>' +
+      '<h2>Between gatherings</h2><ul><li><b>Week 1:</b> verse of the month on WhatsApp</li><li><b>Week 2:</b> a small family experiment</li><li><b>Week 3:</b> a youth-led bhajan jam or heritage walk</li><li><b>Week 4:</b> your lane volunteer invites you in person</li></ul>';
+  }
+
+  function yearPage() {
+    var ni = nextIdx();
+    return '<div class="eb">The journey, oldest first</div><h1>From the Vedas to the Buddha</h1><table class="t"><tr><th>Date</th><th>Topic</th><th>Festival</th></tr>' +
+      D.months.map(function (m, i) {
+        return '<tr' + (i === ni ? ' style="background:var(--warn-bg)"' : '') + '><td><span class="dot" style="background:' + COLS[m.colour] + '"></span> ' + dateOf(m).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' }) + '</td>' +
+          '<td><a href="#month-' + m.n + '"><b>' + esc(m.topic) + '</b></a><br><span class="small muted">' + esc(m.theme) + '</span></td><td class="small">' + esc(m.festival) + '</td></tr>';
+      }).join('') + '</table><p class="small muted">Festival links are seasonal; check the local panchang.</p>';
+  }
+
+  function monthPage(i) {
+    var m = D.months[i], c = m.colour, n = daysTo(m), live = liveMonth(m.n);
+    var s = '<div class="mhead b-' + c + '"><div class="eb">' + esc(m.month) + ' · ' + esc(m.festival) + '</div>' +
+      '<div class="row" style="gap:12px;align-items:flex-end"><div class="num">' + String(m.n).padStart(2, '0') + '</div><div><div class="ttl">' + esc(m.topic) + '</div><div>' + esc(m.theme) + '</div></div></div></div>' +
+      '<p style="margin-top:16px"><b>' + esc(niceDate(m)) + '</b> · ' + esc(D.time) + ' <span class="pill' + (n >= 0 ? '' : ' ok') + '">' + whenText(m) + '</span></p>' +
+      '<p style="font-size:18px">' + esc(m.core) + '</p>' + (m.note ? '<div class="notice">' + esc(m.note) + '</div>' : '') +
+      '<h2>Key verses</h2>' + m.verses.map(function (v) { return '<div class="verse"><div class="v">' + esc(v.text) + '</div><div class="s">' + esc(v.source) + '</div><div>' + esc(v.meaning) + '</div></div>'; }).join('') +
+      '<h2>What we will learn</h2><ul>' + m.learn.map(function (l) { return '<li>' + esc(l) + '</li>'; }).join('') + '</ul>' +
+      '<h2>In the circles</h2><table class="t">' + Object.keys(m.circles).map(function (k) { return '<tr><td style="width:130px"><b>' + esc(k) + '</b></td><td>' + esc(m.circles[k]) + '</td></tr>'; }).join('') + '</table>' +
+      '<div class="lq"><div class="eb">Life’s question, from the epics</div><div class="q">' + esc(m.lifeQuestion.question) + '</div><div>' + esc(m.lifeQuestion.episode) + '</div><div class="s">' + esc(m.lifeQuestion.source) + '</div></div>';
+
+    // RSVP
+    s += '<h2>Are you coming?</h2><div class="card" id="rsvpCard">';
+    if (n < 0) {
+      s += '<p>This gathering was held on ' + esc(niceDate(m)) + '.</p>';
+    } else {
+      s += '<p><b>' + live.families + '</b> families · <b>' + live.people + '</b> people coming so far</p>';
+      if (!ME) {
+        s += '<p>Register your family once, then tell us who is coming each month.</p><a class="btn primary" href="#register">Register your family</a>';
+      } else {
+        var mine = MINE.rsvp[m.n] || { a: ME.adults || 1, c: ME.children || 0, sent: false };
+        s += '<div class="row"><div><div class="small muted">Adults</div>' + stepper('ra', mine.a) + '</div><div><div class="small muted">Children</div>' + stepper('rc', mine.c) + '</div></div>' +
+          '<div class="row" style="margin-top:12px"><button class="btn primary" data-act="rsvp" data-m="' + m.n + '">' + (mine.sent ? 'Update' : 'Count us in') + '</button>' +
+          (mine.sent ? '<button class="btn" data-act="unrsvp" data-m="' + m.n + '">We can’t come</button><span class="pill ok">You’re in</span>' : '') + '</div>';
+      }
+    }
+    s += '</div>';
+
+    // Seva
+    s += '<h2>Seva for this gathering</h2><div class="card">';
+    D.roles.forEach(function (r) {
+      var names = (live.seva && live.seva[r.id]) || [], k = m.n + ':' + r.id, mineOn = !!MINE.seva[k], got = names.length;
+      s += '<div class="role"><div class="info"><b>' + esc(r.name) + '</b> <span class="meter' + (got >= r.need ? ' full' : '') + '">' + got + ' of ' + r.need + '</span>' +
+        (names.length ? '<div class="names">' + names.map(esc).join(', ') + '</div>' : '') + '</div>' +
+        (n >= 0 ? (ME ? '<button class="btn small' + (mineOn ? '' : ' primary') + '" data-act="' + (mineOn ? 'unseva' : 'seva') + '" data-m="' + m.n + '" data-r="' + r.id + '">' + (mineOn ? 'Withdraw' : 'I’ll help') + '</button>' : '') : '') + '</div>';
+    });
+    if (!ME && n >= 0) s += '<p class="small" style="margin-top:10px"><a href="#register">Register</a> to sign up for seva.</p>';
+    s += '</div>';
+
+    // Sankalp tracker
+    var t = TICKS[m.n] || [], done = t.filter(Boolean).length;
+    s += '<h2>Sankalp for 30 days</h2><div class="card"><p>' + esc(m.sankalp) + '</p><div class="small muted">' + done + ' of 30 days · saved on this phone</div><div class="ticks">';
+    for (var d = 0; d < 30; d++) s += '<button data-act="tick" data-m="' + m.n + '" data-d="' + d + '" aria-pressed="' + (!!t[d]) + '" aria-label="Day ' + (d + 1) + '">' + (d + 1) + '</button>';
+    s += '</div></div><div class="row"><button class="btn wa" data-act="share">Share on WhatsApp</button></div>';
+    return s;
+  }
+
+  function stepper(id, v) {
+    return '<div class="stepper"><button type="button" data-step="' + id + '" data-d="-1" aria-label="Fewer">−</button><output id="' + id + '">' + v + '</output><button type="button" data-step="' + id + '" data-d="1" aria-label="More">+</button></div>';
+  }
+
+  function questionsPage() {
+    return '<div class="eb">Answered by the Ramayana and Mahabharata</div><h1>Life’s questions, answered by our heritage</h1>' +
+      '<p>Each month, one circle takes a real question to the two epics. Ramayana references follow Valmiki (Gita Press sarga numbers); Mahabharata references follow the BORI critical edition (CE chapter.verse).</p>' +
+      D.lifeQuestions.map(function (q) { return '<div class="card"><b>' + esc(q.question) + '</b><div>' + esc(q.episode) + '</div><div class="small" style="color:var(--kumkum);font-weight:700">' + esc(q.source) + '</div></div>'; }).join('') +
+      '<h2>Every story, with its source</h2><p>We tell every story and say where it comes from. The Lakshman Rekha, Shabari tasting the berries and the squirrel at Rama Setu come from later retellings, not Valmiki. We quote only the first half of <i>ahiṁsā paramo dharmaḥ</i>, and cite <i>dharmo rakṣati rakṣitaḥ</i> as Draupadi’s words (CE 3.31.7).</p>';
+  }
+
+  function sevaPage() {
+    return '<div class="eb">Everyone has a role</div><h1>Become a sevak</h1><p>This gurukul belongs to all of us. Choose a role, even for one Sunday. Sign up on any month’s page.</p>' +
+      '<table class="t"><tr><th>Role</th><th>Needed each month</th></tr>' + D.roles.map(function (r) { return '<tr><td>' + esc(r.name) + '</td><td>' + r.need + '</td></tr>'; }).join('') + '</table>' +
+      '<h2>Ways to give without money</h2><ul><li>Bring prasad in turn (five families each month).</li><li>Lend durries, chairs, a sound system or a projector.</li><li>Open a hall, courtyard or auditorium for one morning.</li><li>Be the lane volunteer who personally invites 5–10 families.</li></ul>' +
+      '<div class="card"><b>Seva Kosh.</b> A transparent box at every gathering meets printing and children’s materials, about ₹3,500 a month. Giving is voluntary; accounts are read out and posted every quarter.</div>';
+  }
+
+  function registerPage() {
+    var me = ME || { name: '', phone: '', area: '', adults: 2, children: 0, circles: [], photo: false };
+    var circles = ['Bal Gurukul (children)', 'Yuva Sabha (youth and families)', 'Karma Sabha (professionals, civic)', 'Vriddha Sabha (elders)'];
+    var s = '<div class="eb">' + (ME ? 'My entries' : 'Register') + '</div><h1>' + (ME ? 'Your family' : 'Register your family') + '</h1>';
+    if (!online()) s += '<div class="notice">Online registration opens soon. Your details are saved on this phone for now.</div>';
+    if (ME) {
+      var list = [];
+      D.months.forEach(function (m) {
+        var r = MINE.rsvp[m.n]; if (r && r.sent) list.push('<li><a href="#month-' + m.n + '">' + esc(m.topic) + '</a>: ' + r.a + ' adults, ' + r.c + ' children</li>');
+        D.roles.forEach(function (ro) { if (MINE.seva[m.n + ':' + ro.id]) list.push('<li><a href="#month-' + m.n + '">' + esc(m.topic) + '</a>: seva, ' + esc(ro.name) + '</li>'); });
+      });
+      s += '<div class="card"><b>' + esc(ME.name) + '</b><div class="small muted">' + esc(ME.area || '') + ' · ' + ME.adults + ' adults, ' + ME.children + ' children</div>' +
+        (list.length ? '<h3>Coming and helping</h3><ul>' + list.join('') + '</ul>' : '<p class="small" style="margin-top:8px">No RSVPs yet. Open a month’s page to say you’re coming.</p>') + '</div><h2>Edit details</h2>';
+    }
+    s += '<form id="regForm" novalidate>' +
+      '<label class="f" for="fName">Family name or your name</label><input class="f" id="fName" autocomplete="name" required value="' + esc(me.name) + '">' +
+      '<label class="f" for="fPhone">Mobile / WhatsApp number</label><input class="f" id="fPhone" type="tel" inputmode="tel" autocomplete="tel" required value="' + esc(me.phone) + '">' +
+      '<label class="f" for="fArea">Area, society or colony</label><input class="f" id="fArea" value="' + esc(me.area) + '">' +
+      '<div class="row" style="margin-top:12px"><div><div class="small muted">Adults</div>' + stepper('fa', me.adults) + '</div><div><div class="small muted">Children</div>' + stepper('fc', me.children) + '</div></div>' +
+      '<fieldset style="border:0;padding:0;margin:14px 0 0"><legend class="f" style="font-weight:600;font-size:14px">Circles your family would like to join</legend>' +
+      circles.map(function (c, i) { return '<div class="check"><input type="checkbox" id="c' + i + '" value="' + esc(c) + '"' + (me.circles.indexOf(c) >= 0 ? ' checked' : '') + '><label for="c' + i + '">' + esc(c) + '</label></div>'; }).join('') + '</fieldset>' +
+      '<div class="check"><input type="checkbox" id="fPhoto"' + (me.photo ? ' checked' : '') + '><label for="fPhoto">Photos and videos of our family may be used to share the gurukul’s work. Children are never named or tagged.</label></div>' +
+      '<p class="small muted">Only your family name and headcount are shown to others. Your number stays with the organisers.</p>' +
+      '<button class="btn primary" type="submit">' + (ME ? 'Save changes' : 'Register') + '</button></form>';
+    return s;
+  }
+
+  function askPage() {
+    return '<div class="eb">We are listening</div><h1>Ask or suggest</h1><p>Send a question for the Acharya, an idea, or offer to speak, sing or perform.</p><form id="askForm" novalidate>' +
+      '<label class="f" for="aKind">What is it?</label><select class="f" id="aKind"><option>Question for the Acharya</option><option>Suggestion</option><option>I would like to speak, sing or perform</option><option>I can lend or offer something</option></select>' +
+      '<label class="f" for="aMonth">For which gathering?</label><select class="f" id="aMonth"><option value="">Any</option>' + D.months.map(function (m) { return '<option value="' + m.n + '">' + esc(m.month + ': ' + m.topic) + '</option>'; }).join('') + '</select>' +
+      (ME ? '' : '<label class="f" for="aName">Your name</label><input class="f" id="aName"><label class="f" for="aPhone">Mobile number</label><input class="f" id="aPhone" type="tel" inputmode="tel">') +
+      '<label class="f" for="aText">Your message</label><textarea class="f" id="aText" maxlength="1000"></textarea>' +
+      '<div style="margin-top:12px"><button class="btn primary" type="submit">Send</button></div></form>';
+  }
+
+  function prayersPage() {
+    var pr = [['ॐ सह नाववतु । सह नौ भुनक्तु । सह वीर्यं करवावहै । तेजस्वि नावधीतमस्तु मा विद्विषावहै । ॐ शान्तिः शान्तिः शान्तिः ॥', 'Opening invocation (Katha and Taittiriya Upanishads): may we learn together, grow together, and never be hostile to one another.'],
+      ['ॐ भूर्भुवः स्वः । तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि । धियो यो नः प्रचोदयात् ॥', 'Gayatri, Rigveda 3.62.10: may the divine light inspire our minds.'],
+      ['असतो मा सद्गमय । तमसो मा ज्योतिर्गमय । मृत्योर्मा अमृतं गमय ॥', 'Brihadaranyaka Upanishad 1.3.28: lead me from untruth to truth, darkness to light, death to immortality.'],
+      ['सं गच्छध्वं सं वदध्वं सं वो मनांसि जानताम् ॥', 'Rigveda 10.191.2: walk together, speak together, let your minds be in harmony.'],
+      ['सर्वे भवन्तु सुखिनः । सर्वे सन्तु निरामयाः । सर्वे भद्राणि पश्यन्तु । मा कश्चिद् दुःखभाग्भवेत् ॥', 'Closing prayer: may all be happy, may all be free from illness, may all see good, may no one suffer.']];
+    return '<div class="eb">Prayers we share</div><h1>Mantras for the year</h1>' + pr.map(function (p) { return '<div class="card"><div class="dev" style="font-size:20px;line-height:1.7">' + p[0] + '</div><div class="small muted">' + p[1] + '</div></div>'; }).join('');
+  }
+
+  function promisePage() {
+    return '<div class="eb">Our promise to families</div><h1>Safe, open and respectful</h1><ul>' +
+      ['Every volunteer signs a short code of conduct.', 'No volunteer is ever alone with a child.', 'Photos only with written consent; no child is named or tagged online.', 'No shouting, punishment or humiliation, ever.',
+       'Concerns go to our safeguarding contact: ' + D.safeguardingContact + '.', 'Every family is welcome, of every community and background.', 'No politics: no party symbols, banners or campaigning at any gathering.', 'Chairs, a microphone and large print for anyone who needs them.']
+        .map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>';
+  }
+
+  function downloadsPage() {
+    var f = [['Handbook for everyone (A5 booklet, 40 pages)', 'docs/Bharat-Handbook-A5.pdf'], ['Trifold brochure (A4)', 'docs/Bharat-Brochure-Trifold.pdf'], ['Year schedule poster (A3)', 'docs/Bharat-Year-Schedule-A3.pdf'], ['January launch poster (A4)', 'docs/Bharat-Launch-Poster-A4.pdf']];
+    return '<div class="eb">Print and share</div><h1>Downloads</h1>' + f.map(function (x) { return '<div class="card"><a href="' + x[1] + '" download>' + esc(x[0]) + '</a></div>'; }).join('') +
+      '<h2>Contact</h2><p>' + esc(D.contact.name) + ' · ' + esc(D.contact.phone) + '<br>' + esc(D.venue.name) + ', ' + esc(D.venue.address) + '</p>';
+  }
+
+  /* ---------- organiser (hidden: add #organiser to the address) ---------- */
+  function organiserPage() {
+    var key = sessionStorage.getItem('bg_key');
+    var s = '<div class="eb">Organisers only</div><h1>Organiser tools</h1>';
+    if (!online()) return s + '<div class="notice">Add the Apps Script /exec address to programme.json first.</div>';
+    if (!key) return s + '<form id="keyForm"><label class="f" for="kIn">Organiser key</label><input class="f" id="kIn" type="password" autocomplete="off"><div style="margin-top:12px"><button class="btn primary">Unlock</button></div></form><p class="small muted">The key is set in the Google Sheet’s Apps Script properties. It is never stored in this website.</p>';
+    s += '<p class="small muted">Phone numbers and questions are only in the Google Sheet. Use Gurukul > Rebuild reports there for dashboards.</p>';
+    D.months.forEach(function (m) {
+      var l = liveMonth(m.n);
+      s += '<h3>' + esc(m.month + ': ' + m.topic) + '</h3><p class="small">' + l.families + ' families · ' + l.people + ' people</p>';
+      l.names.forEach(function (nm) { s += '<div class="role"><div class="info">' + esc(nm) + '</div><button class="btn small" data-act="orgRsvp" data-m="' + m.n + '" data-n="' + esc(nm) + '">Remove RSVP</button></div>'; });
+      D.roles.forEach(function (r) { ((l.seva || {})[r.id] || []).forEach(function (nm) { s += '<div class="role"><div class="info">' + esc(nm) + ' <span class="small muted">· ' + esc(r.name) + '</span></div><button class="btn small" data-act="orgSeva" data-m="' + m.n + '" data-r="' + r.id + '" data-n="' + esc(nm) + '">Remove</button></div>'; }); });
+    });
+    return s + '<div style="margin-top:16px"><button class="btn" data-act="lock">Lock</button></div>';
+  }
+
+  /* ---------- render and navigation ---------- */
+  function render() {
+    if (!D) return;
+    var i = current(), html, title;
+    if (i === -1) { html = organiserPage(); title = 'Organiser'; }
+    else { html = PAGES[i].r(); title = PAGES[i].title; }
+    $('page').innerHTML = html;
+    $('topTitle').textContent = i <= 0 ? 'Bharat' : title;
+    document.title = (i <= 0 ? '' : title + ' · ') + 'Bharat gurukul';
+    $('pageNo').textContent = i >= 0 ? (i + 1) + ' of ' + PAGES.length : '';
+    $('prevBtn').disabled = i <= 0;
+    $('nextBtn').disabled = i < 0 || i >= PAGES.length - 1;
+    $('nextBtn').textContent = i >= 0 && i < PAGES.length - 1 ? PAGES[i + 1].title.split(':')[0] + ' ›' : 'Next ›';
+    wire();
+  }
+
+  function navTo(i) { if (i >= 0 && i < PAGES.length) go(PAGES[i].id); }
+  window.addEventListener('hashchange', function () { render(); $('main').scrollTop = 0; $('main').focus({ preventScroll: true }); closeDrawer(); });
+  $('prevBtn').onclick = function () { navTo(current() - 1); };
+  $('nextBtn').onclick = function () { navTo(current() + 1); };
+
+  function openDrawer() { $('drawerPanel').innerHTML = contentsPage(); $('drawer').classList.add('open'); $('menuBtn').setAttribute('aria-expanded', 'true'); var a = $('drawerPanel').querySelector('a'); if (a) a.focus(); }
+  function closeDrawer() { $('drawer').classList.remove('open'); $('menuBtn').setAttribute('aria-expanded', 'false'); }
+  $('menuBtn').onclick = function () { $('drawer').classList.contains('open') ? closeDrawer() : openDrawer(); };
+  $('drawer').addEventListener('click', function (e) { if (e.target === $('drawer')) closeDrawer(); });
+  $('drawer').addEventListener('keydown', function (e) { if (e.key === 'Escape') { closeDrawer(); $('menuBtn').focus(); } });
+
+  // swipe between pages
+  var sx = null, sy = null;
+  $('main').addEventListener('touchstart', function (e) { var t = e.touches[0]; sx = t.clientX; sy = t.clientY; }, { passive: true });
+  $('main').addEventListener('touchend', function (e) {
+    if (sx === null) return; var t = e.changedTouches[0], dx = t.clientX - sx, dy = t.clientY - sy; sx = null;
+    if (Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.5 && !e.target.closest('input,textarea,select,.ticks')) navTo(current() + (dx < 0 ? 1 : -1));
+  }, { passive: true });
+
+  function shareText() {
+    var i = current(), url = location.href.split('#')[0] + '#' + (i >= 0 ? PAGES[i].id : '');
+    var p = i >= 0 ? PAGES[i] : null, m = p && p.month;
+    if (m) return '🪔 ' + D.title + '\n' + m.month + ' gathering: ' + m.topic + ' — ' + m.theme + '\n' + niceDate(m) + ', ' + D.time + ', ' + D.venue.name + '\nFree, run by volunteers. Details and RSVP: ' + url;
+    return '🪔 ' + D.title + '\nA free, volunteer-run gurukul for every family: twelve Sunday mornings from the Vedas to the Buddha.\n' + url;
+  }
+  function share() { window.open('https://wa.me/?text=' + encodeURIComponent(shareText()), '_blank', 'noopener'); }
+  $('shareBtn').onclick = share;
+
+  function wire() {
+    var page = $('page');
+    page.querySelectorAll('[data-step]').forEach(function (b) {
+      b.onclick = function () { var o = $(b.dataset.step); o.textContent = Math.max(0, Math.min(20, (+o.textContent || 0) + (+b.dataset.d))); };
+    });
+    page.querySelectorAll('[data-act]').forEach(function (b) { b.onclick = function () { act(b); }; });
+    var rf = $('regForm'); if (rf) rf.onsubmit = function (e) { e.preventDefault(); register(); };
+    var af = $('askForm'); if (af) af.onsubmit = function (e) { e.preventDefault(); ask(); };
+    var kf = $('keyForm'); if (kf) kf.onsubmit = function (e) {
+      e.preventDefault(); var k = $('kIn').value.trim();
+      post({ action: 'checkKey', key: k }).then(function (j) { if (j.ok) { sessionStorage.setItem('bg_key', k); fetchLive(); render(); } else toast('That key did not match.'); });
+    };
+  }
+
+  function act(b) {
+    var a = b.dataset.act, mn = b.dataset.m, m = mn && D.months[+mn - 1];
+    if (a === 'share') return share();
+    if (a === 'lock') { sessionStorage.removeItem('bg_key'); return render(); }
+    if (a === 'tick') {
+      var t = TICKS[mn] || []; t[+b.dataset.d] = !t[+b.dataset.d]; TICKS[mn] = t; save('bg_ticks', TICKS);
+      b.setAttribute('aria-pressed', String(!!t[+b.dataset.d])); return;
+    }
+    if (a === 'rsvp' || a === 'unrsvp') {
+      var ad = a === 'rsvp' ? +$('ra').textContent : 0, ch = a === 'rsvp' ? +$('rc').textContent : 0;
+      if (a === 'rsvp' && ad + ch === 0) return toast('Add at least one person.');
+      b.disabled = true;
+      post({ action: 'rsvp', name: ME.name, phone: ME.phone, month: mn, topic: m.topic, adults: ad, children: ch }).then(function (j) {
+        if (!j.ok) { b.disabled = false; return toast('Could not send. Please try again.'); }
+        if (a === 'rsvp') MINE.rsvp[mn] = { a: ad, c: ch, sent: true }; else delete MINE.rsvp[mn];
+        save('bg_mine', MINE); toast(a === 'rsvp' ? 'Thank you! See you on ' + niceDate(m) + '.' : 'Noted. We’ll miss you.'); fetchLive(); render();
+      });
+      return;
+    }
+    if (a === 'seva' || a === 'unseva') {
+      var role = D.roles.filter(function (r) { return r.id === b.dataset.r; })[0];
+      b.disabled = true;
+      post({ action: a, name: ME.name, phone: ME.phone, month: mn, topic: m.topic, role: role.id, roleName: role.name }).then(function (j) {
+        if (!j.ok) { b.disabled = false; return toast('Could not send. Please try again.'); }
+        var k = mn + ':' + role.id; if (a === 'seva') MINE.seva[k] = true; else delete MINE.seva[k];
+        save('bg_mine', MINE); toast(a === 'seva' ? 'Thank you for your seva!' : 'Withdrawn.'); fetchLive(); render();
+      });
+      return;
+    }
+    if (a === 'orgRsvp' || a === 'orgSeva') {
+      if (!confirm('Remove ' + b.dataset.n + '?')) return;
+      post({ action: a === 'orgRsvp' ? 'removeRsvp' : 'removeSeva', key: sessionStorage.getItem('bg_key'), name: b.dataset.n, month: mn, role: b.dataset.r }).then(function (j) {
+        toast(j.ok ? 'Removed.' : 'Not removed: ' + (j.error || 'error')); fetchLive();
+      });
+    }
+  }
+
+  function register() {
+    var name = $('fName').value.trim(), phone = $('fPhone').value.trim();
+    if (!name) { $('fName').focus(); return toast('Please enter a name.'); }
+    if (digits(phone).length < 8) { $('fPhone').focus(); return toast('Please enter a valid mobile number.'); }
+    var circles = []; for (var i = 0; i < 4; i++) { var c = $('c' + i); if (c && c.checked) circles.push(c.value); }
+    var me = { name: name, phone: phone, area: $('fArea').value.trim(), adults: +$('fa').textContent, children: +$('fc').textContent, circles: circles, photo: $('fPhoto').checked };
+    post({ action: 'register', name: me.name, phone: me.phone, area: me.area, adults: me.adults, children: me.children, circles: me.circles, photoConsent: me.photo }).then(function (j) {
+      if (!j.ok) return toast('Could not register. Please try again.');
+      ME = me; save('bg_me', ME); toast('Welcome to the gurukul, ' + name + '!'); fetchLive();
+      var ni = nextIdx(); go(ni >= 0 ? 'month-' + D.months[ni].n : 'contents');
+    });
+  }
+
+  function ask() {
+    var text = $('aText').value.trim(); if (!text) { $('aText').focus(); return toast('Please write your message.'); }
+    var name = ME ? ME.name : ($('aName').value.trim()), phone = ME ? ME.phone : ($('aPhone').value.trim());
+    if (!name || digits(phone).length < 8) return toast('Please add your name and mobile number.');
+    post({ action: 'ask', name: name, phone: phone, month: $('aMonth').value, kind: $('aKind').value, text: text }).then(function (j) {
+      if (!j.ok) return toast('Could not send. Please try again.');
+      $('aText').value = ''; toast('Thank you. The organisers will see this.');
+    });
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.target.closest && e.target.closest('input,textarea,select')) return;
+    if (e.key === 'ArrowRight') navTo(current() + 1);
+    if (e.key === 'ArrowLeft') navTo(current() - 1);
+  });
+
+  fetch('programme.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (d) {
+    D = d; buildPages(); fetchLive(); render();
+  }).catch(function () { $('page').innerHTML = '<p>Could not load the programme. Please check your connection and reload.</p>'; });
+})();
+</script>
+</body>
+</html>

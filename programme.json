@@ -1,0 +1,787 @@
+{
+ "title": "Bharat: Rooted in Heritage, Inspired for the Future",
+ "tagline": "Ancient Wisdom for Modern Excellence",
+ "organiser": "Bharat Heritage & Leadership Forum",
+ "locality": "[LOCALITY]",
+ "venue": {
+  "name": "[VENUE NAME]",
+  "address": "[ADDRESS]",
+  "mapLink": ""
+ },
+ "time": "9:30 am to 12:30 pm",
+ "contact": {
+  "name": "[NAME]",
+  "phone": "[PHONE]",
+  "whatsapp": ""
+ },
+ "safeguardingContact": "[NAME] · [PHONE]",
+ "scriptUrl": "",
+ "roles": [
+  {
+   "id": "welcome",
+   "name": "Welcome desk and registration",
+   "need": 4
+  },
+  {
+   "id": "seating",
+   "name": "Seating and elders’ care",
+   "need": 3
+  },
+  {
+   "id": "bal",
+   "name": "Bal Gurukul helper",
+   "need": 4
+  },
+  {
+   "id": "stage",
+   "name": "Stage, sound and timekeeping",
+   "need": 2
+  },
+  {
+   "id": "prasad",
+   "name": "Bring prasad (family rota)",
+   "need": 5
+  },
+  {
+   "id": "water",
+   "name": "Water and serving",
+   "need": 3
+  },
+  {
+   "id": "media",
+   "name": "Photos and WhatsApp updates",
+   "need": 2
+  },
+  {
+   "id": "clean",
+   "name": "Clean-up",
+   "need": 3
+  },
+  {
+   "id": "story",
+   "name": "Storyteller or bhajan leader",
+   "need": 2
+  },
+  {
+   "id": "youth",
+   "name": "Youth quiz master or jam lead",
+   "need": 1
+  }
+ ],
+ "morning": [
+  [
+   "9:00",
+   "Aagaman",
+   "Arrive, rangoli welcome, pick up a small seva task"
+  ],
+  [
+   "9:30",
+   "Deep prajwalan and vandana",
+   "A child and an elder light the lamp; children chant the invocation"
+  ],
+  [
+   "9:45",
+   "Acharya pravachan",
+   "The month’s teaching, with one practice we all do together"
+  ],
+  [
+   "10:30",
+   "Vishram",
+   "Water and prasad brought by families in turn"
+  ],
+  [
+   "10:45",
+   "Shishya sabha",
+   "Four learning circles on durries"
+  ],
+  [
+   "11:45",
+   "Prashnottari",
+   "Circles share one insight; questions to the Acharya, children first"
+  ],
+  [
+   "12:10",
+   "Sanskriti",
+   "Bhajan, dance or skit"
+  ],
+  [
+   "12:25",
+   "Sankalp",
+   "The month’s home practice, taken as a pledge"
+  ]
+ ],
+ "lifeQuestions": [
+  {
+   "question": "Staying calm when plans collapse",
+   "episode": "Rama hears of his exile and stays calm",
+   "source": "Ramayana, Ayodhya 18"
+  },
+  {
+   "question": "Anger, pride, desire, greed",
+   "episode": "The Yaksha’s teaching to Yudhishthira",
+   "source": "MBh Vana, CE 3.297.57"
+  },
+  {
+   "question": "Hard choices and fairness",
+   "episode": "Yudhishthira chooses Nakula so both mothers keep a son",
+   "source": "MBh Vana, CE 3.297.55, 65–74"
+  },
+  {
+   "question": "What real wealth is",
+   "episode": "Truly rich is one to whom joy and sorrow are alike",
+   "source": "MBh Vana, CE 3.297.62–64"
+  },
+  {
+   "question": "Sibling rivalry and power",
+   "episode": "Bharata rules with Rama’s sandals",
+   "source": "Ramayana, Ayodhya 112"
+  },
+  {
+   "question": "Keeping promises",
+   "episode": "Rama keeps his father’s word; Bharata vows to wait",
+   "source": "Ramayana, Ayodhya 112"
+  },
+  {
+   "question": "Friendship and resentment",
+   "episode": "Drupada turns away his childhood friend Drona",
+   "source": "MBh Adi, CE 1.121"
+  },
+  {
+   "question": "Courage at any age",
+   "episode": "Old Jatayu fights Ravana",
+   "source": "Ramayana, Aranya 51"
+  },
+  {
+   "question": "Loyalty versus right",
+   "episode": "Karna: where there is dharma, there is victory",
+   "source": "MBh Udyoga, CE 5.141.33"
+  },
+  {
+   "question": "Favouring your own child",
+   "episode": "Dhritarashtra cannot give up Duryodhana",
+   "source": "MBh Udyoga, CE 5.39.7"
+  },
+  {
+   "question": "Self-mastery at work",
+   "episode": "Vidura on the qualities of the wise",
+   "source": "MBh Udyoga, CE 5.33.17, 26"
+  },
+  {
+   "question": "Laziness and delay",
+   "episode": "Vidura’s six faults",
+   "source": "MBh Udyoga, CE 5.33.66"
+  },
+  {
+   "question": "Forgiveness",
+   "episode": "Forgiveness alone is the highest peace",
+   "source": "MBh Udyoga, CE 5.33.48"
+  },
+  {
+   "question": "Keeping counsel",
+   "episode": "The wise act first; plans are known once done",
+   "source": "MBh Udyoga, CE 5.33.18"
+  },
+  {
+   "question": "Envy and talent",
+   "episode": "Ekalavya and his thumb",
+   "source": "MBh Adi, CE 1.123"
+  },
+  {
+   "question": "Speaking up against wrong",
+   "episode": "Draupadi’s question in the court",
+   "source": "MBh Sabha, CE 2.60.7–8"
+  },
+  {
+   "question": "When dharma seems not to protect",
+   "episode": "Draupadi’s challenge to Yudhishthira",
+   "source": "MBh Vana, CE 3.31.7"
+  },
+  {
+   "question": "Greed and compulsion",
+   "episode": "The dice game",
+   "source": "MBh Sabha, CE 2.58"
+  },
+  {
+   "question": "Dignity and courage of women",
+   "episode": "Sita’s blade of grass",
+   "source": "Ramayana, Sundara 21"
+  },
+  {
+   "question": "Heeding good advice",
+   "episode": "Maricha warns Ravana",
+   "source": "Ramayana, Aranya 37.13"
+  },
+  {
+   "question": "Second chances",
+   "episode": "Refuge for Vibhishana",
+   "source": "Ramayana, Yuddha 18.33"
+  },
+  {
+   "question": "Grace in victory",
+   "episode": "Full rites for Ravana",
+   "source": "Ramayana, Yuddha 109"
+  },
+  {
+   "question": "Respecting elders",
+   "episode": "Rama honours Shabari",
+   "source": "Ramayana, Aranya 74"
+  },
+  {
+   "question": "Empathy",
+   "episode": "Do not do to another what hurts you",
+   "source": "MBh Anushasana, CE 13.114.8"
+  },
+  {
+   "question": "Ethics in any job",
+   "episode": "The righteous butcher’s teaching",
+   "source": "MBh Vana, CE 3.198.69"
+  }
+ ],
+ "months": [
+  {
+   "n": 1,
+   "month": "January",
+   "date": "2027-01-17",
+   "festival": "Makar Sankranti",
+   "topic": "The Vedas",
+   "theme": "The roots of Bharat",
+   "colour": "saffron",
+   "core": "The Vedas are India’s oldest texts. They teach that truth is one, that we must live in harmony with nature, and that people must walk and decide together.",
+   "note": "Tradition holds the Vedas to be eternal (apauruṣeya); most scholars date the Rigveda to about 1500–1200 BCE.",
+   "verses": [
+    {
+     "text": "Tat savitur vareṇyaṁ bhargo devasya dhīmahi, dhiyo yo naḥ pracodayāt",
+     "source": "Rigveda 3.62.10 (Gayatri)",
+     "meaning": "We meditate on the radiant light of the divine sun; may it inspire our minds."
+    },
+    {
+     "text": "Ekaṁ sad viprā bahudhā vadanti",
+     "source": "Rigveda 1.164.46",
+     "meaning": "Truth is one; the wise call it by many names."
+    },
+    {
+     "text": "Saṁ gacchadhvaṁ saṁ vadadhvaṁ saṁ vo manāṁsi jānatām",
+     "source": "Rigveda 10.191.2",
+     "meaning": "Walk together, speak together, let your minds be in harmony."
+    },
+    {
+     "text": "Mātā bhūmiḥ putro ahaṁ pṛthivyāḥ",
+     "source": "Atharvaveda 12.1.12",
+     "meaning": "The earth is my mother; I am her child."
+    }
+   ],
+   "learn": [
+    "The four Vedas: Rig (hymns), Sama (melodies, the root of Indian music), Yajur (ritual) and Atharva (daily life and healing).",
+    "Women seers such as Ghosha, Apala and Lopamudra composed Vedic hymns.",
+    "The Vedas were kept alive by memory for over 3,000 years; UNESCO recognises Vedic chanting as world heritage."
+   ],
+   "circles": {
+    "Bal Gurukul": "Learn the Gayatri with a clapping rhythm; Surya Namaskar",
+    "Yuva Sabha": "A memory game in the Vedic krama style",
+    "Karma Sabha": "A meeting where everyone speaks before anyone decides",
+    "Vriddha Sabha": "Prayers we learnt by heart as children"
+   },
+   "lifeQuestion": {
+    "question": "When plans collapse",
+    "episode": "Told he is to be exiled instead of crowned, Rama stays calm and still bows to his father and to Kaikeyi.",
+    "source": "Ramayana, Ayodhya Kanda 18"
+   },
+   "sankalp": "Greet the rising sun each morning and sit in silence for three minutes."
+  },
+  {
+   "n": 2,
+   "month": "February",
+   "date": "2027-02-21",
+   "festival": "Vasant Panchami",
+   "topic": "Vedic sciences",
+   "theme": "Knowledge born from the Vedas",
+   "colour": "haldi",
+   "core": "To understand the Vedas, our ancestors built sciences of sound, grammar, mathematics, astronomy, health and building. Learning and devotion were never separate.",
+   "note": "The popular “Vedic Maths” speed tricks come from a 20th-century book by Swami Bharati Krishna Tirtha, not from the Vedas themselves.",
+   "verses": [
+    {
+     "text": "Sarasvati namastubhyaṁ varade kāmarūpiṇi, vidyārambhaṁ kariṣyāmi siddhir bhavatu me sadā",
+     "source": "Traditional prayer before study",
+     "meaning": "Salutations to Saraswati; as I begin to learn, may I always succeed."
+    },
+    {
+     "text": "Yathā śikhā mayūrāṇāṁ nāgānāṁ maṇayo yathā, tadvad vedāṅga-śāstrāṇāṁ gaṇitaṁ mūrdhani sthitam",
+     "source": "Vedanga Jyotisha",
+     "meaning": "As the crest on the peacock and the jewel on the cobra, so mathematics stands at the head of the sciences."
+    },
+    {
+     "text": "Samadoṣaḥ samāgniśca samadhātu malakriyaḥ, prasannātmendriyamanaḥ svastha ityabhidhīyate",
+     "source": "Sushruta Samhita, Sutrasthana",
+     "meaning": "Health is balance of body and digestion, with a happy self, senses and mind."
+    }
+   ],
+   "learn": [
+    "The six Vedangas: phonetics, grammar, metre, meaning of words, astronomy and ritual.",
+    "The Shulba Sutras give rope-and-peg geometry for building altars, including the relationship now called Pythagoras’ theorem.",
+    "Ayurveda teaches health as balance: daily routine (dinacharya), food and sleep."
+   ],
+   "circles": {
+    "Bal Gurukul": "Rope geometry and a Saraswati vandana",
+    "Yuva Sabha": "Mental-maths games and a science quiz",
+    "Karma Sabha": "Design a realistic daily routine for working life",
+    "Vriddha Sabha": "Household knowledge of food and seasons"
+   },
+   "lifeQuestion": {
+    "question": "Laziness and putting things off",
+    "episode": "Vidura names six faults that hold a person back: too much sleep, drowsiness, fear, anger, laziness and delay.",
+    "source": "Mahabharata, Udyoga Parva (Vidura Niti), CE 5.33.66"
+   },
+   "sankalp": "Ten minutes of new learning every day, and one fixed time to sleep and wake."
+  },
+  {
+   "n": 3,
+   "month": "March",
+   "date": "2027-03-21",
+   "festival": "Holi",
+   "topic": "Upanishads",
+   "theme": "Knowing yourself",
+   "colour": "peacock",
+   "core": "The Upanishads turn the search inward. They ask “Who am I?” and answer that the same divine self lives in every being.",
+   "note": "",
+   "verses": [
+    {
+     "text": "Asato mā sad gamaya, tamaso mā jyotir gamaya, mṛtyor mā amṛtaṁ gamaya",
+     "source": "Brihadaranyaka Upanishad 1.3.28",
+     "meaning": "Lead me from untruth to truth, from darkness to light, from death to immortality."
+    },
+    {
+     "text": "Tat tvam asi",
+     "source": "Chandogya Upanishad 6.8.7",
+     "meaning": "You are that."
+    },
+    {
+     "text": "Mātṛdevo bhava, pitṛdevo bhava, ācāryadevo bhava, atithidevo bhava",
+     "source": "Taittiriya Upanishad 1.11.2",
+     "meaning": "Treat mother, father, teacher and guest as divine."
+    },
+    {
+     "text": "Satyam eva jayate",
+     "source": "Mundaka Upanishad 3.1.6",
+     "meaning": "Truth alone triumphs. (India’s national motto.)"
+    }
+   ],
+   "learn": [
+    "Shvetaketu and the salt: unseen in water, yet present in every sip, like the self in all things (Chandogya 6.13).",
+    "Satyakama Jabala tells his teacher the plain truth about his birth and is accepted for his honesty (Chandogya 4.4).",
+    "At the end of study, the teacher says: “Speak the truth, follow dharma.” (Taittiriya 1.11.1)"
+   ],
+   "circles": {
+    "Bal Gurukul": "The salt-in-water experiment",
+    "Yuva Sabha": "Write “I am…” ten times, then cross out every label",
+    "Karma Sabha": "Honesty at work when it costs you",
+    "Vriddha Sabha": "How atithi devo bhava was lived at home"
+   },
+   "lifeQuestion": {
+    "question": "What real wealth is",
+    "episode": "The Yaksha asks Yudhishthira who is truly rich. The answer: one to whom joy and sorrow, past and future, are alike.",
+    "source": "Mahabharata, Vana Parva (Yaksha Prashna), CE 3.297.62–64"
+   },
+   "sankalp": "Five minutes of journalling each night: who am I beyond my roles today?"
+  },
+  {
+   "n": 4,
+   "month": "April",
+   "date": "2027-04-18",
+   "festival": "Ram Navami",
+   "topic": "Kathopanishad",
+   "theme": "Nachiketa and mastering the mind",
+   "colour": "peacock",
+   "core": "A boy, Nachiketa, has the courage to ask Death itself about the meaning of life. His teacher shows that a trained mind, guided by a clear intellect, carries us to our goal.",
+   "note": "",
+   "verses": [
+    {
+     "text": "Ātmānaṁ rathinaṁ viddhi śarīraṁ ratham eva tu, buddhiṁ tu sārathiṁ viddhi manaḥ pragraham eva ca",
+     "source": "Kathopanishad 1.3.3",
+     "meaning": "The self is the rider, the body the chariot, the intellect the charioteer, the mind the reins."
+    },
+    {
+     "text": "Anyac chreyo ’nyad utaiva preyaḥ",
+     "source": "Kathopanishad 1.2.1",
+     "meaning": "The good is one thing, the pleasant another. The wise choose the good."
+    },
+    {
+     "text": "Uttiṣṭhata jāgrata prāpya varān nibodhata",
+     "source": "Kathopanishad 1.3.14",
+     "meaning": "Arise, awake, and learn from the wise. (Swami Vivekananda’s call to youth.)"
+    }
+   ],
+   "learn": [
+    "Nachiketa waits three days at Yama’s door and refuses wealth and pleasure, asking only for true knowledge.",
+    "The chariot: untrained horses (the senses) run wild unless the charioteer (intellect) holds the reins (mind).",
+    "Shreyas over preyas: choose what is good in the long run over what is pleasant now."
+   ],
+   "circles": {
+    "Bal Gurukul": "Draw and label the chariot; a question box",
+    "Yuva Sabha": "List your “horses” and one rein for each",
+    "Karma Sabha": "Short-term targets versus long-term good",
+    "Vriddha Sabha": "Discipline in our youth, without screens"
+   },
+   "lifeQuestion": {
+    "question": "Anger, pride and greed",
+    "episode": "The Yaksha teaches: give up pride and you are loved; give up anger and you do not grieve; give up greed and you are happy.",
+    "source": "Mahabharata, Vana Parva (Yaksha Prashna), CE 3.297.57"
+   },
+   "sankalp": "Ten screen-free minutes a day, and one family hour a week with all phones in a basket."
+  },
+  {
+   "n": 5,
+   "month": "May",
+   "date": "2027-05-16",
+   "festival": "Buddha Purnima",
+   "topic": "Dhyana and Pranayama",
+   "theme": "Calm in every storm",
+   "colour": "peacock",
+   "core": "The sages found that when the breath is steady, the mind becomes steady. Breath and meditation are tools anyone can use, at any age.",
+   "note": "Take care: no breath-holding for anyone with high blood pressure, heart conditions or pregnancy. Stop at any dizziness.",
+   "verses": [
+    {
+     "text": "Tāṁ yogam iti manyante sthirām indriya-dhāraṇām",
+     "source": "Kathopanishad 2.3.11",
+     "meaning": "The steady holding of the senses is called yoga: one of the earliest definitions."
+    },
+    {
+     "text": "Oṁ ity etad akṣaram idaṁ sarvam",
+     "source": "Mandukya Upanishad 1",
+     "meaning": "Om: this sound is all this."
+    },
+    {
+     "text": "Cale vāte calaṁ cittaṁ niścale niścalaṁ bhavet",
+     "source": "Hatha Yoga Pradipika 2.2 (a later text recording older practice)",
+     "meaning": "When the breath moves, the mind moves; when the breath is still, the mind is still."
+    }
+   ],
+   "learn": [
+    "Om chanting: three long Oms.",
+    "Anulom-vilom (alternate-nostril breathing), five slow rounds.",
+    "Bhramari (bee breath): a soft hum with ears closed; it calms children quickly.",
+    "Simple dhyana: watch the breath for two minutes."
+   ],
+   "circles": {
+    "Bal Gurukul": "Bee breath and a stillness game",
+    "Yuva Sabha": "A five-minute exam-calm routine",
+    "Karma Sabha": "A three-minute desk meditation",
+    "Vriddha Sabha": "Gentle pranayama on chairs"
+   },
+   "lifeQuestion": {
+    "question": "Forgiveness",
+    "episode": "Vidura tells the king: forgiveness alone is the highest peace (kṣamaikā śāntir uttamā).",
+    "source": "Mahabharata, Udyoga Parva (Vidura Niti), CE 5.33.48"
+   },
+   "sankalp": "Five minutes of slow breathing or silent sitting every morning."
+  },
+  {
+   "n": 6,
+   "month": "June",
+   "date": "2027-06-20",
+   "festival": "International Day of Yoga (21 June)",
+   "topic": "Yoga",
+   "theme": "Strong body, steady mind, good conduct",
+   "colour": "saffron",
+   "core": "Yoga is an eight-step path that begins with how we treat others and ourselves, and ends in a still, clear mind.",
+   "note": "Yoga’s roots are in the Upanishads; Patanjali gathered the teaching into the Yoga Sutras, which scholars date to roughly the 2nd century BCE–4th century CE.",
+   "verses": [
+    {
+     "text": "Yogaś citta-vṛtti-nirodhaḥ",
+     "source": "Yoga Sutra 1.2",
+     "meaning": "Yoga is the stilling of the movements of the mind."
+    },
+    {
+     "text": "Sthira-sukham āsanam",
+     "source": "Yoga Sutra 2.46",
+     "meaning": "A posture should be steady and comfortable."
+    },
+    {
+     "text": "Yogaḥ karmasu kauśalam",
+     "source": "Bhagavad Gita 2.50",
+     "meaning": "Yoga is skill in action."
+    }
+   ],
+   "learn": [
+    "Yamas (how we treat others): non-violence, truth, not stealing, self-restraint, not hoarding (Yoga Sutra 2.30).",
+    "Niyamas (how we treat ourselves): cleanliness, contentment, discipline, self-study, surrender (Yoga Sutra 2.32).",
+    "In 2014 the UN declared 21 June the International Day of Yoga, co-sponsored by 177 countries."
+   ],
+   "circles": {
+    "Bal Gurukul": "Animal asanas; five golden-rule cards",
+    "Yuva Sabha": "Yoga for posture and screen fatigue",
+    "Karma Sabha": "Desk yoga; the yamas as a code of work",
+    "Vriddha Sabha": "Chair yoga"
+   },
+   "lifeQuestion": {
+    "question": "Self-mastery at work",
+    "episode": "Vidura: the wise are not pulled from their purpose by anger, joy, pride or shame, and stay calm like a deep pool of the Ganga.",
+    "source": "Mahabharata, Udyoga Parva (Vidura Niti), CE 5.33.17, 26"
+   },
+   "sankalp": "Fifteen minutes of yoga daily, with three rounds of Surya Namaskar."
+  },
+  {
+   "n": 7,
+   "month": "July",
+   "date": "2027-07-18",
+   "festival": "Guru Purnima",
+   "topic": "Ramayana",
+   "theme": "Character, family and keeping your word",
+   "colour": "haldi",
+   "core": "Character is built through small choices: keeping your word, respecting elders and serving without expecting reward.",
+   "note": "We follow Valmiki’s Ramayana (Gita Press numbering). Scenes such as the Lakshman Rekha and Shabari tasting the berries come from later retellings and are told as such.",
+   "verses": [
+    {
+     "text": "Rāmo vigrahavān dharmaḥ",
+     "source": "Valmiki Ramayana, Aranya Kanda 37.13",
+     "meaning": "Rama is dharma in human form, said even by his enemy Maricha."
+    },
+    {
+     "text": "Raghukula rīti sadā chali āī, prāna jāhu baru bachanu na jāī",
+     "source": "Tulsidas, Ramcharitmanas, Ayodhya Kand",
+     "meaning": "The way of Raghu’s line: life may go, but a promise must not."
+    }
+   ],
+   "learn": [
+    "Rama accepts fourteen years of exile to keep his father’s word, without anger (Ayodhya Kanda 18).",
+    "Bharata refuses the throne and rules as caretaker with Rama’s sandals on it (Ayodhya Kanda 112).",
+    "Sita puts a blade of grass between herself and Ravana and rebukes him (Sundara Kanda 21).",
+    "Rama honours the aged Shabari and her service to her teachers (Aranya Kanda 74)."
+   ],
+   "circles": {
+    "Bal Gurukul": "Story theatre; paper padukas",
+    "Yuva Sabha": "A promise that clashes with a new opportunity",
+    "Karma Sabha": "Bharata as a model of trusteeship",
+    "Vriddha Sabha": "The Ramayana as our grandparents told it"
+   },
+   "lifeQuestion": {
+    "question": "Rivalry in the family",
+    "episode": "Bharata could have had the kingdom. Instead he places Rama’s sandals on the throne and rules only in his name.",
+    "source": "Ramayana, Ayodhya Kanda 112"
+   },
+   "sankalp": "One act of service at home every day, done without being asked."
+  },
+  {
+   "n": 8,
+   "month": "August",
+   "date": "2027-08-15",
+   "festival": "Independence Day · Raksha Bandhan",
+   "topic": "Mahabharata",
+   "theme": "Right action in conflict",
+   "colour": "kumkum",
+   "core": "Life is full of grey situations. The Mahabharata shows how to choose rightly when every option has a cost, and what happens when greed and pride go unchecked.",
+   "note": "We cite the BORI critical edition (CE). Some famous lines, such as the Yaksha’s “greatest wonder”, appear only in popular printed editions.",
+   "verses": [
+    {
+     "text": "Na tat parasya saṁdadhyāt pratikūlaṁ yad ātmanaḥ",
+     "source": "Anushasana Parva, CE 13.114.8",
+     "meaning": "Do not do to another what is hateful to yourself; this, in brief, is dharma."
+    },
+    {
+     "text": "Kṣamaikā śāntir uttamā",
+     "source": "Udyoga Parva (Vidura Niti), CE 5.33.48",
+     "meaning": "Forgiveness alone is the highest peace."
+    },
+    {
+     "text": "Yato dharmas tato jayaḥ",
+     "source": "Udyoga Parva, CE 5.39.7",
+     "meaning": "Where there is dharma, there is victory."
+    }
+   ],
+   "learn": [
+    "The dice game: Yudhishthira keeps staking as Shakuni taunts him (Sabha Parva, CE 2.58).",
+    "Draupadi challenges the court: “Did he lose himself first, or me?” (CE 2.60.7–8)",
+    "The Yaksha Prashna: wisdom, not force, saves the brothers (Vana Parva, CE 3.297).",
+    "Vidura warns Dhritarashtra again and again; the king listens but does not act (Udyoga Parva)."
+   ],
+   "circles": {
+    "Bal Gurukul": "“What would you do?” picture quiz",
+    "Yuva Sabha": "A mock Yaksha Prashna",
+    "Karma Sabha": "The one person who warned us: listening to Vidura",
+    "Vriddha Sabha": "Elders as Bhishma: settling family disputes"
+   },
+   "lifeQuestion": {
+    "question": "Speaking up against wrong",
+    "episode": "In a court full of elders, only Draupadi asks the question no one wants to answer: had Yudhishthira the right to stake her?",
+    "source": "Mahabharata, Sabha Parva, CE 2.60.7–8"
+   },
+   "sankalp": "Before any big decision, pause and consult one elder or trusted friend."
+  },
+  {
+   "n": 9,
+   "month": "September",
+   "date": "2027-09-19",
+   "festival": "Ganesh Chaturthi",
+   "topic": "Bhagavad Gita",
+   "theme": "Courage, duty and clear decisions",
+   "colour": "saffron",
+   "core": "Do your duty fully and let go of anxiety about the result. A steady mind makes good decisions.",
+   "note": "Tradition holds that Ganesha wrote down the Mahabharata, which contains the Gita, as Vyasa dictated it.",
+   "verses": [
+    {
+     "text": "Karmaṇy evādhikāras te mā phaleṣu kadācana",
+     "source": "Bhagavad Gita 2.47",
+     "meaning": "Your right is to action alone, never to its fruits."
+    },
+    {
+     "text": "Yogasthaḥ kuru karmāṇi … samatvaṁ yoga ucyate",
+     "source": "Bhagavad Gita 2.48",
+     "meaning": "Act while established in balance; evenness of mind is yoga."
+    },
+    {
+     "text": "Uddhared ātmanātmānaṁ nātmānam avasādayet",
+     "source": "Bhagavad Gita 6.5",
+     "meaning": "Lift yourself by your own effort; never pull yourself down."
+    },
+    {
+     "text": "Yad yad ācarati śreṣṭhas tat tad evetaro janaḥ",
+     "source": "Bhagavad Gita 3.21",
+     "meaning": "Whatever a great person does, others follow."
+    }
+   ],
+   "learn": [
+    "Arjuna at Kurukshetra puts down his bow, overwhelmed by doubt; Krishna helps him see clearly, and Arjuna chooses to act.",
+    "The sthitaprajña, the person of steady mind (2.54–2.72).",
+    "Krishna, the greatest teacher, chose to serve as a charioteer."
+   ],
+   "circles": {
+    "Bal Gurukul": "Paper chariot craft with a Gita value on each wheel",
+    "Yuva Sabha": "“My Kurukshetra”: one hard choice, seen through 2.47",
+    "Karma Sabha": "A manager pressed to cut an ethical corner",
+    "Vriddha Sabha": "When the Gita guided our lives"
+   },
+   "lifeQuestion": {
+    "question": "Loyalty versus what is right",
+    "episode": "Karna turns down Krishna’s offer out of loyalty to Duryodhana, yet admits: where there is dharma, there is victory.",
+    "source": "Mahabharata, Udyoga Parva, CE 5.141.33"
+   },
+   "sankalp": "Do one duty fully every day, without complaint and without worrying about the result."
+  },
+  {
+   "n": 10,
+   "month": "October",
+   "date": "2027-10-17",
+   "festival": "Navaratri · Sharad Purnima",
+   "topic": "Srimad Bhagavatam",
+   "theme": "Devotion, courage and joy in service",
+   "colour": "haldi",
+   "core": "Devotion is open to everyone: a five-year-old, a poor friend or a whole village. Love and service, not status, bring us close to the divine.",
+   "note": "We place the Bhagavatam here for the era of its story, Krishna’s life; scholars date the text to about the 9th–10th century CE.",
+   "verses": [
+    {
+     "text": "Sa vai puṁsāṁ paro dharmo yato bhaktir adhokṣaje",
+     "source": "Bhagavatam 1.2.6",
+     "meaning": "The highest dharma is selfless, unbroken devotion."
+    },
+    {
+     "text": "Śravaṇaṁ kīrtanaṁ viṣṇoḥ smaraṇaṁ pāda-sevanam, arcanaṁ vandanaṁ dāsyaṁ sakhyam ātma-nivedanam",
+     "source": "Bhagavatam 7.5.23",
+     "meaning": "The nine forms of devotion, from listening and singing to friendship and self-offering."
+    }
+   ],
+   "learn": [
+    "Dhruva, aged five, does not give up and becomes the Pole Star (Canto 4).",
+    "Prahlada holds to truth against his powerful father (Canto 7).",
+    "Krishna lifts Govardhan, and every villager helps hold it up with a stick (Canto 10).",
+    "Krishna runs barefoot to welcome his poor friend Sudama (Canto 10)."
+   ],
+   "circles": {
+    "Bal Gurukul": "Find the Pole Star; a paper Govardhan",
+    "Yuva Sabha": "One act of service for someone who has less",
+    "Karma Sabha": "Govardhan leadership: everyone holds a stick",
+    "Vriddha Sabha": "Bhajans and Krishna stories of our region"
+   },
+   "lifeQuestion": {
+    "question": "Courage at any age",
+    "episode": "The aged vulture Jatayu sees Ravana carrying Sita away and, though old and alone, stands up to fight him.",
+    "source": "Ramayana, Aranya Kanda 51"
+   },
+   "sankalp": "One act of selfless service each week, and one small personal goal kept daily, like Dhruva."
+  },
+  {
+   "n": 11,
+   "month": "November",
+   "date": "2027-11-21",
+   "festival": "Kartik Purnima",
+   "topic": "India in the Buddha’s time",
+   "theme": "An age of questions and assemblies",
+   "colour": "kumkum",
+   "core": "Around the 6th–5th century BCE, India was full of new cities, trade and bold thinkers. Kingdoms and republics debated and governed through assemblies.",
+   "note": "",
+   "verses": [
+    {
+     "text": "Yāvakīvañca, ānanda, vajjī abhiṇhaṁ sannipātā … vuddhiyeva pāṭikaṅkhā, no parihāni",
+     "source": "Mahaparinibbana Sutta (Digha Nikaya 16)",
+     "meaning": "As long as the Vajjis meet often and in large numbers, they will prosper, not decline."
+    },
+    {
+     "text": "Parasparopagraho jīvānām",
+     "source": "Tattvartha Sutra 5.21 (Jain)",
+     "meaning": "All living beings support one another."
+    }
+   ],
+   "learn": [
+    "The sixteen Mahajanapadas: Magadha, Kosala, Vatsa, Avanti, the Vajjis and more.",
+    "The Buddha’s seven conditions for a community’s welfare: meet often, in harmony; keep good laws; respect elders; protect women; honour shrines; support the wise.",
+    "Mahavira taught ahimsa and that truth has many sides (anekāntavāda)."
+   ],
+   "circles": {
+    "Bal Gurukul": "Colour a map of the Mahajanapadas",
+    "Yuva Sabha": "A mock assembly with voting tokens",
+    "Karma Sabha": "The seven conditions as a health check for our ward",
+    "Vriddha Sabha": "Local history of our area"
+   },
+   "lifeQuestion": {
+    "question": "Favouring your own",
+    "episode": "Dhritarashtra knows where dharma lies, yet cannot bring himself to give up his son Duryodhana.",
+    "source": "Mahabharata, Udyoga Parva, CE 5.39.7"
+   },
+   "sankalp": "Learn one story of our region’s history and tell it at home; join one residents’ or family meeting."
+  },
+  {
+   "n": 12,
+   "month": "December",
+   "date": "2027-12-19",
+   "festival": "Annual finale",
+   "topic": "Gautama Buddha",
+   "theme": "The middle way and a compassionate mind",
+   "colour": "kumkum",
+   "core": "Siddhartha left comfort to understand suffering and found the middle way. His message of a trained mind, right action and compassion is part of India’s shared heritage.",
+   "note": "Scholars place the Buddha’s life around the 5th century BCE; older estimates say the 6th.",
+   "verses": [
+    {
+     "text": "Manopubbaṅgamā dhammā manoseṭṭhā manomayā",
+     "source": "Dhammapada 1",
+     "meaning": "Mind comes first; all things are shaped by the mind."
+    },
+    {
+     "text": "Na hi verena verāni sammantīdha kudācanaṁ, averena ca sammanti esa dhammo sanantano",
+     "source": "Dhammapada 5",
+     "meaning": "Hatred never ends through hatred, only through love. This is an eternal law."
+    },
+    {
+     "text": "Attadīpā viharatha",
+     "source": "Mahaparinibbana Sutta",
+     "meaning": "Be a lamp unto yourselves."
+    }
+   ],
+   "learn": [
+    "His life: Lumbini, Bodh Gaya, the first teaching at Sarnath, Kushinagar.",
+    "The Four Noble Truths and the Noble Eightfold Path.",
+    "The Kalama Sutta: test a teaching for yourself before you accept it.",
+    "Our flag’s Dharma Chakra and our national emblem come from Sarnath."
+   ],
+   "circles": {
+    "Bal Gurukul": "The insult that was not accepted; a paper lotus",
+    "Yuva Sabha": "Check three viral claims before forwarding",
+    "Karma Sabha": "Right speech and right livelihood at work",
+    "Vriddha Sabha": "Kisa Gotami: change, loss and acceptance"
+   },
+   "lifeQuestion": {
+    "question": "Second chances",
+    "episode": "Rama’s advisers doubt Vibhishana, but Rama gives him refuge: shelter for anyone who asks, even Ravana himself.",
+    "source": "Ramayana, Yuddha Kanda 18.33"
+   },
+   "sankalp": "Two minutes of loving-kindness each night, and our family’s pledge for 2028 on the wall at home."
+  }
+ ]
+}
