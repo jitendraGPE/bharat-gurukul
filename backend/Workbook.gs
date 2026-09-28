@@ -8,7 +8,7 @@
  * TWO KINDS OF TAB
  *   Report tabs   - Dashboard, By Month, Seva Roster.
  *                   Rebuilt every time. Never type in them.
- *   Working tabs  - Tasks, Acharyas, Seva Kosh, Materials, Core Team.
+ *   Working tabs  - Tasks, Presenters, Seva Kosh, Materials, Core Team.
  *                   Created once with starter rows, then left alone. Your edits are safe.
  * Raw tabs written by the website: Families, RSVPs, Seva, Questions. Do not rename them.
  */
@@ -21,24 +21,24 @@ var MONTHS = [
 ];
 
 var ROLES = [
-  ['welcome', 'Welcome desk and registration', 4], ['seating', 'Seating and elders’ care', 3],
-  ['bal', 'Bal Gurukul helper', 4], ['stage', 'Stage, sound and timekeeping', 2],
-  ['prasad', 'Bring prasad (family rota)', 5], ['water', 'Water and serving', 3],
-  ['media', 'Photos and WhatsApp updates', 2], ['clean', 'Clean-up', 3],
-  ['story', 'Storyteller or bhajan leader', 2], ['youth', 'Youth quiz master or jam lead', 1]
+  ['present', 'Present the month\u2019s topic', 1], ['circle', 'Lead a learning circle', 4],
+  ['welcome', 'Welcome desk and registration', 3], ['seating', 'Seating and elders\u2019 care', 3],
+  ['bal', 'Bal Gurukul helper', 3], ['stage', 'Stage, sound and timekeeping', 2],
+  ['media', 'Photos and WhatsApp updates', 2], ['clean', 'Setting up and clean-up', 3],
+  ['culture', 'Bhajan, dance or skit', 2], ['youth', 'Youth quiz master or jam lead', 1]
 ];
 
 var TASKS = [
   ['15 Oct 2026', 'Form the committee; agree the plan', 'Convenor'],
   ['31 Oct 2026', 'Book the venue for all 12 dates; sound and seating', 'Civic liaison'],
   ['31 Oct 2026', 'Set up the Seva Kosh box and open accounts register', 'Accounts coordinator'],
-  ['15 Nov 2026', 'Invite volunteer Acharyas for Jan–Mar; send each the topic guide', 'Programme head'],
-  ['15 Nov 2026', 'Build the in-kind rota: prasad families, printing, durries, sound', 'Management track lead'],
+  ['15 Nov 2026', 'Find volunteer presenters for Jan–Mar; send each the topic guide', 'Programme head'],
+  ['15 Nov 2026', 'Arrange printing, durries and sound in kind', 'Management track lead'],
   ['30 Nov 2026', 'Print posters, Sadhana Cards, booklets; share the website link', 'Media and registrations'],
   ['30 Nov 2026', 'Tie up with 3–5 schools and 2 senior citizens’ associations', 'Children’s and elders’ leads'],
   ['10 Dec 2026', 'Recruit and brief 20 volunteers; code of conduct signed', 'Volunteer coordinator'],
   ['10 Dec 2026', 'Recruit one lane volunteer per building to invite 5–10 families', 'Volunteer coordinator'],
-  ['15 Dec 2026', 'Go/no-go: venue booked, 3 Acharyas, 150 registrations', 'Committee'],
+  ['15 Dec 2026', 'Go/no-go: venue booked, 3 presenters, 150 registrations', 'Committee'],
   ['20 Dec 2026', 'Curtain-raiser at Gita Jayanti', 'Programme head'],
   ['10 Jan 2027', 'Dry run at the venue', 'All']
 ];
@@ -48,7 +48,7 @@ var MATERIALS = [
   ['3', 'Glass, water, salt; asato ma cards; notebooks'], ['4', 'Chart paper, markers, question box'],
   ['5', 'Mats, small bell, breathing practice cards'], ['6', 'Mats, yama-niyama cards, asana chart'],
   ['7', 'Cardboard for padukas, simple costumes, Ramayana picture book'], ['8', 'Mahabharata picture cards, dilemma cards'],
-  ['9', 'Card and paper plates for chariots, 2.47 cards'], ['10', 'Star chart, card and sticks for Govardhan, poha'],
+  ['9', 'Card and paper plates for chariots, 2.47 cards'], ['10', 'Star chart, card and sticks for Govardhan'],
   ['11', 'Map of the Mahajanapadas, voting tokens, local history notes'], ['12', 'Paper for lotuses, certificates, photo slideshow, pledge cards']
 ];
 
@@ -62,10 +62,10 @@ function buildWorkbook() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   ['Families', 'RSVPs', 'Seva', 'Questions'].forEach(function (n) { if (!ss.getSheetByName(n)) ss.insertSheet(n); });
   seed_(ss, 'Tasks', ['Due', 'Task', 'Owner', 'Status', 'Notes'], TASKS.map(function (t) { return [t[0], t[1], t[2], 'Not started', '']; }));
-  seed_(ss, 'Acharyas', ['Month', 'Date', 'Topic', 'Acharya', 'Phone', 'Guide sent', 'Confirmed', 'Pick-up by'],
-        MONTHS.map(function (m) { return [m[0], m[1], m[2], '', '', 'No', 'No', '']; }));
+  seed_(ss, 'Presenters', ['Month', 'Date', 'Topic', 'Volunteer presenter', 'Phone', 'Topic guide sent', 'Confirmed', 'Chief guest / delegates (opening)', 'Invitation sent', 'Circle leaders'],
+        MONTHS.map(function (m) { return [m[0], m[1], m[2], '', '', 'No', 'No', 'An ambassador or invited delegate (to be announced)', 'No', '']; }));
   seed_(ss, 'Seva Kosh', ['Date', 'Month', 'In (₹)', 'Out (₹)', 'What for', 'Recorded by'], []);
-  seed_(ss, 'Materials', ['Month', 'Topic', 'Materials', 'Arranged by', 'Ready?'],
+  seed_(ss, 'Materials', ['Month', 'Topic', 'Materials (plus printed certificates and quiz sheets)', 'Arranged by', 'Ready?'],
         MATERIALS.map(function (m) { return [m[0], MONTHS[Number(m[0]) - 1][2], m[1], '', 'No']; }));
   seed_(ss, 'Core Team', ['Role', 'Name', 'Phone', 'Code of conduct signed'],
         ['Convenor', 'Programme head', 'Bal Gurukul lead', 'Karma Sabha lead', 'Vriddha Sabha lead', 'Civic liaison',
@@ -74,7 +74,7 @@ function buildWorkbook() {
   buildDashboard_(ss);
   buildByMonth_(ss);
   buildRoster_(ss);
-  var order = ['Dashboard', 'By Month', 'Seva Roster', 'Tasks', 'Acharyas', 'Materials', 'Seva Kosh', 'Core Team', 'Families', 'RSVPs', 'Seva', 'Questions'];
+  var order = ['Dashboard', 'By Month', 'Seva Roster', 'Tasks', 'Presenters', 'Materials', 'Seva Kosh', 'Core Team', 'Families', 'RSVPs', 'Seva', 'Questions'];
   order.forEach(function (n, i) { var sh = ss.getSheetByName(n); if (sh) { ss.setActiveSheet(sh); ss.moveActiveSheet(i + 1); } });
   ss.setActiveSheet(ss.getSheetByName('Dashboard'));
 }
@@ -128,7 +128,7 @@ function buildByMonth_(ss) {
     seva.forEach(function (r) { if (String(r[3]) === m[0]) sv++; });
     return [m[1], m[2], fam, ppl, Math.ceil(ppl * 0.75), sv + ' / ' + need];
   });
-  var head = ['Date', 'Topic', 'Families coming', 'People coming', 'Plan food for (75%)', 'Sevaks filled / needed'];
+  var head = ['Date', 'Topic', 'Families coming', 'People coming', 'Plan seating for (75%)', 'Sevaks filled / needed'];
   sh.getRange(1, 1, 1, head.length).setValues([head]).setFontWeight('bold').setBackground('#f3e6cf');
   sh.getRange(2, 1, rows.length, head.length).setValues(rows);
   sh.setFrozenRows(1);

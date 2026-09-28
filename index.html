@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Bharat: Rooted in Heritage, Inspired for the Future</title>
-<meta name="description" content="A free, volunteer-run community gurukul: twelve monthly gatherings from the Vedas to the Buddha.">
+<meta name="description" content="Twelve Sunday mornings from the Vedas to the Buddha, for everyone. Free, and run entirely by volunteers.">
 <meta name="theme-color" content="#9e2a2b">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Bharat Gurukul">
+<meta name="apple-mobile-web-app-title" content="Bharat">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/icon-192.png">
 <link rel="manifest" href="manifest.webmanifest">
@@ -21,7 +21,7 @@
   --kumkum:#9e2a2b; --saffron:#e8871e; --haldi:#e9b949; --peacock:#1f5f6b;
   --on-kumkum:#fffdf8; --on-peacock:#fffdf8; --on-saffron:#2a1a12; --on-haldi:#2a1a12;
   --ok:#2c6e49; --ok-bg:#e3f0e6; --warn-bg:#f7eac9; --need-bg:#f6d5cc; --wa:#15803d;
-  --shadow:0 1px 2px rgba(42,26,18,.08);
+  --shadow:0 1px 3px rgba(42,26,18,.1);
 }
 @media (prefers-color-scheme: dark){
   :root{
@@ -38,106 +38,147 @@ a{color:var(--kumkum)}
 button,input,select,textarea{font:inherit;color:inherit}
 .disp{font-family:'Fraunces',Georgia,serif;font-weight:600}
 .dev{font-family:'Tiro Devanagari Sanskrit','Noto Serif Devanagari',serif}
-.eb{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--kumkum)}
+.eb{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--kumkum)}
 .muted{color:var(--muted)} .small{font-size:14px}
-header.top{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:8px;padding:calc(8px + env(safe-area-inset-top)) 12px 8px;background:var(--kumkum);color:var(--on-kumkum)}
-header.top .t{flex:1;font-family:'Fraunces',serif;font-weight:600;font-size:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.iconbtn{min-width:44px;min-height:44px;border:0;background:transparent;color:inherit;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
-.iconbtn:focus-visible,.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--kumkum);outline-offset:2px}
-header.top .iconbtn:focus-visible{outline-color:var(--on-kumkum)}
+:focus-visible{outline:2px solid var(--kumkum);outline-offset:2px}
+header.top{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:6px;padding:calc(6px + env(safe-area-inset-top)) 8px 6px 12px;background:var(--kumkum);color:var(--on-kumkum)}
+header.top .t{flex:1;display:flex;align-items:center;gap:8px;font-family:'Fraunces',serif;font-weight:600;font-size:19px;white-space:nowrap;min-width:0}
+header.top .t span{overflow:hidden;text-overflow:ellipsis}
+header.top :focus-visible{outline-color:var(--on-kumkum)}
+.iconbtn{min-width:44px;min-height:44px;border:0;background:transparent;color:inherit;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0}
 main{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
-.page{max-width:720px;margin:0 auto;padding:20px 16px 32px}
-nav.pager{position:sticky;bottom:0;display:flex;align-items:center;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:var(--raised);border-top:1px solid var(--line)}
-nav.pager .mid{flex:1;text-align:center;font-size:13px;color:var(--muted)}
-.btn{text-decoration:none;display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 16px;border-radius:8px;border:1px solid var(--line);background:var(--raised);cursor:pointer;font-weight:600}
+.page{max-width:720px;margin:0 auto;padding:18px 16px 28px;animation:in .25s ease-out}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.page{animation:none}}
+nav.tabs{position:sticky;bottom:0;z-index:5;display:grid;grid-template-columns:repeat(5,1fr);background:var(--raised);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+nav.tabs a{display:flex;flex-direction:column;align-items:center;gap:1px;padding:7px 2px 6px;font-size:12px;font-weight:600;color:var(--muted);text-decoration:none;min-height:52px}
+nav.tabs a svg{width:22px;height:22px}
+nav.tabs a[aria-current="page"]{color:var(--kumkum)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:8px 16px;border-radius:10px;border:1px solid var(--line);background:var(--raised);cursor:pointer;font-weight:700;text-decoration:none;color:var(--ink)}
 .btn.primary{background:var(--kumkum);border-color:var(--kumkum);color:var(--on-kumkum)}
 .btn.wa{background:var(--wa);border-color:var(--wa);color:#fff}
+.btn.ghost{background:transparent;border:1.5px solid currentColor;color:inherit}
 .btn:disabled{opacity:.5;cursor:default}
 .btn.small{min-height:36px;padding:4px 12px;font-size:14px}
 h1{font-family:'Fraunces',serif;font-weight:600;font-size:30px;line-height:1.15;margin:6px 0 12px}
-h2{font-family:'Fraunces',serif;font-weight:600;font-size:22px;line-height:1.2;margin:24px 0 8px}
+h2{font-family:'Fraunces',serif;font-weight:600;font-size:22px;line-height:1.2;margin:26px 0 8px;scroll-margin-top:64px}
 h3{font-family:'Fraunces',serif;font-weight:600;font-size:18px;margin:18px 0 6px}
-p{margin:0 0 12px}
-ul{padding-left:20px;margin:0 0 12px} li{margin-bottom:4px}
-.card{background:var(--raised);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:12px 0;box-shadow:var(--shadow)}
-.band{border-radius:10px;padding:14px 16px;margin:12px 0}
+p{margin:0 0 12px} ul{padding-left:20px;margin:0 0 12px} li{margin-bottom:4px}
+.card{background:var(--raised);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:12px 0;box-shadow:var(--shadow)}
+.band{border-radius:12px;padding:14px 16px;margin:12px 0}
 .b-saffron{background:var(--saffron);color:var(--on-saffron)} .b-haldi{background:var(--haldi);color:var(--on-haldi)}
 .b-kumkum{background:var(--kumkum);color:var(--on-kumkum)} .b-peacock{background:var(--peacock);color:var(--on-peacock)}
-.band .eb{color:inherit;opacity:.9}
-.arches{display:flex;gap:5px;align-items:flex-end}
-.arches i{display:block;width:18px;height:28px;border-radius:999px 999px 0 0}
-.cover{margin:-20px -16px 0;min-height:calc(100vh - 130px);display:flex;flex-direction:column}
-.cover .top{background:var(--saffron);color:var(--on-saffron);padding:28px 20px 0}
-.cover .big{font-family:'Fraunces',serif;font-weight:600;font-size:76px;line-height:1;margin:18px 0}
-.cover .top .arches i{width:26px;height:40px;background:var(--kumkum)}
-.cover .bot{flex:1;background:var(--kumkum);color:var(--on-kumkum);padding:22px 20px 28px;display:flex;flex-direction:column;gap:10px}
-.cover .bot .h{font-family:'Fraunces',serif;font-weight:600;font-size:26px;line-height:1.15}
-.cover .verbs{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px;font-family:'Fraunces',serif;font-weight:600;font-size:28px;line-height:1.15;color:var(--haldi)}
-.btn.cta{background:transparent;color:inherit;border:1.5px solid currentColor}
-.cover .tag{font-style:italic;color:var(--haldi)}
-@media (prefers-color-scheme: dark){.cover .verbs{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px;font-family:'Fraunces',serif;font-weight:600;font-size:28px;line-height:1.15;color:var(--haldi)}
-.btn.cta{background:transparent;color:inherit;border:1.5px solid currentColor}
-.cover .tag{color:var(--on-kumkum);opacity:.85}}
-.stats{display:flex;gap:10px;flex-wrap:wrap}
-.stat{flex:1;min-width:120px;border-radius:10px;padding:10px 12px;background:rgba(255,253,248,.12);border:1px solid rgba(255,253,248,.3)}
-.stat b{display:block;font-size:24px;font-family:'Fraunces',serif}
-.toc a{display:flex;gap:12px;align-items:center;padding:10px 4px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);min-height:44px}
-.toc .n{font-family:'Fraunces',serif;font-weight:600;width:32px;color:var(--kumkum)}
-.toc .next{margin-left:auto;font-size:12px;font-weight:700;color:var(--on-saffron);background:var(--saffron);padding:2px 8px;border-radius:99px}
-.dot{display:inline-block;width:10px;height:14px;border-radius:99px 99px 0 0;flex-shrink:0}
-.mhead{margin:-20px -16px 0;padding:24px 16px 20px;border-radius:0 0 28px 28px}
+.band .eb,.b-kumkum .eb,.b-peacock .eb,.b-saffron .eb,.b-haldi .eb{color:inherit;opacity:.92}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.hero{margin:-18px -16px 0;background:var(--kumkum);color:var(--on-kumkum);padding:22px 18px}
+.hero .top{display:flex;align-items:flex-end;gap:12px}
+.hero .big{font-family:'Fraunces',serif;font-weight:600;font-size:64px;line-height:.95}
+.hero .sub{font-family:'Fraunces',serif;font-weight:600;font-size:22px;line-height:1.2;margin-top:10px}
+.hero .tag{font-style:italic;color:var(--haldi);margin-top:4px}
+.verbs{display:flex;flex-wrap:wrap;gap:4px 14px;font-family:'Fraunces',serif;font-weight:600;font-size:24px;color:var(--haldi);margin:12px 0 4px}
+@media (prefers-color-scheme: dark){.hero .tag,.verbs{color:var(--on-kumkum)}}
+.flag{flex-shrink:0}
+.count{display:flex;gap:16px;align-items:center}
+.count .n{font-family:'Fraunces',serif;font-weight:600;font-size:56px;line-height:1}
+.count .l{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.arc{display:grid;grid-template-columns:repeat(12,1fr);gap:5px;align-items:end;margin:6px 0 2px}
+.arc a{display:block;text-decoration:none}
+.arc i{display:block;height:34px;border-radius:999px 999px 0 0;border:1.5px solid var(--line)}
+.arc a.next i{height:46px;border-color:var(--kumkum)}
+.arc span{display:block;text-align:center;font-size:10px;font-weight:700;color:var(--muted);margin-top:2px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{display:block;padding:14px;border-radius:12px;text-decoration:none;min-height:88px}
+.tile b{display:block;font-family:'Fraunces',serif;font-size:17px;line-height:1.2;margin-bottom:2px}
+.tile span{font-size:13px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.stat{background:var(--raised);border:1px solid var(--line);border-radius:12px;padding:10px;text-align:center}
+.stat b{display:block;font-family:'Fraunces',serif;font-size:26px;line-height:1.1;color:var(--kumkum)}
+.stat span{font-size:12px;color:var(--muted)}
+.mhead{margin:-18px -16px 0;padding:22px 16px 18px;border-radius:0 0 26px 26px}
 .mhead .num{font-family:'Fraunces',serif;font-weight:600;font-size:48px;line-height:1;opacity:.9}
-.mhead .ttl{font-family:'Fraunces',serif;font-weight:600;font-size:32px;line-height:1.1}
+.mhead .ttl{font-family:'Fraunces',serif;font-weight:600;font-size:30px;line-height:1.1}
+.chips{position:sticky;top:0;z-index:3;display:flex;gap:6px;overflow-x:auto;padding:10px 16px;margin:0 -16px;background:var(--paper);border-bottom:1px solid var(--line);scrollbar-width:none}
+.chips a{flex-shrink:0;padding:6px 12px;border-radius:99px;border:1px solid var(--line);background:var(--raised);font-size:14px;font-weight:700;text-decoration:none;color:var(--ink);min-height:36px;display:inline-flex;align-items:center}
 .pill{display:inline-block;font-size:13px;font-weight:700;padding:2px 10px;border-radius:99px;background:var(--warn-bg);color:var(--ink)}
 .pill.ok{background:var(--ok-bg);color:var(--ok)}
 .verse{margin:0 0 12px}.verse .v{font-style:italic;font-size:17px}.verse .s{font-size:13px;font-weight:700;color:var(--kumkum)}
 table.t{width:100%;border-collapse:collapse;font-size:15px}
 table.t td,table.t th{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-table.t th{font-size:13px;color:var(--muted);border-bottom:2px solid var(--kumkum)}
-.lq{background:var(--peacock);color:var(--on-peacock);border-radius:10px;padding:14px 16px;margin:14px 0}
-.lq .eb{color:inherit;opacity:.9}.lq .q{font-family:'Fraunces',serif;font-weight:600;font-size:20px}.lq .s{font-size:13px;font-weight:700;opacity:.9}
+.agenda{list-style:none;padding:0;margin:0;position:relative}
+.agenda li{display:grid;grid-template-columns:54px 1fr;gap:12px;margin:0;padding:0 0 14px;position:relative}
+.agenda li:before{content:"";position:absolute;left:62px;top:10px;bottom:0;width:2px;background:var(--line)}
+.agenda li:last-child:before{display:none}
+.agenda .tm{font-weight:700;color:var(--kumkum);font-size:14px;padding-top:2px;text-align:right}
+.agenda .bx{background:var(--raised);border:1px solid var(--line);border-left:0;border-radius:12px;padding:10px 14px;position:relative;margin-left:8px}
+.agenda .bx:before{content:"";position:absolute;left:-15px;top:8px;width:12px;height:16px;border-radius:99px 99px 0 0;background:var(--c,var(--saffron))}
+.agenda .nm{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.agenda .tp{font-family:'Fraunces',serif;font-weight:600;font-size:18px;line-height:1.25}
+.agenda .sub{font-size:14px}
+.agenda .cir{display:grid;gap:6px;margin-top:6px}
+.agenda .cir div{font-size:14px;padding:6px 10px;border-radius:8px}
+.game{border-radius:12px;padding:12px 14px;margin:10px 0}
+.qz{margin:14px 0}.qz .qq{font-weight:700;margin-bottom:6px}
+.qz .opts{display:grid;gap:6px}
+.qz button.o{text-align:left;min-height:44px;padding:8px 12px;border-radius:10px;border:1px solid var(--line);background:var(--raised);cursor:pointer;font-weight:600}
+.qz button.o.right{background:var(--ok-bg);border-color:var(--ok);color:var(--ok)}
+.qz button.o.wrong{background:var(--need-bg);border-color:var(--kumkum)}
+.qz .why{font-size:14px;margin-top:4px;color:var(--muted)}
+.score{font-family:'Fraunces',serif;font-weight:600;font-size:22px}
 .ticks{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;margin-top:10px}
 .ticks button{aspect-ratio:1;min-height:30px;border:1px solid var(--line);border-radius:6px;background:var(--raised);font-size:12px;color:var(--muted);cursor:pointer;padding:0}
 .ticks button[aria-pressed="true"]{background:var(--saffron);color:var(--on-saffron);border-color:var(--saffron);font-weight:700}
+.bar{height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin:6px 0}
+.bar i{display:block;height:100%;background:var(--saffron);border-radius:99px}
 .stepper{display:flex;align-items:center;gap:8px}
-.stepper button{width:44px;height:44px;border-radius:8px;border:1px solid var(--line);background:var(--raised);font-size:20px;cursor:pointer}
+.stepper button{width:44px;height:44px;border-radius:10px;border:1px solid var(--line);background:var(--raised);font-size:20px;cursor:pointer}
 .stepper output{min-width:28px;text-align:center;font-weight:700;font-size:18px}
-.row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
 .role{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
-.role .info{flex:1}.role .names{font-size:13px;color:var(--muted)}
-.meter{font-size:12px;font-weight:700;padding:1px 8px;border-radius:99px;background:var(--need-bg)}
+.role:last-child{border-bottom:0}
+.role .info{flex:1;min-width:0}.role .names{font-size:13px;color:var(--muted)}
+.meter{font-size:12px;font-weight:700;padding:1px 8px;border-radius:99px;background:var(--need-bg);white-space:nowrap}
 .meter.full{background:var(--ok-bg);color:var(--ok)}
+.pager2{display:flex;justify-content:space-between;gap:10px;margin-top:24px}
+.tl{list-style:none;padding:0;margin:0}
+.tl li{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);margin:0}
+.tl .mk{width:22px;height:32px;border-radius:999px 999px 0 0;flex-shrink:0;margin-top:2px}
+.tl a{text-decoration:none;color:var(--ink)}
+.tl .when{font-size:13px;color:var(--muted)}
 label.f{display:block;font-weight:600;font-size:14px;margin:12px 0 4px}
-input.f,select.f,textarea.f{width:100%;min-height:44px;padding:8px 10px;border:1px solid var(--muted);border-radius:8px;background:var(--raised)}
+input.f,select.f,textarea.f{width:100%;min-height:44px;padding:8px 10px;border:1px solid var(--muted);border-radius:10px;background:var(--raised)}
 textarea.f{min-height:110px}
 .check{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
 .check input{width:22px;height:22px;margin-top:2px;flex-shrink:0}
-.notice{background:var(--warn-bg);border-radius:8px;padding:10px 12px;font-size:14px;margin:12px 0}
-.toast{position:fixed;left:50%;bottom:84px;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:8px;font-size:15px;z-index:20;max-width:90vw;opacity:0;transition:opacity .2s}
+.notice{background:var(--warn-bg);border-radius:10px;padding:10px 12px;font-size:14px;margin:12px 0}
+.toast{position:fixed;left:50%;bottom:84px;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:10px;font-size:15px;z-index:20;max-width:90vw;opacity:0;transition:opacity .2s;pointer-events:none}
 .toast.show{opacity:1}
-.drawer{position:fixed;inset:0;z-index:15;display:none;background:rgba(0,0,0,.4)}
+.drawer{position:fixed;inset:0;z-index:15;display:none;background:rgba(0,0,0,.45)}
 .drawer.open{display:block}
-.drawer .panel{position:absolute;top:0;left:0;bottom:0;width:min(360px,88vw);background:var(--paper);overflow-y:auto;padding:calc(16px + env(safe-area-inset-top)) 16px 24px}
-@media (prefers-reduced-motion: reduce){.toast{transition:none}}
+.drawer .panel{position:absolute;top:0;right:0;bottom:0;width:min(360px,88vw);background:var(--paper);overflow-y:auto;padding:calc(16px + env(safe-area-inset-top)) 16px 24px}
+.menu a{display:flex;align-items:center;gap:10px;padding:12px 4px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);min-height:44px;font-weight:600}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="dhwaj" viewBox="0 0 40 48">
+    <rect x="3" y="2" width="3" height="46" rx="1.5" fill="#7a4a1c"/>
+    <path d="M6 5 L36 15 L17 17 L38 30 L6 30 Z" fill="#f47b20" stroke="#c4540a" stroke-width="1.2" stroke-linejoin="round"/>
+  </symbol>
+</svg>
 <header class="top">
-  <button class="iconbtn" id="menuBtn" aria-label="Contents" aria-expanded="false" aria-controls="drawer">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-  </button>
-  <div class="t" id="topTitle">Bharat</div>
-  <button class="iconbtn" id="shareBtn" aria-label="Share this page on WhatsApp">
+  <div class="t"><svg class="flag" width="26" height="32" role="img" aria-label="Bhagwa Dhwaj"><use href="#dhwaj"/></svg><span id="topTitle">Bharat</span></div>
+  <button class="iconbtn" id="shareBtn" aria-label="Share on WhatsApp">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M16 6l-4-4-4 4M12 2v14"/></svg>
   </button>
 </header>
 <main id="main" tabindex="-1"><div class="page" id="page"><p class="muted">Loading…</p></div></main>
-<nav class="pager" aria-label="Page navigation">
-  <button class="btn small" id="prevBtn">‹ Back</button>
-  <div class="mid" id="pageNo"></div>
-  <button class="btn small primary" id="nextBtn">Next ›</button>
+<nav class="tabs" aria-label="Main">
+  <a href="#home" data-tab="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg>Home</a>
+  <a href="#year" data-tab="year"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Year</a>
+  <a href="#join" data-tab="join"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6M19 8v6M16 11h6"/></svg>Join</a>
+  <a href="#seva" data-tab="seva"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9A5 5 0 0 1 12 6a5 5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg>Volunteer</a>
+  <a href="#more" data-tab="more" id="moreTab" aria-controls="drawer" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>More</a>
 </nav>
-<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Contents"><div class="panel" id="drawerPanel"></div></div>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="More"><div class="panel" id="drawerPanel"></div></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
@@ -146,236 +187,306 @@ textarea.f{min-height:110px}
   var D = null, LIVE = null;
   var $ = function (id) { return document.getElementById(id); };
   var COLS = { saffron: 'var(--saffron)', haldi: 'var(--haldi)', kumkum: 'var(--kumkum)', peacock: 'var(--peacock)' };
+  var CIRCLE_COL = { 'Bal Gurukul': 'b-saffron', 'Yuva Sabha': 'b-haldi', 'Karma Sabha': 'b-peacock', 'Vriddha Sabha': 'b-kumkum' };
+  function FLAG(w, h) { return '<svg class="flag" width="' + w + '" height="' + h + '" role="img" aria-label="Bhagwa Dhwaj"><use href="#dhwaj"/></svg>'; }
 
-  /* ---------- storage (per phone, never shared) ---------- */
   function load(k, d) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
   function save(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
-  var ME = load('bg_me', null);
-  var MINE = load('bg_mine', { rsvp: {}, seva: {} });
-  var TICKS = load('bg_ticks', {});
+  var ME = load('bg_me', null), MINE = load('bg_mine', { rsvp: {}, seva: {} }), TICKS = load('bg_ticks', {}), QUIZ = load('bg_quiz', {});
 
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function toast(msg) { var t = $('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toast.h); toast.h = setTimeout(function () { t.classList.remove('show'); }, 2800); }
   function digits(s) { return String(s || '').replace(/\D/g, ''); }
   function online() { return !!(D && D.scriptUrl); }
 
-  /* ---------- dates ---------- */
-  function today() { var d = new Date(); d.setHours(0, 0, 0, 0); return d; }
+  var PREVIEW = /[?&]today=(\d{4}-\d{2}-\d{2})/.exec(location.search);
+  function today() { var d = PREVIEW ? new Date(PREVIEW[1] + 'T00:00:00') : new Date(); d.setHours(0, 0, 0, 0); return d; }
   function dateOf(m) { var p = m.date.split('-'); return new Date(+p[0], +p[1] - 1, +p[2]); }
   function daysTo(m) { return Math.round((dateOf(m) - today()) / 864e5); }
   function nextIdx() { for (var i = 0; i < D.months.length; i++) if (daysTo(D.months[i]) >= 0) return i; return -1; }
-  function whenText(m) {
-    var n = daysTo(m);
-    if (n === 0) return 'Today';
-    if (n === 1) return 'Tomorrow';
-    if (n > 1) return 'In ' + n + ' days';
-    return 'Held';
-  }
+  function whenText(m) { var n = daysTo(m); return n === 0 ? 'Today' : n === 1 ? 'Tomorrow' : n > 1 ? 'In ' + n + ' days' : 'Held'; }
   function niceDate(m) { return dateOf(m).toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }); }
+  function shortDate(m) { return dateOf(m).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' }); }
 
-  /* ---------- backend ---------- */
   function fetchLive() {
     LIVE = load('bg_live', null);
     if (!online()) return;
-    fetch(D.scriptUrl, { method: 'GET' }).then(function (r) { return r.json(); }).then(function (j) {
-      if (j && j.ok) { LIVE = j; save('bg_live', j); render(); }
-    }).catch(function () {});
+    fetch(D.scriptUrl).then(function (r) { return r.json(); }).then(function (j) { if (j && j.ok) { LIVE = j; save('bg_live', j); render(true); } }).catch(function () {});
   }
   function post(body) {
     if (!online()) return Promise.resolve({ ok: true, offline: true });
     return fetch(D.scriptUrl, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(body) })
-      .then(function (r) { return r.json(); })
-      .catch(function () { return { ok: false, error: 'network' }; });
+      .then(function (r) { return r.json(); }).catch(function () { return { ok: false, error: 'network' }; });
   }
   function liveMonth(n) { return (LIVE && LIVE.months && LIVE.months[String(n)]) || { families: 0, people: 0, names: [], seva: {} }; }
+  function presenterOf(m) { var l = liveMonth(m.n), p = (l.seva && l.seva.present) || []; return m.presenter || p[0] || ''; }
 
-  /* ---------- pages ---------- */
-  var PAGES = [];
-  function buildPages() {
-    PAGES = [
-      { id: 'cover', title: 'Welcome', r: coverPage },
-      { id: 'contents', title: 'Contents', r: contentsPage },
-      { id: 'about', title: 'Why we gather', r: aboutPage },
-      { id: 'morning', title: 'A gurukul morning', r: morningPage },
-      { id: 'year', title: 'The year', r: yearPage }
-    ];
-    D.months.forEach(function (m, i) { PAGES.push({ id: 'month-' + m.n, title: m.month + ': ' + m.topic, r: function () { return monthPage(i); }, month: m }); });
-    PAGES.push(
-      { id: 'questions', title: 'Life’s questions', r: questionsPage },
-      { id: 'seva', title: 'Become a sevak', r: sevaPage },
-      { id: 'register', title: 'Register', r: registerPage },
-      { id: 'ask', title: 'Ask or suggest', r: askPage },
-      { id: 'prayers', title: 'Prayers', r: prayersPage },
-      { id: 'promise', title: 'Our promise', r: promisePage },
-      { id: 'downloads', title: 'Downloads', r: downloadsPage }
-    );
-  }
-  function current() {
-    var h = location.hash.replace('#', '') || 'cover';
-    if (h === 'organiser') return -1;
-    for (var i = 0; i < PAGES.length; i++) if (PAGES[i].id === h) return i;
-    return 0;
-  }
-  function go(id) { location.hash = id; }
-
-  function arches(n, cols) { var s = '<div class="arches" aria-hidden="true">'; for (var i = 0; i < n; i++) s += '<i style="background:' + COLS[cols[i % cols.length]] + '"></i>'; return s + '</div>'; }
-
-  function coverPage() {
-    var ni = nextIdx(), nm = ni >= 0 ? D.months[ni] : null;
-    var live = LIVE ? '<div class="stats"><div class="stat"><b>' + (LIVE.families || 0) + '</b>families registered</div><div class="stat"><b>' + (LIVE.people || 0) + '</b>people</div></div>' : '';
-    return '<div class="cover"><div class="top"><div class="big">Bharat</div>' +
-      '<div class="arches" aria-hidden="true">' + new Array(9).join('<i></i>') + '</div></div>' +
-      '<div class="bot"><div class="h">Rooted in Heritage,<br>Inspired for the Future</div><div class="tag">' + esc(D.tagline) + '</div>' +
-      '<div class="verbs"><span>Learn.</span><span>Practise.</span><span>Serve.</span><span>Grow.</span></div>' +
-      '<p>Twelve Sunday mornings from the Vedas to the Buddha, for everyone. Free, and run entirely by volunteers.</p>' +
-      (nm ? '<div class="band b-saffron"><div class="eb">Next gathering · ' + whenText(nm) + '</div><div class="disp" style="font-size:22px">' + esc(nm.topic) + '</div><div>' + esc(niceDate(nm)) + ' · ' + esc(D.time) + '</div>' +
-        '<div class="row" style="margin-top:10px"><a class="btn primary" href="#month-' + nm.n + '">See the gathering</a></div></div>' : '') +
-      live +
-      '<div class="row"><a class="btn cta" href="#register">' + (ME ? 'My entries' : 'Register your family') + '</a><a class="btn cta" href="#seva">Volunteer</a><a class="btn cta" href="#contents">Explore the year</a></div>' +
-      '<p class="small" style="margin-top:auto;opacity:.9">No fees. No sponsors. Only seva.</p></div></div>';
+  var ROUTES = {
+    home: ['Bharat', homePage, 'home'], year: ['The year', yearPage, 'year'], join: ['Join', joinPage, 'join'], seva: ['Volunteer', sevaPage, 'seva'],
+    morning: ['A gathering morning', morningPage, 'more'], about: ['Why we gather', aboutPage, 'more'], questions: ['Life’s questions', questionsPage, 'more'],
+    ask: ['Ask or offer', askPage, 'more'], prayers: ['Prayers', prayersPage, 'more'], promise: ['Our promise', promisePage, 'more'],
+    downloads: ['Downloads', downloadsPage, 'more'], organiser: ['Organiser', organiserPage, 'more']
+  };
+  function route() {
+    var id = (location.hash || '#home').slice(1).split('/')[0];
+    var mm = /^month-(\d+)$/.exec(id);
+    if (mm) { var i = +mm[1] - 1; if (D.months[i]) return { title: D.months[i].month + ': ' + D.months[i].topic, r: function () { return monthPage(i); }, tab: 'year' }; }
+    var r = ROUTES[id] || ROUTES.home;
+    return { title: r[0], r: r[1], tab: r[2] };
   }
 
-  function contentsPage() {
+  function arcHtml() {
     var ni = nextIdx();
-    var s = '<div class="eb">Contents</div><h1>Inside the book</h1><div class="toc">';
-    PAGES.forEach(function (p, i) {
-      if (i < 2) return;
-      var m = p.month;
-      s += '<a href="#' + p.id + '">' + (m ? '<span class="dot" style="background:' + COLS[m.colour] + '"></span><span class="n">' + m.n + '</span>' : '<span class="n">·</span>') +
-        '<span>' + esc(p.title) + (m ? '<br><span class="small muted">' + esc(niceDate(m)) + '</span>' : '') + '</span>' +
-        (m && ni === m.n - 1 ? '<span class="next">Next</span>' : '') + '</a>';
-    });
-    return s + '</div>';
+    return '<div class="arc">' + D.months.map(function (m, i) {
+      var cls = daysTo(m) < 0 ? 'done' : i === ni ? 'next' : '';
+      var bg = cls === 'next' ? ' style="background:' + COLS[m.colour] + '"' : cls === 'done' ? ' style="background:' + COLS[m.colour] + ';opacity:.5"' : '';
+      return '<a href="#month-' + m.n + '" class="' + cls + '" aria-label="' + esc(m.month + ': ' + m.topic + ', ' + whenText(m)) + '"><i' + bg + '></i><span>' + m.month.slice(0, 1) + '</span></a>';
+    }).join('') + '</div>';
   }
+  function tile(href, cls, t, sub) { return '<a class="tile ' + cls + '" href="' + href + '"><b>' + esc(t) + '</b><span>' + esc(sub) + '</span></a>'; }
+  function sevaCount() { var c = 0; if (LIVE && LIVE.months) Object.keys(LIVE.months).forEach(function (k) { var sv = LIVE.months[k].seva || {}; Object.keys(sv).forEach(function (r) { c += sv[r].length; }); }); return c; }
 
-  function aboutPage() {
-    var lv = [['Vyakti', 'The individual', 'Focus, discipline, calm, character', 'saffron'], ['Parivar', 'The family', 'Respect, time together, shared values', 'haldi'], ['Samaj', 'The community', 'Seva, harmony, neighbours who care', 'peacock'], ['Rashtra', 'The nation', 'Pride, responsibility, Viksit Bharat 2047', 'kumkum']];
-    return '<div class="eb">Why we gather</div><h1>Grow yourself. Grow together.</h1>' +
-      '<p>Our ancestors saw development as a chain: a better person makes a better family, a stronger community and a greater nation.</p>' +
-      lv.map(function (l) { return '<div class="band b-' + l[3] + '"><span class="disp" style="font-size:20px">' + l[0] + '</span> <b>' + l[1] + '</b><div>' + l[2] + '</div></div>'; }).join('') +
-      '<h2>A gurukul in our own neighbourhood</h2><p>On the third Sunday of each month, children, youth, parents, working people, elders and civic leaders gather for one morning of learning, practice and seva. We follow India’s wisdom in the order it unfolded, from the Vedas to the Buddha, with the Ramayana and Mahabharata at the heart of the year.</p>' +
-      '<div class="band b-saffron"><div class="disp" style="font-size:19px">No fees. No sponsors. Only seva.</div>Everything is run by volunteers. Families take turns bringing prasad, and a small Seva Kosh box meets the cost of printing and children’s materials.</div>' +
-      '<h2>Four pillars</h2><table class="t"><tr><th>Pillar</th><th>What it asks</th></tr>' +
-      '<tr><td><b>Wisdom</b> <i>(jñāna)</i></td><td>Who am I, and what is worth pursuing?</td></tr><tr><td><b>Life management</b> <i>(swadharma)</i></td><td>Discipline, balance, focus and calm</td></tr>' +
-      '<tr><td><b>Human management</b> <i>(sambandha)</i></td><td>Family, respect, empathy and service</td></tr><tr><td><b>Complete management</b> <i>(rājadharma)</i></td><td>Ethical leadership of teams and communities</td></tr></table>';
-  }
-
-  function morningPage() {
-    return '<div class="eb">A gurukul with a modern touch</div><h1>One Sunday morning</h1><p>' + esc(D.time) + ' at ' + esc(D.venue.name) + '.</p><table class="t">' +
-      D.morning.map(function (r) { return '<tr><td style="width:60px;color:var(--kumkum);font-weight:700">' + r[0] + '</td><td><b>' + esc(r[1]) + '</b><br>' + esc(r[2]) + '</td></tr>'; }).join('') + '</table>' +
-      '<h2>Four learning circles</h2><div class="band b-saffron"><b>Bal Gurukul</b> · children 8–14</div><div class="band b-haldi"><b>Yuva Sabha</b> · youth and families</div>' +
-      '<div class="band b-peacock"><b>Karma Sabha</b> · professionals and civic leaders</div><div class="band b-kumkum"><b>Vriddha Sabha</b> · elders</div>' +
-      '<h2>Between gatherings</h2><ul><li><b>Week 1:</b> verse of the month on WhatsApp</li><li><b>Week 2:</b> a small family experiment</li><li><b>Week 3:</b> a youth-led bhajan jam or heritage walk</li><li><b>Week 4:</b> your lane volunteer invites you in person</li></ul>';
+  function homePage() {
+    var ni = nextIdx(), nm = ni >= 0 ? D.months[ni] : null, held = D.months.filter(function (m) { return daysTo(m) < 0; }).length;
+    var s = '<section class="hero"><div class="top">' + FLAG(46, 56) + '<div class="big">Bharat</div></div>' +
+      '<div class="sub">Rooted in Heritage, Inspired for the Future</div><div class="tag">' + esc(D.tagline) + '</div>' +
+      '<div class="verbs"><span>Learn.</span><span>Practise.</span><span>Serve.</span><span>Grow.</span></div>' +
+      '<p style="margin:6px 0 0">Twelve Sunday mornings from the Vedas to the Buddha, for everyone. Free, and run entirely by volunteers.</p></section>';
+    if (nm) {
+      var n = daysTo(nm), pr = presenterOf(nm), inn = MINE.rsvp[nm.n] && MINE.rsvp[nm.n].sent;
+      s += '<div class="band b-saffron" style="margin-top:18px"><div class="eb">Next gathering · ' + esc(nm.month) + ' · ' + esc(nm.festival) + '</div>' +
+        '<div class="count"><div><div class="n">' + n + '</div><div class="l">' + (n === 0 ? 'Today!' : n === 1 ? 'day to go' : 'days to go') + '</div></div>' +
+        '<div><div class="disp" style="font-size:24px;line-height:1.15">' + esc(nm.topic) + '</div><div class="small">' + esc(nm.theme) + '</div><div class="small">' + esc(niceDate(nm)) + ' · ' + esc(D.time) + '</div>' +
+        '<div class="small"><b>Presenter:</b> ' + (pr ? esc(pr) : 'a volunteer is needed') + '</div></div></div>' +
+        '<div class="row" style="margin-top:12px"><a class="btn primary" href="#month-' + nm.n + '/join">' + (inn ? 'You’re in ✓' : 'Count us in') + '</a>' +
+        '<a class="btn ghost" href="#month-' + nm.n + '/day">Topics of the day</a>' + (pr ? '' : '<button class="btn ghost" data-act="offer" data-m="' + nm.n + '">Offer to present</button>') + '</div></div>';
+    }
+    s += '<h2>The year at a glance</h2><div class="small muted">' + held + ' of 12 gatherings held · tap an arch</div>' + arcHtml();
+    if (LIVE) s += '<h2>Together so far</h2><div class="stats"><div class="stat"><b>' + (LIVE.families || 0) + '</b><span>families</span></div><div class="stat"><b>' + (LIVE.people || 0) + '</b><span>people</span></div><div class="stat"><b>' + sevaCount() + '</b><span>volunteer sign-ups</span></div></div>';
+    s += '<h2>Take part</h2><div class="grid2">' +
+      tile('#join', 'b-kumkum', ME ? 'My entries' : 'Register', ME ? 'What you’ve signed up for' : 'One minute, once a year') +
+      tile('#seva', 'b-peacock', 'Volunteer', 'Present a topic, lead a circle, help on the day') +
+      tile('#questions', 'b-haldi', 'Life’s questions', 'Answered by the Ramayana and Mahabharata') +
+      tile('#morning', 'b-saffron', 'A gathering morning', 'How the three hours run') + '</div>' +
+      '<div class="row" style="margin-top:14px"><button class="btn wa" data-act="share">Invite a family on WhatsApp</button></div>';
+    return s;
   }
 
   function yearPage() {
     var ni = nextIdx();
-    return '<div class="eb">The journey, oldest first</div><h1>From the Vedas to the Buddha</h1><table class="t"><tr><th>Date</th><th>Topic</th><th>Festival</th></tr>' +
+    return '<div class="eb">The journey, oldest first</div><h1>From the Vedas to the Buddha</h1>' + arcHtml() + '<ul class="tl">' +
       D.months.map(function (m, i) {
-        return '<tr' + (i === ni ? ' style="background:var(--warn-bg)"' : '') + '><td><span class="dot" style="background:' + COLS[m.colour] + '"></span> ' + dateOf(m).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' }) + '</td>' +
-          '<td><a href="#month-' + m.n + '"><b>' + esc(m.topic) + '</b></a><br><span class="small muted">' + esc(m.theme) + '</span></td><td class="small">' + esc(m.festival) + '</td></tr>';
-      }).join('') + '</table><p class="small muted">Festival links are seasonal; check the local panchang.</p>';
+        var n = daysTo(m), pr = presenterOf(m);
+        var st = n < 0 ? '<span class="pill ok">Held</span>' : i === ni ? '<span class="pill">Next · ' + whenText(m) + '</span>' : '';
+        return '<li><span class="mk" style="background:' + COLS[m.colour] + '"></span><div style="flex:1"><a href="#month-' + m.n + '"><b class="disp" style="font-size:18px">' + esc(m.topic) + '</b></a> ' + st +
+          '<div class="small">' + esc(m.theme) + '</div><div class="when">' + esc(shortDate(m)) + ' · ' + esc(m.festival) + (pr ? ' · Presenter: ' + esc(pr) : n >= 0 ? ' · <b style="color:var(--kumkum)">Presenter needed</b>' : '') + '</div></div></li>';
+      }).join('') + '</ul><p class="small muted">Every third Sunday, ' + esc(D.time) + ', at ' + esc(D.venue.name) + '. Festival links are seasonal; check the local panchang.</p>';
+  }
+
+  function delegatesOf(m) { return m.delegates || 'An ambassador or invited delegate · to be announced'; }
+  function agenda(m) {
+    var v = m.verses[0];
+    var item = function (tm, nm, c, body) { return '<li><div class="tm">' + tm + '</div><div class="bx" style="--c:' + c + '"><div class="nm">' + nm + '</div>' + body + '</div></li>'; };
+    return '<ol class="agenda">' +
+      item('9:30', 'Deep prajwalan · opening', 'var(--saffron)', '<div class="tp">Opening by our chief guest</div><div class="sub"><b>' + esc(delegatesOf(m)) + '</b>, with a child and an elder. Invocation: <i>Oṁ saha nāvavatu</i>.</div>') +
+      item('9:45', 'Pravachan', COLS[m.colour], '<div class="tp">' + esc(m.topic) + ': ' + esc(m.theme) + '</div><div class="sub">Presented by ' + (presenterOf(m) ? esc(presenterOf(m)) : 'a volunteer') + '. Key verse: <i>' + esc(v.text) + '</i> (' + esc(v.source) + ')</div>') +
+      item('10:45', 'Shishya sabha · circles and games', 'var(--peacock)', '<div class="cir">' + Object.keys(m.circles).map(function (k) { return '<div class="' + CIRCLE_COL[k] + '"><b>' + esc(k) + ':</b> ' + esc(m.circles[k]) + '</div>'; }).join('') + '</div><div class="sub" style="margin-top:6px">Games: ' + m.games.map(function (g) { return esc(g.name); }).join(' · ') + '</div>') +
+      item('11:30', 'Quiz', 'var(--haldi)', '<div class="tp">Quick quiz: ' + m.quiz.length + ' questions on ' + esc(m.topic) + '</div><div class="sub">Try it below before or after the gathering.</div>') +
+      item('11:45', 'Prashnottari · life’s question', 'var(--kumkum)', '<div class="tp">' + esc(m.lifeQuestion.question) + '</div><div class="sub">' + esc(m.lifeQuestion.episode) + ' <b>(' + esc(m.lifeQuestion.source) + ')</b></div>') +
+      item('12:10', 'Sanskriti', 'var(--haldi)', '<div class="tp">Bhajan, dance or skit on the day’s theme</div>') +
+      item('12:25', 'Sankalp and certificates', 'var(--saffron)', '<div class="tp">' + esc(m.sankalp) + '</div><div class="sub">Everyone who took part receives a certificate.</div>') +
+      '</ol>';
+  }
+
+  function gamesHtml(m) {
+    var cls = ['b-saffron', 'b-haldi'];
+    return m.games.map(function (g, i) { return '<div class="game ' + cls[i % 2] + '"><b class="disp" style="font-size:18px">' + esc(g.name) + '</b><div>' + esc(g.how) + '</div></div>'; }).join('');
+  }
+
+  function quizHtml(m) {
+    var st = QUIZ[m.n] || {}, done = 0, right = 0;
+    var s = m.quiz.map(function (q, qi) {
+      var pick = st[qi];
+      if (pick != null) { done++; if (pick === q.answer) right++; }
+      return '<div class="qz"><div class="qq">' + (qi + 1) + '. ' + esc(q.q) + '</div><div class="opts" role="group" aria-label="Question ' + (qi + 1) + '">' +
+        q.options.map(function (o, oi) {
+          var cls = pick == null ? '' : oi === q.answer ? ' right' : oi === pick ? ' wrong' : '';
+          return '<button class="o' + cls + '" data-act="quiz" data-m="' + m.n + '" data-q="' + qi + '" data-o="' + oi + '"' + (pick != null ? ' disabled' : '') + '>' + esc(o) + (pick != null && oi === q.answer ? ' ✓' : '') + '</button>';
+        }).join('') + '</div>' + (pick != null ? '<div class="why">' + (pick === q.answer ? 'Correct!' : 'The answer is: ' + esc(q.options[q.answer]) + '.') + (q.why ? ' ' + esc(q.why) : '') + '</div>' : '') + '</div>';
+    }).join('');
+    var head = done === m.quiz.length ? '<div class="band b-peacock"><div class="score">' + right + ' of ' + m.quiz.length + '</div><div>' + (right === m.quiz.length ? 'Perfect score!' : right >= 3 ? 'Well done!' : 'Good try. Come to the gathering to learn more!') + '</div>' +
+      '<div class="row" style="margin-top:8px"><button class="btn ghost small" data-act="quizReset" data-m="' + m.n + '">Try again</button></div></div>' : '<div class="small muted">' + done + ' of ' + m.quiz.length + ' answered</div>';
+    return head + s;
+  }
+
+  function certHtml(m) {
+    var n = daysTo(m);
+    if (!ME) return '<p>Register, come to the gathering, and download your certificate at the end of the day.</p><a class="btn primary" href="#join">Register</a>';
+    if (n > 0) return '<p>Your certificate for <b>' + esc(m.topic) + '</b> will be ready here at the end of the gathering on ' + esc(niceDate(m)) + '.</p>';
+    return '<p>Thank you for taking part in <b>' + esc(m.topic) + '</b>. Download a certificate for each member of your family.</p>' +
+      '<label class="f" for="certName">Name on the certificate</label><input class="f" id="certName" value="' + esc(ME.name) + '">' +
+      '<div class="row" style="margin-top:12px"><button class="btn primary" data-act="cert" data-m="' + m.n + '">Download certificate</button></div>';
+  }
+
+  function makeCert(m, name) {
+    var W = 1600, H = 1131, c = document.createElement('canvas'); c.width = W; c.height = H;
+    var x = c.getContext('2d');
+    x.fillStyle = '#fffdf8'; x.fillRect(0, 0, W, H);
+    x.fillStyle = '#9e2a2b'; x.fillRect(0, 0, W, 26); x.fillRect(0, H - 26, W, 26);
+    x.strokeStyle = '#9e2a2b'; x.lineWidth = 4; x.strokeRect(50, 60, W - 100, H - 120);
+    x.strokeStyle = '#e9b949'; x.lineWidth = 2; x.strokeRect(66, 76, W - 132, H - 152);
+    // flag
+    x.fillStyle = '#7a4a1c'; x.fillRect(W / 2 - 56, 110, 8, 110);
+    x.beginPath(); x.moveTo(W / 2 - 48, 116); x.lineTo(W / 2 + 32, 142); x.lineTo(W / 2 - 18, 148); x.lineTo(W / 2 + 38, 182); x.lineTo(W / 2 - 48, 182); x.closePath();
+    x.fillStyle = '#f47b20'; x.fill(); x.strokeStyle = '#c4540a'; x.lineWidth = 2; x.stroke();
+    // arches
+    var cols = ['#e8871e', '#e9b949', '#9e2a2b', '#1f5f6b'];
+    for (var i = 0; i < 12; i++) { var ax = W / 2 - 12 * 17 + i * 34 + 4; x.fillStyle = cols[i % 4]; x.beginPath(); x.moveTo(ax, 262); x.lineTo(ax, 246); x.arc(ax + 13, 246, 13, Math.PI, 0); x.lineTo(ax + 26, 262); x.closePath(); x.fill(); }
+    x.textAlign = 'center'; x.fillStyle = '#2a1a12';
+    x.font = '600 30px Mukta, sans-serif'; x.fillText('BHARAT · ROOTED IN HERITAGE, INSPIRED FOR THE FUTURE', W / 2, 320);
+    x.fillStyle = '#9e2a2b'; x.font = '600 78px Fraunces, Georgia, serif'; x.fillText('Certificate of Participation', W / 2, 420);
+    x.fillStyle = '#6b5646'; x.font = '32px Mukta, sans-serif'; x.fillText('This is presented to', W / 2, 500);
+    x.fillStyle = '#2a1a12'; x.font = '600 64px Fraunces, Georgia, serif'; x.fillText(name, W / 2, 590);
+    x.strokeStyle = '#2a1a12'; x.lineWidth = 1.5; x.beginPath(); x.moveTo(W / 2 - 380, 614); x.lineTo(W / 2 + 380, 614); x.stroke();
+    x.font = '34px Mukta, sans-serif'; x.fillText('for taking part in the gathering on', W / 2, 680);
+    x.fillStyle = '#9e2a2b'; x.font = '600 46px Fraunces, Georgia, serif'; x.fillText(m.topic + ': ' + m.theme, W / 2, 745);
+    x.fillStyle = '#2a1a12'; x.font = '32px Mukta, sans-serif'; x.fillText(niceDate(m) + ' · ' + D.venue.name, W / 2, 805);
+    var st = QUIZ[m.n] || {}, right = 0, done = 0; m.quiz.forEach(function (q, qi) { if (st[qi] != null) { done++; if (st[qi] === q.answer) right++; } });
+    if (done === m.quiz.length) { x.fillStyle = '#1f5f6b'; x.font = '600 30px Mukta, sans-serif'; x.fillText('Quiz score: ' + right + ' of ' + m.quiz.length, W / 2, 860); }
+    x.fillStyle = '#e9b949'; x.font = '600 40px Fraunces, Georgia, serif'; x.fillText('Learn. Practise. Serve. Grow.', W / 2, 940);
+    x.fillStyle = '#2a1a12'; x.font = '26px Mukta, sans-serif'; x.textAlign = 'left'; x.fillText('Organising volunteer', 170, 1015); x.textAlign = 'right'; x.fillText('Presenter', W - 170, 1015);
+    x.beginPath(); x.moveTo(150, 980); x.lineTo(470, 980); x.moveTo(W - 470, 980); x.lineTo(W - 150, 980); x.stroke();
+    var a = document.createElement('a'); a.download = 'Bharat-certificate-' + m.month + '-' + name.replace(/[^A-Za-z0-9]+/g, '-') + '.png'; a.href = c.toDataURL('image/png'); document.body.appendChild(a); a.click(); a.remove();
   }
 
   function monthPage(i) {
-    var m = D.months[i], c = m.colour, n = daysTo(m), live = liveMonth(m.n);
+    var m = D.months[i], c = m.colour, n = daysTo(m), live = liveMonth(m.n), pr = presenterOf(m);
     var s = '<div class="mhead b-' + c + '"><div class="eb">' + esc(m.month) + ' · ' + esc(m.festival) + '</div>' +
       '<div class="row" style="gap:12px;align-items:flex-end"><div class="num">' + String(m.n).padStart(2, '0') + '</div><div><div class="ttl">' + esc(m.topic) + '</div><div>' + esc(m.theme) + '</div></div></div></div>' +
-      '<p style="margin-top:16px"><b>' + esc(niceDate(m)) + '</b> · ' + esc(D.time) + ' <span class="pill' + (n >= 0 ? '' : ' ok') + '">' + whenText(m) + '</span></p>' +
-      '<p style="font-size:18px">' + esc(m.core) + '</p>' + (m.note ? '<div class="notice">' + esc(m.note) + '</div>' : '') +
-      '<h2>Key verses</h2>' + m.verses.map(function (v) { return '<div class="verse"><div class="v">' + esc(v.text) + '</div><div class="s">' + esc(v.source) + '</div><div>' + esc(v.meaning) + '</div></div>'; }).join('') +
-      '<h2>What we will learn</h2><ul>' + m.learn.map(function (l) { return '<li>' + esc(l) + '</li>'; }).join('') + '</ul>' +
-      '<h2>In the circles</h2><table class="t">' + Object.keys(m.circles).map(function (k) { return '<tr><td style="width:130px"><b>' + esc(k) + '</b></td><td>' + esc(m.circles[k]) + '</td></tr>'; }).join('') + '</table>' +
-      '<div class="lq"><div class="eb">Life’s question, from the epics</div><div class="q">' + esc(m.lifeQuestion.question) + '</div><div>' + esc(m.lifeQuestion.episode) + '</div><div class="s">' + esc(m.lifeQuestion.source) + '</div></div>';
+      '<nav class="chips" aria-label="Sections"><a href="#month-' + m.n + '/day">Topics of the day</a><a href="#month-' + m.n + '/topic">The topic</a><a href="#month-' + m.n + '/games">Games</a><a href="#month-' + m.n + '/quiz">Quiz</a><a href="#month-' + m.n + '/join">Coming?</a><a href="#month-' + m.n + '/sankalp">Sankalp</a><a href="#month-' + m.n + '/certificate">Certificate</a></nav>' +
+      '<p style="margin-top:14px"><b>' + esc(niceDate(m)) + '</b> · ' + esc(D.time) + ' <span class="pill' + (n >= 0 ? '' : ' ok') + '">' + whenText(m) + '</span></p>' +
+      '<div class="card" style="display:flex;gap:12px;align-items:center"><div style="flex:1"><div class="eb">Presented by a volunteer</div><div class="disp" style="font-size:18px">' + (pr ? esc(pr) : 'Presenter needed') + '</div>' +
+      (pr ? '' : '<div class="small muted">Know this topic well? Offer to present it; you will get the topic guide.</div>') + '</div>' +
+      (!pr && n >= 0 ? '<button class="btn primary small" data-act="offer" data-m="' + m.n + '">Offer to present</button>' : '') + '</div>' +
+      '<h2 id="day">Topics of the day</h2>' + agenda(m) +
+      '<h2 id="topic">The topic</h2><p style="font-size:18px">' + esc(m.core) + '</p>' + (m.note ? '<div class="notice">' + esc(m.note) + '</div>' : '') +
+      '<h3>Key verses</h3>' + m.verses.map(function (v) { return '<div class="verse"><div class="v">' + esc(v.text) + '</div><div class="s">' + esc(v.source) + '</div><div>' + esc(v.meaning) + '</div></div>'; }).join('') +
+      '<h3>What we will learn</h3><ul>' + m.learn.map(function (l) { return '<li>' + esc(l) + '</li>'; }).join('') + '</ul>' +
+      '<h2 id="games">Games</h2>' + gamesHtml(m) +
+      '<h2 id="quiz">Quiz</h2><div id="quizBox">' + quizHtml(m) + '</div>';
 
-    // RSVP
-    s += '<h2>Are you coming?</h2><div class="card" id="rsvpCard">';
-    if (n < 0) {
-      s += '<p>This gathering was held on ' + esc(niceDate(m)) + '.</p>';
-    } else {
+    s += '<h2 id="join">Are you coming?</h2><div class="card">';
+    if (n < 0) s += '<p style="margin:0">This gathering was held on ' + esc(niceDate(m)) + '.</p>';
+    else {
       s += '<p><b>' + live.families + '</b> families · <b>' + live.people + '</b> people coming so far</p>';
-      if (!ME) {
-        s += '<p>Register your family once, then tell us who is coming each month.</p><a class="btn primary" href="#register">Register your family</a>';
-      } else {
+      if (!ME) s += '<p>Register once, then say who is coming each month.</p><a class="btn primary" href="#join">Register</a>';
+      else {
         var mine = MINE.rsvp[m.n] || { a: ME.adults || 1, c: ME.children || 0, sent: false };
-        s += '<div class="row"><div><div class="small muted">Adults</div>' + stepper('ra', mine.a) + '</div><div><div class="small muted">Children</div>' + stepper('rc', mine.c) + '</div></div>' +
+        s += '<div class="row" style="gap:18px"><div><div class="small muted">Adults</div>' + stepper('ra', mine.a) + '</div><div><div class="small muted">Children</div>' + stepper('rc', mine.c) + '</div></div>' +
           '<div class="row" style="margin-top:12px"><button class="btn primary" data-act="rsvp" data-m="' + m.n + '">' + (mine.sent ? 'Update' : 'Count us in') + '</button>' +
           (mine.sent ? '<button class="btn" data-act="unrsvp" data-m="' + m.n + '">We can’t come</button><span class="pill ok">You’re in</span>' : '') + '</div>';
       }
     }
     s += '</div>';
 
-    // Seva
-    s += '<h2>Seva for this gathering</h2><div class="card">';
-    D.roles.forEach(function (r) {
-      var names = (live.seva && live.seva[r.id]) || [], k = m.n + ':' + r.id, mineOn = !!MINE.seva[k], got = names.length;
-      s += '<div class="role"><div class="info"><b>' + esc(r.name) + '</b> <span class="meter' + (got >= r.need ? ' full' : '') + '">' + got + ' of ' + r.need + '</span>' +
-        (names.length ? '<div class="names">' + names.map(esc).join(', ') + '</div>' : '') + '</div>' +
-        (n >= 0 ? (ME ? '<button class="btn small' + (mineOn ? '' : ' primary') + '" data-act="' + (mineOn ? 'unseva' : 'seva') + '" data-m="' + m.n + '" data-r="' + r.id + '">' + (mineOn ? 'Withdraw' : 'I’ll help') + '</button>' : '') : '') + '</div>';
-    });
-    if (!ME && n >= 0) s += '<p class="small" style="margin-top:10px"><a href="#register">Register</a> to sign up for seva.</p>';
-    s += '</div>';
-
-    // Sankalp tracker
     var t = TICKS[m.n] || [], done = t.filter(Boolean).length;
-    s += '<h2>Sankalp for 30 days</h2><div class="card"><p>' + esc(m.sankalp) + '</p><div class="small muted">' + done + ' of 30 days · saved on this phone</div><div class="ticks">';
+    s += '<h2 id="sankalp">Sankalp for 30 days</h2><div class="card"><p><b>' + esc(m.sankalp) + '</b></p><div class="small muted" data-count>' + done + ' of 30 days · saved on this phone</div><div class="bar"><i style="width:' + Math.round(done / 30 * 100) + '%"></i></div><div class="ticks">';
     for (var d = 0; d < 30; d++) s += '<button data-act="tick" data-m="' + m.n + '" data-d="' + d + '" aria-pressed="' + (!!t[d]) + '" aria-label="Day ' + (d + 1) + '">' + (d + 1) + '</button>';
-    s += '</div></div><div class="row"><button class="btn wa" data-act="share">Share on WhatsApp</button></div>';
+    s += '</div></div><h2 id="certificate">Certificate</h2><div class="card">' + certHtml(m) + '</div>' +
+      '<div class="row"><button class="btn wa" data-act="share">Share this gathering</button><a class="btn" href="#seva">Volunteer</a></div>';
+    var prev = D.months[i - 1], next = D.months[i + 1];
+    s += '<div class="pager2">' + (prev ? '<a class="btn" href="#month-' + prev.n + '">‹ ' + esc(prev.topic) + '</a>' : '<span></span>') + (next ? '<a class="btn" href="#month-' + next.n + '">' + esc(next.topic) + ' ›</a>' : '') + '</div>';
     return s;
   }
+  function stepper(id, v) { return '<div class="stepper"><button type="button" data-step="' + id + '" data-d="-1" aria-label="Fewer">−</button><output id="' + id + '">' + v + '</output><button type="button" data-step="' + id + '" data-d="1" aria-label="More">+</button></div>'; }
 
-  function stepper(id, v) {
-    return '<div class="stepper"><button type="button" data-step="' + id + '" data-d="-1" aria-label="Fewer">−</button><output id="' + id + '">' + v + '</output><button type="button" data-step="' + id + '" data-d="1" aria-label="More">+</button></div>';
-  }
-
-  function questionsPage() {
-    return '<div class="eb">Answered by the Ramayana and Mahabharata</div><h1>Life’s questions, answered by our heritage</h1>' +
-      '<p>Each month, one circle takes a real question to the two epics. Ramayana references follow Valmiki (Gita Press sarga numbers); Mahabharata references follow the BORI critical edition (CE chapter.verse).</p>' +
-      D.lifeQuestions.map(function (q) { return '<div class="card"><b>' + esc(q.question) + '</b><div>' + esc(q.episode) + '</div><div class="small" style="color:var(--kumkum);font-weight:700">' + esc(q.source) + '</div></div>'; }).join('') +
-      '<h2>Every story, with its source</h2><p>We tell every story and say where it comes from. The Lakshman Rekha, Shabari tasting the berries and the squirrel at Rama Setu come from later retellings, not Valmiki. We quote only the first half of <i>ahiṁsā paramo dharmaḥ</i>, and cite <i>dharmo rakṣati rakṣitaḥ</i> as Draupadi’s words (CE 3.31.7).</p>';
-  }
-
-  function sevaPage() {
-    return '<div class="eb">Everyone has a role</div><h1>Become a sevak</h1><p>This gurukul belongs to all of us. Choose a role, even for one Sunday. Sign up on any month’s page.</p>' +
-      '<table class="t"><tr><th>Role</th><th>Needed each month</th></tr>' + D.roles.map(function (r) { return '<tr><td>' + esc(r.name) + '</td><td>' + r.need + '</td></tr>'; }).join('') + '</table>' +
-      '<h2>Ways to give without money</h2><ul><li>Bring prasad in turn (five families each month).</li><li>Lend durries, chairs, a sound system or a projector.</li><li>Open a hall, courtyard or auditorium for one morning.</li><li>Be the lane volunteer who personally invites 5–10 families.</li></ul>' +
-      '<div class="card"><b>Seva Kosh.</b> A transparent box at every gathering meets printing and children’s materials, about ₹3,500 a month. Giving is voluntary; accounts are read out and posted every quarter.</div>';
-  }
-
-  function registerPage() {
+  function joinPage() {
     var me = ME || { name: '', phone: '', area: '', adults: 2, children: 0, circles: [], photo: false };
     var circles = ['Bal Gurukul (children)', 'Yuva Sabha (youth and families)', 'Karma Sabha (professionals, civic)', 'Vriddha Sabha (elders)'];
-    var s = '<div class="eb">' + (ME ? 'My entries' : 'Register') + '</div><h1>' + (ME ? 'Your family' : 'Register your family') + '</h1>';
+    var s = '<div class="eb">' + (ME ? 'My entries' : 'Join') + '</div><h1>' + (ME ? 'Namaste, ' + esc(ME.name) : 'Register once, for the whole year') + '</h1>';
     if (!online()) s += '<div class="notice">Online registration opens soon. Your details are saved on this phone for now.</div>';
     if (ME) {
       var list = [];
       D.months.forEach(function (m) {
-        var r = MINE.rsvp[m.n]; if (r && r.sent) list.push('<li><a href="#month-' + m.n + '">' + esc(m.topic) + '</a>: ' + r.a + ' adults, ' + r.c + ' children</li>');
-        D.roles.forEach(function (ro) { if (MINE.seva[m.n + ':' + ro.id]) list.push('<li><a href="#month-' + m.n + '">' + esc(m.topic) + '</a>: seva, ' + esc(ro.name) + '</li>'); });
+        var r = MINE.rsvp[m.n]; if (r && r.sent) list.push('<li><a href="#month-' + m.n + '">' + esc(m.topic) + '</a> · coming: ' + r.a + ' adults, ' + r.c + ' children</li>');
+        D.roles.forEach(function (ro) { if (MINE.seva[m.n + ':' + ro.id]) list.push('<li><a href="#month-' + m.n + '">' + esc(m.topic) + '</a> · volunteering: ' + esc(ro.name) + '</li>'); });
       });
-      s += '<div class="card"><b>' + esc(ME.name) + '</b><div class="small muted">' + esc(ME.area || '') + ' · ' + ME.adults + ' adults, ' + ME.children + ' children</div>' +
-        (list.length ? '<h3>Coming and helping</h3><ul>' + list.join('') + '</ul>' : '<p class="small" style="margin-top:8px">No RSVPs yet. Open a month’s page to say you’re coming.</p>') + '</div><h2>Edit details</h2>';
+      s += '<div class="card">' + (list.length ? '<ul style="margin:0">' + list.join('') + '</ul>' : '<p style="margin:0">Nothing yet. Open the next gathering and say you’re coming.</p>') + '</div><h2>Edit your details</h2>';
     }
     s += '<form id="regForm" novalidate>' +
       '<label class="f" for="fName">Family name or your name</label><input class="f" id="fName" autocomplete="name" required value="' + esc(me.name) + '">' +
       '<label class="f" for="fPhone">Mobile / WhatsApp number</label><input class="f" id="fPhone" type="tel" inputmode="tel" autocomplete="tel" required value="' + esc(me.phone) + '">' +
       '<label class="f" for="fArea">Area, society or colony</label><input class="f" id="fArea" value="' + esc(me.area) + '">' +
-      '<div class="row" style="margin-top:12px"><div><div class="small muted">Adults</div>' + stepper('fa', me.adults) + '</div><div><div class="small muted">Children</div>' + stepper('fc', me.children) + '</div></div>' +
-      '<fieldset style="border:0;padding:0;margin:14px 0 0"><legend class="f" style="font-weight:600;font-size:14px">Circles your family would like to join</legend>' +
+      '<div class="row" style="margin-top:12px;gap:18px"><div><div class="small muted">Adults</div>' + stepper('fa', me.adults) + '</div><div><div class="small muted">Children</div>' + stepper('fc', me.children) + '</div></div>' +
+      '<fieldset style="border:0;padding:0;margin:14px 0 0"><legend style="font-weight:600;font-size:14px">Circles your family would like to join</legend>' +
       circles.map(function (c, i) { return '<div class="check"><input type="checkbox" id="c' + i + '" value="' + esc(c) + '"' + (me.circles.indexOf(c) >= 0 ? ' checked' : '') + '><label for="c' + i + '">' + esc(c) + '</label></div>'; }).join('') + '</fieldset>' +
-      '<div class="check"><input type="checkbox" id="fPhoto"' + (me.photo ? ' checked' : '') + '><label for="fPhoto">Photos and videos of our family may be used to share the gurukul’s work. Children are never named or tagged.</label></div>' +
+      '<div class="check"><input type="checkbox" id="fPhoto"' + (me.photo ? ' checked' : '') + '><label for="fPhoto">Photos and videos of our family may be used to share the gatherings. Children are never named or tagged.</label></div>' +
       '<p class="small muted">Only your family name and headcount are shown to others. Your number stays with the organisers.</p>' +
       '<button class="btn primary" type="submit">' + (ME ? 'Save changes' : 'Register') + '</button></form>';
     return s;
   }
 
+  function roleRow(m, r, live, showNames) {
+    var names = (live.seva && live.seva[r.id]) || [], on = !!MINE.seva[m.n + ':' + r.id];
+    return '<div class="role"><div class="info"><b>' + esc(r.name) + '</b> <span class="meter' + (names.length >= r.need ? ' full' : '') + '">' + names.length + '/' + r.need + '</span>' +
+      (showNames && names.length ? '<div class="names">' + names.map(esc).join(', ') + '</div>' : '') + '</div>' +
+      (ME ? '<button class="btn small' + (on ? '' : ' primary') + '" data-act="' + (on ? 'unseva' : 'seva') + '" data-m="' + m.n + '" data-r="' + r.id + '">' + (on ? 'Withdraw' : 'I’ll help') + '</button>' : '') + '</div>';
+  }
+
+  function sevaPage() {
+    var up = D.months.filter(function (m) { return daysTo(m) >= 0; });
+    var sel = +((location.hash.split('/')[1]) || (up[0] && up[0].n) || 1), m = D.months[sel - 1] || D.months[0];
+    var s = '<div class="eb">Everyone has a role</div><h1>Volunteer</h1><p>Every gathering is organised, presented and run by volunteers. Pick a role, even for one Sunday.</p>' +
+      '<div class="band b-kumkum"><div class="eb">Present a topic</div><div class="disp" style="font-size:20px">Share what you know</div><p style="margin:4px 0 0">Any volunteer can sign up for any topic. You get a topic guide with the verses, stories, games and quiz.</p></div>' +
+      '<div class="card">' + D.months.map(function (x) {
+        var names = (liveMonth(x.n).seva || {}).present || [], on = !!MINE.seva[x.n + ':present'], past = daysTo(x) < 0;
+        return '<div class="role"><span class="mk" style="width:14px;height:20px;border-radius:99px 99px 0 0;background:' + COLS[x.colour] + ';flex-shrink:0"></span><div class="info"><b>' + esc(x.topic) + '</b><div class="names">' + esc(shortDate(x)) +
+          (x.presenter ? ' · Presenter: ' + esc(x.presenter) : names.length ? ' · Signed up: ' + names.map(esc).join(', ') : ' · Presenter needed') + '</div></div>' +
+          (past ? '<span class="pill ok">Held</span>' : ME ? '<button class="btn small' + (on ? '' : ' primary') + '" data-act="' + (on ? 'unseva' : 'offer') + '" data-m="' + x.n + '" data-r="present">' + (on ? 'Withdraw' : 'Sign up') + '</button>' : '') + '</div>';
+      }).join('') + (ME ? '' : '<p class="small" style="margin-top:10px"><a href="#join">Register</a> to sign up.</p>') + '</div><h2>Help on the day</h2>';
+    if (up.length) {
+      var live = liveMonth(m.n), need = 0, got = 0;
+      D.roles.forEach(function (r) { if (r.id === 'present') return; need += r.need; got += Math.min(r.need, ((live.seva || {})[r.id] || []).length); });
+      s += '<label class="f" for="svMonth">Gathering</label><select class="f" id="svMonth">' + up.map(function (x) { return '<option value="' + x.n + '"' + (x.n === m.n ? ' selected' : '') + '>' + esc(x.month + ': ' + x.topic) + '</option>'; }).join('') + '</select>' +
+        '<div class="card"><div class="small"><b>' + got + ' of ' + need + '</b> places filled for ' + esc(m.topic) + '</div><div class="bar"><i style="width:' + Math.round(100 * got / need) + '%"></i></div>' +
+        D.roles.filter(function (r) { return r.id !== 'present'; }).map(function (r) { return roleRow(m, r, live, true); }).join('') + (ME ? '' : '<p class="small" style="margin-top:10px"><a href="#join">Register</a> to sign up.</p>') + '</div>';
+    }
+    s += '<h2>Other ways to help</h2><ul><li>Lend durries, chairs, a sound system or a projector.</li><li>Open a hall, courtyard or auditorium for one morning.</li><li>Be the lane volunteer who personally invites 5–10 families each month.</li></ul>' +
+      '<div class="card"><b>Seva Kosh.</b> A transparent box at every gathering meets printing and children’s materials. Giving is voluntary; accounts are shared every quarter.</div>' +
+      '<div class="row"><a class="btn" href="#ask">Offer something else</a></div>';
+    return s;
+  }
+
+  function morningPage() {
+    return '<div class="eb">A gurukul with a modern touch</div><h1>A gathering morning</h1><p>' + esc(D.time) + ' at ' + esc(D.venue.name) + '.</p><table class="t">' +
+      D.morning.map(function (r) { return '<tr><td style="width:60px;color:var(--kumkum);font-weight:700">' + r[0] + '</td><td><b>' + esc(r[1]) + '</b><br>' + esc(r[2]) + '</td></tr>'; }).join('') + '</table>' +
+      '<h2>Four learning circles</h2><div class="grid2">' + tile('#year', 'b-saffron', 'Bal Gurukul', 'Children 8–14') + tile('#year', 'b-haldi', 'Yuva Sabha', 'Youth and families') +
+      tile('#year', 'b-peacock', 'Karma Sabha', 'Professionals and civic leaders') + tile('#year', 'b-kumkum', 'Vriddha Sabha', 'Elders') + '</div>' +
+      '<h2>Between gatherings</h2><ul><li><b>Week 1:</b> verse of the month on WhatsApp</li><li><b>Week 2:</b> a small family experiment</li><li><b>Week 3:</b> a youth-led bhajan jam or heritage walk</li><li><b>Week 4:</b> your lane volunteer invites you in person</li></ul>';
+  }
+
+  function aboutPage() {
+    var lv = [['Vyakti', 'The individual', 'Focus, discipline, calm, character', 'saffron'], ['Parivar', 'The family', 'Respect, time together, shared values', 'haldi'], ['Samaj', 'The community', 'Seva, harmony, neighbours who care', 'peacock'], ['Rashtra', 'The nation', 'Pride, responsibility, Viksit Bharat 2047', 'kumkum']];
+    return '<div class="eb">Why we gather</div><h1>Grow yourself. Grow together.</h1><p>A better person makes a better family, a stronger community and a greater nation.</p>' +
+      lv.map(function (l) { return '<div class="band b-' + l[3] + '"><span class="disp" style="font-size:20px">' + l[0] + '</span> <b>' + l[1] + '</b><div>' + l[2] + '</div></div>'; }).join('') +
+      '<h2>Four pillars</h2><table class="t"><tr><td><b>Wisdom</b> <i>(jñāna)</i></td><td>Who am I, and what is worth pursuing?</td></tr><tr><td><b>Life management</b> <i>(swadharma)</i></td><td>Discipline, balance, focus and calm</td></tr>' +
+      '<tr><td><b>Human management</b> <i>(sambandha)</i></td><td>Family, respect, empathy and service</td></tr><tr><td><b>Complete management</b> <i>(rājadharma)</i></td><td>Ethical leadership of teams and communities</td></tr></table>' +
+      '<div class="band b-saffron" style="margin-top:16px"><div class="disp" style="font-size:19px">No fees. No sponsors. Only seva.</div>Every gathering is organised, presented and run by volunteers from our neighbourhood.</div>';
+  }
+
+  function questionsPage() {
+    return '<div class="eb">Answered by the Ramayana and Mahabharata</div><h1>Life’s questions, answered by our heritage</h1>' +
+      '<p class="small muted">Ramayana references follow Valmiki (Gita Press sarga numbers); Mahabharata references follow the BORI critical edition (CE chapter.verse).</p>' +
+      D.lifeQuestions.map(function (q) { return '<div class="card"><b>' + esc(q.question) + '</b><div>' + esc(q.episode) + '</div><div class="small" style="color:var(--kumkum);font-weight:700">' + esc(q.source) + '</div></div>'; }).join('') +
+      '<h2>Every story, with its source</h2><p>The Lakshman Rekha, Shabari tasting the berries and the squirrel at Rama Setu come from later retellings, not Valmiki. We quote only the first half of <i>ahiṁsā paramo dharmaḥ</i>, and cite <i>dharmo rakṣati rakṣitaḥ</i> as Draupadi’s words (CE 3.31.7).</p>';
+  }
+
   function askPage() {
-    return '<div class="eb">We are listening</div><h1>Ask or suggest</h1><p>Send a question for the Acharya, an idea, or offer to speak, sing or perform.</p><form id="askForm" novalidate>' +
-      '<label class="f" for="aKind">What is it?</label><select class="f" id="aKind"><option>Question for the Acharya</option><option>Suggestion</option><option>I would like to speak, sing or perform</option><option>I can lend or offer something</option></select>' +
+    return '<div class="eb">We are listening</div><h1>Ask or offer</h1><form id="askForm" novalidate>' +
+      '<label class="f" for="aKind">What is it?</label><select class="f" id="aKind"><option>A question on a topic</option><option>I would like to present a topic</option><option>I would like to lead a circle</option><option>I would like to sing, dance or perform</option><option>I can lend or offer something</option><option>Suggestion</option></select>' +
       '<label class="f" for="aMonth">For which gathering?</label><select class="f" id="aMonth"><option value="">Any</option>' + D.months.map(function (m) { return '<option value="' + m.n + '">' + esc(m.month + ': ' + m.topic) + '</option>'; }).join('') + '</select>' +
       (ME ? '' : '<label class="f" for="aName">Your name</label><input class="f" id="aName"><label class="f" for="aPhone">Mobile number</label><input class="f" id="aPhone" type="tel" inputmode="tel">') +
-      '<label class="f" for="aText">Your message</label><textarea class="f" id="aText" maxlength="1000"></textarea>' +
-      '<div style="margin-top:12px"><button class="btn primary" type="submit">Send</button></div></form>';
+      '<label class="f" for="aText">Your message</label><textarea class="f" id="aText" maxlength="1000"></textarea><div style="margin-top:12px"><button class="btn primary" type="submit">Send</button></div></form>';
   }
 
   function prayersPage() {
@@ -388,25 +499,24 @@ textarea.f{min-height:110px}
   }
 
   function promisePage() {
-    return '<div class="eb">Our promise to families</div><h1>Safe, open and respectful</h1><ul>' +
+    return '<div class="eb">Our promise to families</div><h1>Safe and respectful</h1><ul>' +
       ['Every volunteer signs a short code of conduct.', 'No volunteer is ever alone with a child.', 'Photos only with written consent; no child is named or tagged online.', 'No shouting, punishment or humiliation, ever.',
-       'Concerns go to our safeguarding contact: ' + D.safeguardingContact + '.', 'Every family is welcome, of every community and background.', 'No politics: no party symbols, banners or campaigning at any gathering.', 'Chairs, a microphone and large print for anyone who needs them.']
+       'Concerns go to our safeguarding contact: ' + D.safeguardingContact + '.', 'Every family is welcome.', 'Chairs, a microphone and large print for anyone who needs them.']
         .map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>';
   }
 
   function downloadsPage() {
-    var f = [['Handbook for everyone (A5 booklet, 40 pages)', 'docs/Bharat-Handbook-A5.pdf'], ['Trifold brochure (A4)', 'docs/Bharat-Brochure-Trifold.pdf'], ['Year schedule poster (A3)', 'docs/Bharat-Year-Schedule-A3.pdf'], ['January launch poster (A4)', 'docs/Bharat-Launch-Poster-A4.pdf']];
+    var f = [['Handbook for everyone (A5, 40 pages)', 'docs/Bharat-Handbook-A5.pdf'], ['Trifold brochure (A4)', 'docs/Bharat-Brochure-Trifold.pdf'], ['Year schedule poster (A3)', 'docs/Bharat-Year-Schedule-A3.pdf'], ['January poster (A4)', 'docs/Bharat-Launch-Poster-A4.pdf']];
     return '<div class="eb">Print and share</div><h1>Downloads</h1>' + f.map(function (x) { return '<div class="card"><a href="' + x[1] + '" download>' + esc(x[0]) + '</a></div>'; }).join('') +
       '<h2>Contact</h2><p>' + esc(D.contact.name) + ' · ' + esc(D.contact.phone) + '<br>' + esc(D.venue.name) + ', ' + esc(D.venue.address) + '</p>';
   }
 
-  /* ---------- organiser (hidden: add #organiser to the address) ---------- */
   function organiserPage() {
     var key = sessionStorage.getItem('bg_key');
     var s = '<div class="eb">Organisers only</div><h1>Organiser tools</h1>';
     if (!online()) return s + '<div class="notice">Add the Apps Script /exec address to programme.json first.</div>';
     if (!key) return s + '<form id="keyForm"><label class="f" for="kIn">Organiser key</label><input class="f" id="kIn" type="password" autocomplete="off"><div style="margin-top:12px"><button class="btn primary">Unlock</button></div></form><p class="small muted">The key is set in the Google Sheet’s Apps Script properties. It is never stored in this website.</p>';
-    s += '<p class="small muted">Phone numbers and questions are only in the Google Sheet. Use Gurukul > Rebuild reports there for dashboards.</p>';
+    s += '<p class="small muted">Phone numbers and messages are only in the Google Sheet. Use Gurukul > Rebuild reports there for dashboards.</p>';
     D.months.forEach(function (m) {
       var l = liveMonth(m.n);
       s += '<h3>' + esc(m.month + ': ' + m.topic) + '</h3><p class="small">' + l.families + ' families · ' + l.people + ' people</p>';
@@ -416,56 +526,51 @@ textarea.f{min-height:110px}
     return s + '<div style="margin-top:16px"><button class="btn" data-act="lock">Lock</button></div>';
   }
 
-  /* ---------- render and navigation ---------- */
-  function render() {
-    if (!D) return;
-    var i = current(), html, title;
-    if (i === -1) { html = organiserPage(); title = 'Organiser'; }
-    else { html = PAGES[i].r(); title = PAGES[i].title; }
-    $('page').innerHTML = html;
-    $('topTitle').textContent = i <= 0 ? 'Bharat' : title;
-    document.title = (i <= 0 ? '' : title + ' · ') + 'Bharat gurukul';
-    $('pageNo').textContent = i >= 0 ? (i + 1) + ' of ' + PAGES.length : '';
-    $('prevBtn').disabled = i <= 0;
-    $('nextBtn').disabled = i < 0 || i >= PAGES.length - 1;
-    $('nextBtn').textContent = i >= 0 && i < PAGES.length - 1 ? PAGES[i + 1].title.split(':')[0] + ' ›' : 'Next ›';
-    wire();
+  function moreMenu() {
+    var items = [['#about', 'Why we gather'], ['#morning', 'A gathering morning'], ['#questions', 'Life’s questions'], ['#ask', 'Ask or offer'], ['#prayers', 'Prayers'], ['#promise', 'Our promise'], ['#downloads', 'Downloads']];
+    return '<div class="eb">More</div><div class="menu">' + items.map(function (x) { return '<a href="' + x[0] + '">' + esc(x[1]) + '</a>'; }).join('') + '</div>' +
+      '<h3>The twelve gatherings</h3><div class="menu">' + D.months.map(function (m) { return '<a href="#month-' + m.n + '"><span style="display:inline-block;width:12px;height:16px;border-radius:99px 99px 0 0;background:' + COLS[m.colour] + '"></span>' + esc(m.month + ': ' + m.topic) + '</a>'; }).join('') + '</div>';
   }
 
-  function navTo(i) { if (i >= 0 && i < PAGES.length) go(PAGES[i].id); }
-  window.addEventListener('hashchange', function () { render(); $('main').scrollTop = 0; $('main').focus({ preventScroll: true }); closeDrawer(); });
-  $('prevBtn').onclick = function () { navTo(current() - 1); };
-  $('nextBtn').onclick = function () { navTo(current() + 1); };
+  var lastKey = '';
+  function render(soft) {
+    if (!D) return;
+    var h = (location.hash || '#home').slice(1).split('/'), key = h[0];
+    if (key === 'more') { openDrawer(); return; }
+    var r = route(), scroll = $('main').scrollTop;
+    $('page').innerHTML = r.r();
+    $('topTitle').textContent = r.title;
+    document.title = (r.title === 'Bharat' ? '' : r.title + ' · ') + 'Bharat';
+    document.querySelectorAll('nav.tabs a').forEach(function (a) { if (a.dataset.tab === r.tab) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+    wire();
+    if (soft && key === lastKey) { $('main').scrollTop = scroll; return; }
+    lastKey = key;
+    var anchor = h[1] && isNaN(+h[1]) && document.getElementById(h[1]);
+    if (anchor) anchor.scrollIntoView(); else $('main').scrollTop = 0;
+  }
+  window.addEventListener('hashchange', function () { closeDrawer(); render(); });
 
-  function openDrawer() { $('drawerPanel').innerHTML = contentsPage(); $('drawer').classList.add('open'); $('menuBtn').setAttribute('aria-expanded', 'true'); var a = $('drawerPanel').querySelector('a'); if (a) a.focus(); }
-  function closeDrawer() { $('drawer').classList.remove('open'); $('menuBtn').setAttribute('aria-expanded', 'false'); }
-  $('menuBtn').onclick = function () { $('drawer').classList.contains('open') ? closeDrawer() : openDrawer(); };
-  $('drawer').addEventListener('click', function (e) { if (e.target === $('drawer')) closeDrawer(); });
-  $('drawer').addEventListener('keydown', function (e) { if (e.key === 'Escape') { closeDrawer(); $('menuBtn').focus(); } });
-
-  // swipe between pages
-  var sx = null, sy = null;
-  $('main').addEventListener('touchstart', function (e) { var t = e.touches[0]; sx = t.clientX; sy = t.clientY; }, { passive: true });
-  $('main').addEventListener('touchend', function (e) {
-    if (sx === null) return; var t = e.changedTouches[0], dx = t.clientX - sx, dy = t.clientY - sy; sx = null;
-    if (Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.5 && !e.target.closest('input,textarea,select,.ticks')) navTo(current() + (dx < 0 ? 1 : -1));
-  }, { passive: true });
+  function openDrawer() { $('drawerPanel').innerHTML = moreMenu(); $('drawer').classList.add('open'); $('moreTab').setAttribute('aria-expanded', 'true'); var a = $('drawerPanel').querySelector('a'); if (a) a.focus(); }
+  function closeDrawer() { $('drawer').classList.remove('open'); $('moreTab').setAttribute('aria-expanded', 'false'); }
+  $('moreTab').addEventListener('click', function (e) { e.preventDefault(); $('drawer').classList.contains('open') ? closeDrawer() : openDrawer(); });
+  $('drawer').addEventListener('click', function (e) { if (e.target === $('drawer') || e.target.closest('a')) closeDrawer(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && $('drawer').classList.contains('open')) { closeDrawer(); $('moreTab').focus(); } });
 
   function shareText() {
-    var i = current(), url = location.href.split('#')[0] + '#' + (i >= 0 ? PAGES[i].id : '');
-    var p = i >= 0 ? PAGES[i] : null, m = p && p.month;
-    if (m) return '🪔 ' + D.title + '\n' + m.month + ' gathering: ' + m.topic + ' — ' + m.theme + '\n' + niceDate(m) + ', ' + D.time + ', ' + D.venue.name + '\nFree, run by volunteers. Details and RSVP: ' + url;
-    return '🪔 ' + D.title + '\nA free, volunteer-run gurukul for every family: twelve Sunday mornings from the Vedas to the Buddha.\n' + url;
+    var h = (location.hash || '').slice(1).split('/')[0], mm = /^month-(\d+)$/.exec(h), base = location.href.split('#')[0];
+    var m = mm ? D.months[+mm[1] - 1] : D.months[Math.max(0, nextIdx())];
+    return '🚩 ' + D.title + '\n' + m.month + ': ' + m.topic + ' — ' + m.theme + '\n' + niceDate(m) + ', ' + D.time + ', ' + D.venue.name +
+      '\nFree, and run entirely by volunteers. Come with your family: ' + base + '#month-' + m.n;
   }
   function share() { window.open('https://wa.me/?text=' + encodeURIComponent(shareText()), '_blank', 'noopener'); }
   $('shareBtn').onclick = share;
 
   function wire() {
     var page = $('page');
-    page.querySelectorAll('[data-step]').forEach(function (b) {
-      b.onclick = function () { var o = $(b.dataset.step); o.textContent = Math.max(0, Math.min(20, (+o.textContent || 0) + (+b.dataset.d))); };
-    });
+    page.querySelectorAll('[data-step]').forEach(function (b) { b.onclick = function () { var o = $(b.dataset.step); o.textContent = Math.max(0, Math.min(20, (+o.textContent || 0) + (+b.dataset.d))); }; });
     page.querySelectorAll('[data-act]').forEach(function (b) { b.onclick = function () { act(b); }; });
+    page.querySelectorAll('.chips a').forEach(function (a) { a.onclick = function (e) { e.preventDefault(); var el = $(a.getAttribute('href').split('/')[1]); if (el) el.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); }; });
+    var sv = $('svMonth'); if (sv) sv.onchange = function () { location.hash = '#seva/' + sv.value; };
     var rf = $('regForm'); if (rf) rf.onsubmit = function (e) { e.preventDefault(); register(); };
     var af = $('askForm'); if (af) af.onsubmit = function (e) { e.preventDefault(); ask(); };
     var kf = $('keyForm'); if (kf) kf.onsubmit = function (e) {
@@ -478,9 +583,28 @@ textarea.f{min-height:110px}
     var a = b.dataset.act, mn = b.dataset.m, m = mn && D.months[+mn - 1];
     if (a === 'share') return share();
     if (a === 'lock') { sessionStorage.removeItem('bg_key'); return render(); }
+    if (a === 'offer') {
+      if (!ME) { toast('Register first, then offer to present.'); location.hash = '#join'; return; }
+      b.dataset.r = 'present'; a = 'seva';
+    }
+    if (a === 'quiz') {
+      var st = QUIZ[mn] || {}; st[+b.dataset.q] = +b.dataset.o; QUIZ[mn] = st; save('bg_quiz', QUIZ);
+      $('quizBox').innerHTML = quizHtml(m); wire(); return;
+    }
+    if (a === 'quizReset') { delete QUIZ[mn]; save('bg_quiz', QUIZ); $('quizBox').innerHTML = quizHtml(m); wire(); return; }
+    if (a === 'cert') {
+      var nm = ($('certName').value || '').trim().slice(0, 60);
+      if (!nm) { $('certName').focus(); return toast('Please enter a name.'); }
+      (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(function () { makeCert(m, nm); toast('Certificate downloaded.'); });
+      return;
+    }
     if (a === 'tick') {
       var t = TICKS[mn] || []; t[+b.dataset.d] = !t[+b.dataset.d]; TICKS[mn] = t; save('bg_ticks', TICKS);
-      b.setAttribute('aria-pressed', String(!!t[+b.dataset.d])); return;
+      b.setAttribute('aria-pressed', String(!!t[+b.dataset.d]));
+      var done = t.filter(Boolean).length, card = b.closest('.card');
+      card.querySelector('[data-count]').textContent = done + ' of 30 days · saved on this phone'; card.querySelector('.bar i').style.width = Math.round(done / 30 * 100) + '%';
+      if (done === 30) toast('30 days complete. Well done!');
+      return;
     }
     if (a === 'rsvp' || a === 'unrsvp') {
       var ad = a === 'rsvp' ? +$('ra').textContent : 0, ch = a === 'rsvp' ? +$('rc').textContent : 0;
@@ -489,7 +613,7 @@ textarea.f{min-height:110px}
       post({ action: 'rsvp', name: ME.name, phone: ME.phone, month: mn, topic: m.topic, adults: ad, children: ch }).then(function (j) {
         if (!j.ok) { b.disabled = false; return toast('Could not send. Please try again.'); }
         if (a === 'rsvp') MINE.rsvp[mn] = { a: ad, c: ch, sent: true }; else delete MINE.rsvp[mn];
-        save('bg_mine', MINE); toast(a === 'rsvp' ? 'Thank you! See you on ' + niceDate(m) + '.' : 'Noted. We’ll miss you.'); fetchLive(); render();
+        save('bg_mine', MINE); toast(a === 'rsvp' ? 'See you on ' + niceDate(m) + '!' : 'Noted. We’ll miss you.'); fetchLive(); render(true);
       });
       return;
     }
@@ -499,7 +623,9 @@ textarea.f{min-height:110px}
       post({ action: a, name: ME.name, phone: ME.phone, month: mn, topic: m.topic, role: role.id, roleName: role.name }).then(function (j) {
         if (!j.ok) { b.disabled = false; return toast('Could not send. Please try again.'); }
         var k = mn + ':' + role.id; if (a === 'seva') MINE.seva[k] = true; else delete MINE.seva[k];
-        save('bg_mine', MINE); toast(a === 'seva' ? 'Thank you for your seva!' : 'Withdrawn.'); fetchLive(); render();
+        save('bg_mine', MINE);
+        toast(a === 'unseva' ? 'Withdrawn.' : role.id === 'present' ? 'Thank you! An organiser will send you the topic guide.' : 'Thank you for volunteering!');
+        fetchLive(); render(true);
       });
       return;
     }
@@ -519,14 +645,14 @@ textarea.f{min-height:110px}
     var me = { name: name, phone: phone, area: $('fArea').value.trim(), adults: +$('fa').textContent, children: +$('fc').textContent, circles: circles, photo: $('fPhoto').checked };
     post({ action: 'register', name: me.name, phone: me.phone, area: me.area, adults: me.adults, children: me.children, circles: me.circles, photoConsent: me.photo }).then(function (j) {
       if (!j.ok) return toast('Could not register. Please try again.');
-      ME = me; save('bg_me', ME); toast('Welcome to the gurukul, ' + name + '!'); fetchLive();
-      var ni = nextIdx(); go(ni >= 0 ? 'month-' + D.months[ni].n : 'contents');
+      var first = !ME; ME = me; save('bg_me', ME); toast(first ? 'Welcome, ' + name + '!' : 'Saved.'); fetchLive();
+      var ni = nextIdx(); location.hash = ni >= 0 ? '#month-' + D.months[ni].n + '/join' : '#home';
     });
   }
 
   function ask() {
     var text = $('aText').value.trim(); if (!text) { $('aText').focus(); return toast('Please write your message.'); }
-    var name = ME ? ME.name : ($('aName').value.trim()), phone = ME ? ME.phone : ($('aPhone').value.trim());
+    var name = ME ? ME.name : $('aName').value.trim(), phone = ME ? ME.phone : $('aPhone').value.trim();
     if (!name || digits(phone).length < 8) return toast('Please add your name and mobile number.');
     post({ action: 'ask', name: name, phone: phone, month: $('aMonth').value, kind: $('aKind').value, text: text }).then(function (j) {
       if (!j.ok) return toast('Could not send. Please try again.');
@@ -534,15 +660,8 @@ textarea.f{min-height:110px}
     });
   }
 
-  document.addEventListener('keydown', function (e) {
-    if (e.target.closest && e.target.closest('input,textarea,select')) return;
-    if (e.key === 'ArrowRight') navTo(current() + 1);
-    if (e.key === 'ArrowLeft') navTo(current() - 1);
-  });
-
-  fetch('programme.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (d) {
-    D = d; buildPages(); fetchLive(); render();
-  }).catch(function () { $('page').innerHTML = '<p>Could not load the programme. Please check your connection and reload.</p>'; });
+  fetch('programme.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (d) { D = d; fetchLive(); render(); })
+    .catch(function () { $('page').innerHTML = '<p>Could not load the programme. Please check your connection and reload.</p>'; });
 })();
 </script>
 </body>

@@ -1,7 +1,6 @@
 {
  "title": "Bharat: Rooted in Heritage, Inspired for the Future",
  "tagline": "Ancient Wisdom for Modern Excellence",
- "organiser": "Bharat Heritage & Leadership Forum",
  "locality": "[LOCALITY]",
  "venue": {
   "name": "[VENUE NAME]",
@@ -18,9 +17,19 @@
  "scriptUrl": "",
  "roles": [
   {
+   "id": "present",
+   "name": "Present the month’s topic",
+   "need": 1
+  },
+  {
+   "id": "circle",
+   "name": "Lead a learning circle",
+   "need": 4
+  },
+  {
    "id": "welcome",
    "name": "Welcome desk and registration",
-   "need": 4
+   "need": 3
   },
   {
    "id": "seating",
@@ -30,22 +39,12 @@
   {
    "id": "bal",
    "name": "Bal Gurukul helper",
-   "need": 4
+   "need": 3
   },
   {
    "id": "stage",
    "name": "Stage, sound and timekeeping",
    "need": 2
-  },
-  {
-   "id": "prasad",
-   "name": "Bring prasad (family rota)",
-   "need": 5
-  },
-  {
-   "id": "water",
-   "name": "Water and serving",
-   "need": 3
   },
   {
    "id": "media",
@@ -54,12 +53,12 @@
   },
   {
    "id": "clean",
-   "name": "Clean-up",
+   "name": "Setting up and clean-up",
    "need": 3
   },
   {
-   "id": "story",
-   "name": "Storyteller or bhajan leader",
+   "id": "culture",
+   "name": "Bhajan, dance or skit",
    "need": 2
   },
   {
@@ -70,34 +69,34 @@
  ],
  "morning": [
   [
-   "9:00",
-   "Aagaman",
-   "Arrive, rangoli welcome, pick up a small seva task"
-  ],
-  [
    "9:30",
-   "Deep prajwalan and vandana",
-   "A child and an elder light the lamp; children chant the invocation"
+   "Deep prajwalan",
+   "Invited delegates open the gathering, lighting the lamp with a child and an elder"
   ],
   [
    "9:45",
-   "Acharya pravachan",
-   "The month’s teaching, with one practice we all do together"
+   "Pravachan",
+   "A volunteer presents the day’s topic, with one practice we all do together"
   ],
   [
    "10:30",
    "Vishram",
-   "Water and prasad brought by families in turn"
+   "A short break"
   ],
   [
    "10:45",
    "Shishya sabha",
-   "Four learning circles on durries"
+   "Four learning circles with activities and games"
+  ],
+  [
+   "11:30",
+   "Quiz",
+   "A quick quiz on the day’s topic for everyone"
   ],
   [
    "11:45",
    "Prashnottari",
-   "Circles share one insight; questions to the Acharya, children first"
+   "Life’s question from the epics; open questions, children first"
   ],
   [
    "12:10",
@@ -106,8 +105,8 @@
   ],
   [
    "12:25",
-   "Sankalp",
-   "The month’s home practice, taken as a pledge"
+   "Sankalp and certificates",
+   "The month’s home practice, and a certificate for everyone who took part"
   ]
  ],
  "lifeQuestions": [
@@ -286,7 +285,76 @@
     "episode": "Told he is to be exiled instead of crowned, Rama stays calm and still bows to his father and to Kaikeyi.",
     "source": "Ramayana, Ayodhya Kanda 18"
    },
-   "sankalp": "Greet the rising sun each morning and sit in silence for three minutes."
+   "sankalp": "Greet the rising sun each morning and sit in silence for three minutes.",
+   "presenter": "",
+   "games": [
+    {
+     "name": "Mantra relay",
+     "how": "In pairs, pass a line of the Gayatri word by word, forwards and then backwards, the way the Vedas were memorised (krama style)."
+    },
+    {
+     "name": "Sun salutation freeze",
+     "how": "Children flow through Surya Namaskar; when the leader rings a bell, everyone freezes in the current pose."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "How many Vedas are there?",
+     "options": [
+      "Two",
+      "Three",
+      "Four",
+      "Six"
+     ],
+     "answer": 2,
+     "why": ""
+    },
+    {
+     "q": "Which Veda is called the root of Indian music?",
+     "options": [
+      "Rigveda",
+      "Samaveda",
+      "Yajurveda",
+      "Atharvaveda"
+     ],
+     "answer": 1,
+     "why": ""
+    },
+    {
+     "q": "“Ekaṁ sad viprā bahudhā vadanti” means…",
+     "options": [
+      "Truth is one; the wise call it by many names",
+      "Walk together, speak together",
+      "The earth is my mother",
+      "Arise and awake"
+     ],
+     "answer": 0,
+     "why": "Rigveda 1.164.46"
+    },
+    {
+     "q": "The Gayatri mantra is a prayer to…",
+     "options": [
+      "Savitr, the sun",
+      "Agni, fire",
+      "Indra",
+      "Varuna"
+     ],
+     "answer": 0,
+     "why": "Rigveda 3.62.10"
+    },
+    {
+     "q": "Which woman seer composed Vedic hymns?",
+     "options": [
+      "Ghosha",
+      "Draupadi",
+      "Kunti",
+      "Mandodari"
+     ],
+     "answer": 0,
+     "why": ""
+    }
+   ],
+   "delegates": ""
   },
   {
    "n": 2,
@@ -331,7 +399,76 @@
     "episode": "Vidura names six faults that hold a person back: too much sleep, drowsiness, fear, anger, laziness and delay.",
     "source": "Mahabharata, Udyoga Parva (Vidura Niti), CE 5.33.66"
    },
-   "sankalp": "Ten minutes of new learning every day, and one fixed time to sleep and wake."
+   "sankalp": "Ten minutes of new learning every day, and one fixed time to sleep and wake.",
+   "presenter": "",
+   "games": [
+    {
+     "name": "Rope geometry challenge",
+     "how": "Teams get a rope knotted into 12 equal parts and race to make a right angle with sides of 3, 4 and 5 parts."
+    },
+    {
+     "name": "Vedanga match",
+     "how": "Match six cards (phonetics, grammar, metre, meaning, astronomy, ritual) to their Sanskrit names."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "The Shulba Sutras give rules for building…",
+     "options": [
+      "Fire altars",
+      "Ships",
+      "Roads",
+      "Forts"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "How many Vedangas are there?",
+     "options": [
+      "Four",
+      "Six",
+      "Eight",
+      "Twelve"
+     ],
+     "answer": 1,
+     "why": ""
+    },
+    {
+     "q": "Which Upaveda is about health?",
+     "options": [
+      "Ayurveda",
+      "Dhanurveda",
+      "Gandharvaveda",
+      "Sthapatyaveda"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "A rope triangle with sides 3, 4 and 5 gives…",
+     "options": [
+      "A right angle",
+      "A circle",
+      "A square",
+      "A straight line"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "In Ayurveda, the daily routine is called…",
+     "options": [
+      "Dinacharya",
+      "Ritucharya",
+      "Sankalp",
+      "Yatra"
+     ],
+     "answer": 0,
+     "why": ""
+    }
+   ],
+   "delegates": ""
   },
   {
    "n": 3,
@@ -381,7 +518,76 @@
     "episode": "The Yaksha asks Yudhishthira who is truly rich. The answer: one to whom joy and sorrow, past and future, are alike.",
     "source": "Mahabharata, Vana Parva (Yaksha Prashna), CE 3.297.62–64"
    },
-   "sankalp": "Five minutes of journalling each night: who am I beyond my roles today?"
+   "sankalp": "Five minutes of journalling each night: who am I beyond my roles today?",
+   "presenter": "",
+   "games": [
+    {
+     "name": "The salt mystery",
+     "how": "Dissolve salt in water in front of everyone. Children taste a drop from the top, middle and bottom, then guess the lesson."
+    },
+    {
+     "name": "Beyond the label",
+     "how": "Everyone writes three labels about themselves, then swaps: guess who is behind the labels."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "“Tat tvam asi” (you are that) comes from which Upanishad?",
+     "options": [
+      "Chandogya",
+      "Katha",
+      "Isha",
+      "Mundaka"
+     ],
+     "answer": 0,
+     "why": "Chandogya 6.8.7"
+    },
+    {
+     "q": "India’s national motto “Satyameva jayate” comes from…",
+     "options": [
+      "Mundaka Upanishad",
+      "Rigveda",
+      "Bhagavad Gita",
+      "Ramayana"
+     ],
+     "answer": 0,
+     "why": "Mundaka 3.1.6"
+    },
+    {
+     "q": "In the salt story, the self is like salt in water because it is…",
+     "options": [
+      "Present everywhere though unseen",
+      "Only in the heart",
+      "Only in the sky",
+      "Only in books"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "Why did the teacher accept Satyakama as a student?",
+     "options": [
+      "He told the plain truth",
+      "He was rich",
+      "He was strong",
+      "He was a prince"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "“Asato mā sad gamaya” asks to be led from…",
+     "options": [
+      "Untruth to truth",
+      "Village to city",
+      "Poverty to wealth",
+      "War to peace"
+     ],
+     "answer": 0,
+     "why": ""
+    }
+   ],
+   "delegates": ""
   },
   {
    "n": 4,
@@ -426,7 +632,76 @@
     "episode": "The Yaksha teaches: give up pride and you are loved; give up anger and you do not grieve; give up greed and you are happy.",
     "source": "Mahabharata, Vana Parva (Yaksha Prashna), CE 3.297.57"
    },
-   "sankalp": "Ten screen-free minutes a day, and one family hour a week with all phones in a basket."
+   "sankalp": "Ten screen-free minutes a day, and one family hour a week with all phones in a basket.",
+   "presenter": "",
+   "games": [
+    {
+     "name": "Chariot tug",
+     "how": "Five children are the horses, one the charioteer holding a rope as reins; the charioteer must steer the horses to a goal."
+    },
+    {
+     "name": "Question box race",
+     "how": "Teams write the deepest question they can; the whole group votes for the most Nachiketa-like question."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "From whom did Nachiketa learn the secret of life?",
+     "options": [
+      "Yama",
+      "Vishvamitra",
+      "Vasishtha",
+      "Indra"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "In the chariot image, the reins stand for…",
+     "options": [
+      "The mind",
+      "The senses",
+      "The intellect",
+      "The body"
+     ],
+     "answer": 0,
+     "why": "Kathopanishad 1.3.3"
+    },
+    {
+     "q": "The horses in the chariot image are…",
+     "options": [
+      "The senses",
+      "The mind",
+      "The self",
+      "The road"
+     ],
+     "answer": 0,
+     "why": "Kathopanishad 1.3.4"
+    },
+    {
+     "q": "“Shreyas” means…",
+     "options": [
+      "The good",
+      "The pleasant",
+      "Wealth",
+      "Fame"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "“Uttiṣṭhata jāgrata” became the call to youth of…",
+     "options": [
+      "Swami Vivekananda",
+      "Rabindranath Tagore",
+      "Sri Aurobindo",
+      "Adi Shankaracharya"
+     ],
+     "answer": 0,
+     "why": ""
+    }
+   ],
+   "delegates": ""
   },
   {
    "n": 5,
@@ -472,7 +747,76 @@
     "episode": "Vidura tells the king: forgiveness alone is the highest peace (kṣamaikā śāntir uttamā).",
     "source": "Mahabharata, Udyoga Parva (Vidura Niti), CE 5.33.48"
    },
-   "sankalp": "Five minutes of slow breathing or silent sitting every morning."
+   "sankalp": "Five minutes of slow breathing or silent sitting every morning.",
+   "presenter": "",
+   "games": [
+    {
+     "name": "Stillness statue",
+     "how": "Everyone sits still with eyes closed; anyone who moves before the bell quietly stands. The last still person wins."
+    },
+    {
+     "name": "Bee-breath choir",
+     "how": "Groups hum bhramari together; the calmest, longest hum wins a clap."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Bhramari is also called…",
+     "options": [
+      "Bee breath",
+      "Lion breath",
+      "Fire breath",
+      "Cooling breath"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "Anulom-vilom is…",
+     "options": [
+      "Alternate-nostril breathing",
+      "Holding the breath",
+      "Fast breathing",
+      "Humming"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "The Kathopanishad calls the steady holding of the senses…",
+     "options": [
+      "Yoga",
+      "Tapas",
+      "Seva",
+      "Bhakti"
+     ],
+     "answer": 0,
+     "why": "Kathopanishad 2.3.11"
+    },
+    {
+     "q": "Who should not practise breath-holding?",
+     "options": [
+      "People with high blood pressure or heart conditions",
+      "Children who are calm",
+      "Anyone before breakfast",
+      "Nobody"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "The Mandukya Upanishad is about…",
+     "options": [
+      "The sound Om",
+      "The Ramayana",
+      "The planets",
+      "Ayurveda"
+     ],
+     "answer": 0,
+     "why": ""
+    }
+   ],
+   "delegates": ""
   },
   {
    "n": 6,
@@ -517,7 +861,76 @@
     "episode": "Vidura: the wise are not pulled from their purpose by anger, joy, pride or shame, and stay calm like a deep pool of the Ganga.",
     "source": "Mahabharata, Udyoga Parva (Vidura Niti), CE 5.33.17, 26"
    },
-   "sankalp": "Fifteen minutes of yoga daily, with three rounds of Surya Namaskar."
+   "sankalp": "Fifteen minutes of yoga daily, with three rounds of Surya Namaskar.",
+   "presenter": "",
+   "games": [
+    {
+     "name": "Animal asana freeze",
+     "how": "Call out an animal; everyone makes its asana (tree, cobra, butterfly, cat) and holds it for five breaths."
+    },
+    {
+     "name": "Yama-niyama sort",
+     "how": "Sort ten cards into ‘how we treat others’ (yamas) and ‘how we treat ourselves’ (niyamas)."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Yoga Sutra 1.2 defines yoga as…",
+     "options": [
+      "Stilling the movements of the mind",
+      "Standing on one’s head",
+      "A kind of exercise",
+      "Chanting mantras"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "How many limbs does Patanjali’s yoga have?",
+     "options": [
+      "Four",
+      "Six",
+      "Eight",
+      "Ten"
+     ],
+     "answer": 2,
+     "why": ""
+    },
+    {
+     "q": "Ahimsa (non-violence) is one of the…",
+     "options": [
+      "Yamas",
+      "Niyamas",
+      "Asanas",
+      "Pranayamas"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "International Day of Yoga is on…",
+     "options": [
+      "21 June",
+      "26 January",
+      "15 August",
+      "2 October"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "“Yogaḥ karmasu kauśalam” means…",
+     "options": [
+      "Yoga is skill in action",
+      "Yoga is rest",
+      "Yoga is prayer",
+      "Yoga is breath"
+     ],
+     "answer": 0,
+     "why": "Bhagavad Gita 2.50"
+    }
+   ],
+   "delegates": ""
   },
   {
    "n": 7,
@@ -558,7 +971,76 @@
     "episode": "Bharata could have had the kingdom. Instead he places Rama’s sandals on the throne and rules only in his name.",
     "source": "Ramayana, Ayodhya Kanda 112"
    },
-   "sankalp": "One act of service at home every day, done without being asked."
+   "sankalp": "One act of service at home every day, done without being asked.",
+   "presenter": "",
+   "games": [
+    {
+     "name": "Paduka relay",
+     "how": "Teams carry paper padukas on a tray to a ‘throne’ without dropping them, as Bharata carried Rama’s sandals."
+    },
+    {
+     "name": "Who said it?",
+     "how": "Read a line from the Ramayana; teams guess the speaker: Rama, Sita, Bharata, Hanuman, Maricha or Jatayu."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Who composed the original Ramayana?",
+     "options": [
+      "Valmiki",
+      "Vyasa",
+      "Tulsidas",
+      "Kalidasa"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "What did Bharata place on the throne?",
+     "options": [
+      "Rama’s sandals",
+      "Rama’s bow",
+      "A crown",
+      "A lamp"
+     ],
+     "answer": 0,
+     "why": "Ayodhya Kanda 112"
+    },
+    {
+     "q": "Who said “Rāmo vigrahavān dharmaḥ” (Rama is dharma embodied)?",
+     "options": [
+      "Maricha",
+      "Hanuman",
+      "Lakshmana",
+      "Vibhishana"
+     ],
+     "answer": 0,
+     "why": "Aranya Kanda 37.13"
+    },
+    {
+     "q": "Which of these is NOT in Valmiki’s Ramayana?",
+     "options": [
+      "The Lakshman Rekha",
+      "Jatayu’s fight",
+      "Bharata ruling with the sandals",
+      "Sita’s blade of grass"
+     ],
+     "answer": 0,
+     "why": "It comes from later retellings"
+    },
+    {
+     "q": "Who, though old, fought Ravana to save Sita?",
+     "options": [
+      "Jatayu",
+      "Sampati",
+      "Jambavan",
+      "Sugriva"
+     ],
+     "answer": 0,
+     "why": "Aranya Kanda 51"
+    }
+   ],
+   "delegates": ""
   },
   {
    "n": 8,
@@ -604,7 +1086,76 @@
     "episode": "In a court full of elders, only Draupadi asks the question no one wants to answer: had Yudhishthira the right to stake her?",
     "source": "Mahabharata, Sabha Parva, CE 2.60.7–8"
    },
-   "sankalp": "Before any big decision, pause and consult one elder or trusted friend."
+   "sankalp": "Before any big decision, pause and consult one elder or trusted friend.",
+   "presenter": "",
+   "games": [
+    {
+     "name": "Yaksha’s riddles",
+     "how": "A volunteer plays the Yaksha by the lake; teams must answer riddles before they may ‘drink’."
+    },
+    {
+     "name": "Dilemma walk",
+     "how": "Read a dilemma; people walk to the ‘yes’ or ‘no’ side of the hall, then each side gives one reason."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "According to tradition, who composed the Mahabharata?",
+     "options": [
+      "Vyasa",
+      "Valmiki",
+      "Kalidasa",
+      "Panini"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "In the Yaksha Prashna, whom does Yudhishthira ask to be revived?",
+     "options": [
+      "Nakula",
+      "Bhima",
+      "Arjuna",
+      "Karna"
+     ],
+     "answer": 0,
+     "why": "CE 3.297"
+    },
+    {
+     "q": "“Kṣamaikā śāntir uttamā” (forgiveness is the highest peace) is the counsel of…",
+     "options": [
+      "Vidura",
+      "Shakuni",
+      "Duryodhana",
+      "Drona"
+     ],
+     "answer": 0,
+     "why": "CE 5.33.48"
+    },
+    {
+     "q": "Who asked the court, “Did he lose himself first, or me?”",
+     "options": [
+      "Draupadi",
+      "Gandhari",
+      "Kunti",
+      "Subhadra"
+     ],
+     "answer": 0,
+     "why": "CE 2.60"
+    },
+    {
+     "q": "“Yato dharmas tato jayaḥ” means…",
+     "options": [
+      "Where there is dharma, there is victory",
+      "Victory at any cost",
+      "Dharma is difficult",
+      "War is dharma"
+     ],
+     "answer": 0,
+     "why": ""
+    }
+   ],
+   "delegates": ""
   },
   {
    "n": 9,
@@ -654,7 +1205,76 @@
     "episode": "Karna turns down Krishna’s offer out of loyalty to Duryodhana, yet admits: where there is dharma, there is victory.",
     "source": "Mahabharata, Udyoga Parva, CE 5.141.33"
    },
-   "sankalp": "Do one duty fully every day, without complaint and without worrying about the result."
+   "sankalp": "Do one duty fully every day, without complaint and without worrying about the result.",
+   "presenter": "",
+   "games": [
+    {
+     "name": "Chariot wheel craft",
+     "how": "Make a paper-plate chariot wheel with one Gita value on each spoke, then roll it to a partner who reads one aloud."
+    },
+    {
+     "name": "Verse completion relay",
+     "how": "The leader starts a Gita line; teams race to finish it and say what it means."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "On which battlefield is the Gita spoken?",
+     "options": [
+      "Kurukshetra",
+      "Lanka",
+      "Hastinapura",
+      "Ayodhya"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "Gita 2.47 says our right is to…",
+     "options": [
+      "Action, not its fruits",
+      "The fruits alone",
+      "Rest",
+      "Wealth"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "A “sthitaprajña” is a person of…",
+     "options": [
+      "Steady mind",
+      "Great wealth",
+      "Great strength",
+      "Many words"
+     ],
+     "answer": 0,
+     "why": "Gita 2.54–72"
+    },
+    {
+     "q": "Who was Arjuna’s charioteer?",
+     "options": [
+      "Krishna",
+      "Bhishma",
+      "Drona",
+      "Karna"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "How many chapters does the Bhagavad Gita have?",
+     "options": [
+      "12",
+      "18",
+      "24",
+      "700"
+     ],
+     "answer": 1,
+     "why": ""
+    }
+   ],
+   "delegates": ""
   },
   {
    "n": 10,
@@ -695,7 +1315,76 @@
     "episode": "The aged vulture Jatayu sees Ravana carrying Sita away and, though old and alone, stands up to fight him.",
     "source": "Ramayana, Aranya Kanda 51"
    },
-   "sankalp": "One act of selfless service each week, and one small personal goal kept daily, like Dhruva."
+   "sankalp": "One act of selfless service each week, and one small personal goal kept daily, like Dhruva.",
+   "presenter": "",
+   "games": [
+    {
+     "name": "Find the Pole Star",
+     "how": "Using a star chart, teams find Dhruva, the Pole Star, and learn why it never moves."
+    },
+    {
+     "name": "Govardhan lift",
+     "how": "Everyone holds up a large sheet (the hill) with a stick; if one person lets go, it sags. Keep it up together for one minute."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "What did Dhruva become?",
+     "options": [
+      "The Pole Star",
+      "The moon",
+      "A river",
+      "A mountain"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "Who lifted Govardhan hill?",
+     "options": [
+      "Krishna",
+      "Balarama",
+      "Hanuman",
+      "Bhima"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "What gift did Sudama bring Krishna?",
+     "options": [
+      "Flattened rice",
+      "Gold",
+      "A flute",
+      "Flowers"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "How many forms of devotion (navadha bhakti) are named?",
+     "options": [
+      "Five",
+      "Seven",
+      "Nine",
+      "Twelve"
+     ],
+     "answer": 2,
+     "why": "Bhagavatam 7.5.23"
+    },
+    {
+     "q": "Who was Prahlada’s father?",
+     "options": [
+      "Hiranyakashipu",
+      "Ravana",
+      "Kamsa",
+      "Bali"
+     ],
+     "answer": 0,
+     "why": ""
+    }
+   ],
+   "delegates": ""
   },
   {
    "n": 11,
@@ -735,7 +1424,76 @@
     "episode": "Dhritarashtra knows where dharma lies, yet cannot bring himself to give up his son Duryodhana.",
     "source": "Mahabharata, Udyoga Parva, CE 5.39.7"
    },
-   "sankalp": "Learn one story of our region’s history and tell it at home; join one residents’ or family meeting."
+   "sankalp": "Learn one story of our region’s history and tell it at home; join one residents’ or family meeting.",
+   "presenter": "",
+   "games": [
+    {
+     "name": "Mahajanapada map puzzle",
+     "how": "Teams assemble a cut-up map of the sixteen Mahajanapadas and find where our region lies."
+    },
+    {
+     "name": "Token vote",
+     "how": "Hold a real vote on a small local question using wooden tokens, as the Sangha did."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "How many Mahajanapadas were there?",
+     "options": [
+      "Eight",
+      "Twelve",
+      "Sixteen",
+      "Twenty"
+     ],
+     "answer": 2,
+     "why": ""
+    },
+    {
+     "q": "The Vajjis of Vaishali were governed by…",
+     "options": [
+      "An assembly",
+      "A single emperor",
+      "A foreign ruler",
+      "Priests alone"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "Mahavira taught above all…",
+     "options": [
+      "Ahimsa (non-violence)",
+      "Conquest",
+      "Trade",
+      "Astronomy"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "The site of the ancient Nalanda university is now…",
+     "options": [
+      "A UNESCO World Heritage Site",
+      "A shopping mall",
+      "Under the sea",
+      "Unknown"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "The Buddhist Sangha voted with…",
+     "options": [
+      "Wooden tokens (salaka)",
+      "Paper ballots",
+      "Raised swords",
+      "Coins"
+     ],
+     "answer": 0,
+     "why": ""
+    }
+   ],
+   "delegates": ""
   },
   {
    "n": 12,
@@ -781,7 +1539,76 @@
     "episode": "Rama’s advisers doubt Vibhishana, but Rama gives him refuge: shelter for anyone who asks, even Ravana himself.",
     "source": "Ramayana, Yuddha Kanda 18.33"
    },
-   "sankalp": "Two minutes of loving-kindness each night, and our family’s pledge for 2028 on the wall at home."
+   "sankalp": "Two minutes of loving-kindness each night, and our family’s pledge for 2028 on the wall at home.",
+   "presenter": "",
+   "games": [
+    {
+     "name": "The gift not accepted",
+     "how": "Act out the story: one person offers angry words, the other politely declines them. Who keeps the anger?"
+    },
+    {
+     "name": "Kalama check",
+     "how": "Teams get three ‘viral’ claims and must check each before deciding to believe or forward it."
+    }
+   ],
+   "quiz": [
+    {
+     "q": "Where did the Buddha attain enlightenment?",
+     "options": [
+      "Bodh Gaya",
+      "Sarnath",
+      "Lumbini",
+      "Kushinagar"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "Where did the Buddha give his first teaching?",
+     "options": [
+      "Sarnath",
+      "Rajgir",
+      "Vaishali",
+      "Shravasti"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "The Dharma Chakra on India’s flag comes from the lion capital at…",
+     "options": [
+      "Sarnath",
+      "Delhi",
+      "Ujjain",
+      "Mathura"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "Dhammapada 5 says hatred ends through…",
+     "options": [
+      "Love (non-hatred)",
+      "More hatred",
+      "Silence",
+      "Victory"
+     ],
+     "answer": 0,
+     "why": ""
+    },
+    {
+     "q": "How many Noble Truths did the Buddha teach?",
+     "options": [
+      "Two",
+      "Four",
+      "Eight",
+      "Ten"
+     ],
+     "answer": 1,
+     "why": ""
+    }
+   ],
+   "delegates": ""
   }
  ]
 }

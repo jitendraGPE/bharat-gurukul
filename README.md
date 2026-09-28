@@ -10,6 +10,10 @@ This repository is the programme's website. People can:
 - **sign up for seva** roles each month and see which roles still need people;
 - track the month's 30-day **sankalp** on their phone;
 - send a **question for the Acharya**, a suggestion, or an offer to perform or lend something;
+- see the **topics of the day**: opening by delegates, the talk, circle activities and games, the quiz, the life question and the sankalp;
+- play each month's **games** and take its **quiz** (5 questions, scored instantly);
+- **sign up to present any topic** (every topic is presented by a volunteer);
+- **download a certificate** at the end of the gathering, with their name, the topic and their quiz score;
 - **share** any page on WhatsApp and download the print materials.
 
 It works like the Durga Puja site: a single page on GitHub Pages, with a Google Sheet (through Google Apps Script) collecting registrations.
@@ -18,7 +22,7 @@ It works like the Durga Puja site: a single page on GitHub Pages, with a Google 
 
 | Path | What it is | Who edits it |
 | --- | --- | --- |
-| `programme.json` | All content: dates, venue, contacts, the 12 months, seva roles, life questions, and the `scriptUrl` for registrations | Organisers, on GitHub |
+| `programme.json` | All content: dates, venue, contacts, the 12 months (topic, verses, circles, games, quiz, `presenter`, `delegates`), volunteer roles, life questions, and the `scriptUrl` | Organisers, on GitHub |
 | `index.html` | The website (mobile-first book you swipe through) | Rarely |
 | `backend/Code.gs` | Apps Script that receives registrations, RSVPs, seva sign-ups and questions | Once, at set-up |
 | `backend/Workbook.gs` | Apps Script that builds the organisers' dashboards in the sheet | Once, at set-up |
@@ -32,6 +36,14 @@ It works like the Durga Puja site: a single page on GitHub Pages, with a Google 
 3. Click **Commit changes**. The website updates within a minute or two.
 
 Before launch, replace every placeholder in `programme.json`: `[LOCALITY]`, `[VENUE NAME]`, `[ADDRESS]`, `[NAME]`, `[PHONE]`.
+
+### Filling in presenters and delegates
+
+When a volunteer is confirmed to present a month, type their name in that month's `"presenter"` field. When a chief guest (for example an ambassador or invited delegate) confirms the opening, type it in `"delegates"`. Until then the site shows "Presenter needed" and "An ambassador or invited delegate · to be announced".
+
+### Previewing a future date
+
+Add `?today=2027-01-17` to the address to see the site as it will look on that day (for example, to test certificates).
 
 ## Turning on registrations (about 10 minutes, once)
 
